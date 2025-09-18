@@ -1,1 +1,1 @@
-# backend-fast-api
+# Backend для приложения МИИГАиК
