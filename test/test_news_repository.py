@@ -19,7 +19,7 @@ class NewsRepositoryTest(unittest.TestCase):
 
     def test_invalid_range_page_get_list_news_html(self):
         with self.assertRaises(ValueError):
-            self.news_repository.get_news_list(-1)
+            self.news_repository.get_news_list(-1)#AA
 
     def test_get_eq_list_news_html(self):
         news_list_1 = self.news_repository.get_news_list(1)
