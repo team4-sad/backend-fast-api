@@ -13,20 +13,20 @@ from test.utils import mock
 class ParserTest(TestCase):
 
     def setUp(self):
-        self.news_list_html = mock("./test/mock/html/news_list_first_page.html")
-        self.news_list_without_optional_fields_html = mock("./test/mock/html/news_list_without_optional_fields.html")
-        self.news_list_invalid_header_html = mock("./test/mock/html/news_list_invalid_header.html")
-        self.news_list_invalid_date_html = mock("./test/mock/html/news_list_invalid_date.html")
-        self.news_list_invalid_news_link_html = mock("./test/mock/html/news_list_invalid_news_link.html")
-        self.news_list_invalid_html = mock("./test/mock/html/news_list_invalid.html")
-        self.news_list_last_page_html = mock("./test/mock/html/news_list_last_page.html")
-        self.news_list_invalid_pagination_html = mock("./test/mock/html/news_list_invalid_pagination.html")
+        self.news_list_html = mock("news_list_first_page.html")
+        self.news_list_without_optional_fields_html = mock("news_list_without_optional_fields.html")
+        self.news_list_invalid_header_html = mock("news_list_invalid_header.html")
+        self.news_list_invalid_date_html = mock("news_list_invalid_date.html")
+        self.news_list_invalid_news_link_html = mock("news_list_invalid_news_link.html")
+        self.news_list_invalid_html = mock("news_list_invalid.html")
+        self.news_list_last_page_html = mock("news_list_last_page.html")
+        self.news_list_invalid_pagination_html = mock("news_list_invalid_pagination.html")
 
-        self.singular_news_html = mock("./test/mock/html/singular_news.html")
-        self.singular_news_content_html = mock("./test/mock/html/singular_news_content.html")
-        self.singular_news_invalid_header_html = mock("./test/mock/html/singular_news_invalid_header.html")
-        self.singular_news_invalid_date_html = mock("./test/mock/html/singular_news_invalid_date.html")
-        self.singular_news_invalid_content_html = mock("./test/mock/html/singular_news_invalid_content.html")
+        self.singular_news_html = mock("singular_news.html")
+        self.singular_news_content_html = mock("singular_news_content.html")
+        self.singular_news_invalid_header_html = mock("singular_news_invalid_header.html")
+        self.singular_news_invalid_date_html = mock("singular_news_invalid_date.html")
+        self.singular_news_invalid_content_html = mock("singular_news_invalid_content.html")
 
         self.parser = NewsParser(base_link_url="https://miigaik.ru")
 
@@ -144,14 +144,14 @@ class ParserTest(TestCase):
     def test_invalid_singular_news_header_html(self):
         with self.assertRaises(InvalidSingularNewsHTML) as e:
             self.parser.parse_singular_news(self.singular_news_invalid_header_html)
-            self.assertEqual(e.exception.field, RequiredNewsFields.header)
+        self.assertEqual(e.exception.field, RequiredNewsFields.header)
 
     def test_invalid_singular_news_date_html(self):
         with self.assertRaises(InvalidSingularNewsHTML) as e:
             self.parser.parse_singular_news(self.singular_news_invalid_date_html)
-            self.assertEqual(e.exception.field, RequiredNewsFields.date)
+        self.assertEqual(e.exception.field, RequiredNewsFields.date)
 
     def test_invalid_singular_news_content_html(self):
         with self.assertRaises(InvalidSingularNewsHTML) as e:
             self.parser.parse_singular_news(self.singular_news_invalid_content_html)
-            self.assertEqual(e.exception.field, RequiredNewsFields.content)
+        self.assertEqual(e.exception.field, RequiredNewsFields.content)
