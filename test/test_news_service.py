@@ -9,6 +9,7 @@ from src.parsers.news_parser import NewsParser
 from src.services.news_service import NewsService
 from test.mock.classes.mock_corrupted_news_repository import MockCorruptedNewsRepository
 from test.mock.classes.mock_news_repository import MockNewsRepository
+from test.utils import mock
 
 
 class NewsServiceTest(unittest.TestCase):
@@ -22,12 +23,10 @@ class NewsServiceTest(unittest.TestCase):
             news_repository=MockCorruptedNewsRepository()
         )
 
-
     def test_get_list_news(self):
         result = self.news_service.get_news_list(1)
         self.assertEqual(
             result,
-
             NewsListResponseModel(
                 news_list=[
                     NewsModel(id='6614',
@@ -68,78 +67,10 @@ class NewsServiceTest(unittest.TestCase):
         result = self.news_service.get_singular_news(1)
         self.assertEqual(
             result,
-
             SingularNewsModel(
                 header='Студенты МИИГАиК на фестивале "Открытый город"',
                 date_created='22.09.2025',
-                content_html='<hr/>\n'
-                               '<div class="news-item-image">\n'
-                               "<img alt='Студенты МИИГАиК на фестивале "
-                               '"Открытый город"\' '
-                               'src="/upload/iblock/de2/xnkgdh2140swp45nojmanzlsukgamcm1.jpg" '
-                               "title='Студенты МИИГАиК на фестивале "
-                               '"Открытый город"\' width="800"/>\n'
-                               '</div>\n'
-                               '<hr/>\n'
-                               '<!-- Об интереснейшем и сложном объекте '
-                               'рассказал его автор, куратор фестиваля, '
-                               'архитектор Тимур Башкаев. -->\n'
-                               '                В рамках фестиваля <a '
-                               'href="http://opencityfest.ru/">«Открытый '
-                               'город»</a> группа градостроителей 5 курса '
-                               'Факультета архитектуры и градостроительства '
-                               'вместе преподавателем по архитектурному и '
-                               'градостроительному проектированию Еленой '
-                               'Ганушкиной посвятила выходные дни изучению '
-                               'города и посетила экскурсию по крупнейшему '
-                               'транспортно-пересадочному узлу Москвы. Об '
-                               'интереснейшем и сложном объекте рассказал его '
-                               'автор, куратор фестиваля, архитектор Тимур '
-                               'Башкаев.\n'
-                               '<p style="text-align: center;">\n'
-                               '<img '
-                               'src="/upload/images/content-img(227).png"/>\n'
-                               '</p>\n'
-                               '<p style="text-align: center;">\n'
-                               '<img '
-                               'src="/upload/images/content-img(226).png"/>\n'
-                               '</p>\n'
-                               ' ТПУ «Нижегородская» объединяет метро '
-                               '(Некрасовская и БКЛ), МЦК, МЦД, железную '
-                               'дорогу, наземный транспорт и ежедневно '
-                               'обслуживает около 100 тысяч поездок. Это не '
-                               'только пересадочный пункт, но и современное '
-                               'городское пространство с эксплуатируемой '
-                               'кровлей, стеклянным атриумом и озелененной '
-                               'площадью по проекту Arteza. Центральный акцент '
-                               'ансамбля — арт-объект «Московские кольца».\n'
-                               '<p style="text-align: center;">\n'
-                               '<img '
-                               'src="/upload/images/content-img(229).png"/>\n'
-                               '</p>\n'
-                               '<p style="text-align: center;">\n'
-                               '<img '
-                               'src="/upload/images/content-img(228).png"/>\n'
-                               '</p>\n'
-                               ' На экскурсии студенты МИИГАиК узнали:<br/>\n'
-                               ' - каковы особенности проектирования '
-                               'крупнейшего ТПУ столицы,<br/>\n'
-                               ' - как изменились подходы к созданию подобных '
-                               'объектов за последние годы,<br/>\n'
-                               ' - какие дополнительные функции могут обрести '
-                               'подобные транзитные пространства в будущем.\n'
-                               '<p style="text-align: center;">\n'
-                               '<img '
-                               'src="/upload/images/content-img(230).png"/>\n'
-                               '</p>\n'
-                               '<p style="text-align: center;">\n'
-                               '<img '
-                               'src="/upload/images/content-img(231).png"/>\n'
-                               '</p>\n'
-                               ' Фотографии: <a '
-                               'href="http://prorus.ru/projects/tpu-nizhegorodskaya-v-moskve/#gallery-13%20">ПРОЕКТ '
-                               'РОССИЯ</a><br/>\n'
-                               '<br/>'
+                content_html=mock("singular_news_content.html")
             )
         )
 
@@ -152,9 +83,3 @@ class NewsServiceTest(unittest.TestCase):
         with self.assertRaises(CodeException) as e:
             self.corrupted_news_service.get_singular_news(1)
         self.assertEqual(e.exception, CodeException('Failed to process singular news', 424))
-
-
-
-
-if __name__ == '__main__':
-    unittest.main()

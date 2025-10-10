@@ -1,5 +1,3 @@
-from logging import exception
-
 from src.exceptions.code_exception import CodeException
 from src.exceptions.invalid_news_html import InvalidNewsHTML
 from src.exceptions.invalid_pagination_html import InvalidPaginationHTML
@@ -11,10 +9,16 @@ from src.parsers.news_parser import NewsParser
 
 
 class NewsService:
-    def get_news_list(self, page_numb: int)->NewsListResponseModel:
+
+    def __init__(self, news_parser: NewsParser, news_repository: INewsRepository):
+        self.news_parser = news_parser
+        self.news_repository = news_repository
+
+    def get_news_list(self, page_numb: int) -> NewsListResponseModel:
         try:
             html = self.news_repository.get_news_list(page_numb)
-        except Exception: raise CodeException("Failed to fetch news list", 424)
+        except Exception:
+            raise CodeException("Failed to fetch news list", 424)
 
         try:
             news_models = self.news_parser.parse_news_list(html=html)
@@ -28,7 +32,7 @@ class NewsService:
 
         return NewsListResponseModel(news_list=news_models, pagination=pagination)
 
-    def get_singular_news(self, news_id:int)->SingularNewsModel:
+    def get_singular_news(self, news_id: int) -> SingularNewsModel:
         try:
             html = self.news_repository.get_singular_news(news_id)
         except Exception:
@@ -40,7 +44,3 @@ class NewsService:
             raise CodeException("Failed to process singular news", 424)
 
         return singular_news_model
-
-    def __init__(self, news_parser:NewsParser, news_repository:INewsRepository):
-        self.news_parser = news_parser
-        self.news_repository = news_repository

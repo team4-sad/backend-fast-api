@@ -13,20 +13,20 @@ from test.utils import mock
 class ParserTest(TestCase):
 
     def setUp(self):
-        self.news_list_html = mock("mock/html/news_list_first_page.html")
-        self.news_list_without_optional_fields_html = mock("mock/html/news_list_without_optional_fields.html")
-        self.news_list_invalid_header_html = mock("mock/html/news_list_invalid_header.html")
-        self.news_list_invalid_date_html = mock("mock/html/news_list_invalid_date.html")
-        self.news_list_invalid_news_link_html = mock("mock/html/news_list_invalid_news_link.html")
-        self.news_list_invalid_html = mock("mock/html/news_list_invalid.html")
-        self.news_list_last_page_html = mock("mock/html/news_list_last_page.html")
-        self.news_list_invalid_pagination_html = mock("mock/html/news_list_invalid_pagination.html")
+        self.news_list_html = mock("news_list_first_page.html")
+        self.news_list_without_optional_fields_html = mock("news_list_without_optional_fields.html")
+        self.news_list_invalid_header_html = mock("news_list_invalid_header.html")
+        self.news_list_invalid_date_html = mock("news_list_invalid_date.html")
+        self.news_list_invalid_news_link_html = mock("news_list_invalid_news_link.html")
+        self.news_list_invalid_html = mock("news_list_invalid.html")
+        self.news_list_last_page_html = mock("news_list_last_page.html")
+        self.news_list_invalid_pagination_html = mock("news_list_invalid_pagination.html")
 
-        self.singular_news_html = mock("mock/html/singular_news.html")
-        self.singular_news_content_html = mock("mock/html/singular_news_content.html")
-        self.singular_news_invalid_header_html = mock("mock/html/singular_news_invalid_header.html")
-        self.singular_news_invalid_date_html = mock("mock/html/singular_news_invalid_date.html")
-        self.singular_news_invalid_content_html = mock("mock/html/singular_news_invalid_content.html")
+        self.singular_news_html = mock("singular_news.html")
+        self.singular_news_content_html = mock("singular_news_content.html")
+        self.singular_news_invalid_header_html = mock("singular_news_invalid_header.html")
+        self.singular_news_invalid_date_html = mock("singular_news_invalid_date.html")
+        self.singular_news_invalid_content_html = mock("singular_news_invalid_content.html")
 
         self.parser = NewsParser(base_link_url="https://miigaik.ru")
 
