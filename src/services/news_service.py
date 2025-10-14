@@ -3,12 +3,13 @@ from src.exceptions.invalid_news_html import InvalidNewsHTML
 from src.exceptions.invalid_pagination_html import InvalidPaginationHTML
 from src.exceptions.invalid_singular_news_html import InvalidSingularNewsHTML
 from src.interfaces.i_news_repository import INewsRepository
+from src.interfaces.i_news_service import INewsService
 from src.models.news_list_response_model import NewsListResponseModel
 from src.models.singular_news_model import SingularNewsModel
 from src.parsers.news_parser import NewsParser
 
 
-class NewsService:
+class NewsService(INewsService):
 
     def __init__(self, news_parser: NewsParser, news_repository: INewsRepository):
         self.news_parser = news_parser
