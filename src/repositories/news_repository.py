@@ -4,9 +4,9 @@ from src.interfaces.i_news_repository import INewsRepository
 
 
 class NewsRepository(INewsRepository):
-    def __init__(self, base_news_list_url: str, base_singular_news: str):
+    def __init__(self, base_news_list_url: str, base_singular_news_url: str):
         self.base_news_list_url = base_news_list_url
-        self.base_singular_news = base_singular_news
+        self.base_singular_news = base_singular_news_url
 
     def get_news_list(self, page: int) -> str:
         if page <= 0:

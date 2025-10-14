@@ -9,7 +9,7 @@ class NewsRepositoryTest(unittest.TestCase):
 
     def setUp(self):
         self.news_repository = NewsRepository(
-            base_singular_news="https://miigaik.ru/about/news",
+            base_singular_news_url="https://miigaik.ru/about/news",
             base_news_list_url="https://miigaik.ru/about/news/?PAGEN_2="
         )
 
