@@ -3,7 +3,7 @@
 
 ## Технологический стек
 - Python 3.12
-- FastAPI 0.117.1
+- FastAPI 0.118.3
 - beautifulsoup 4.13.0
 - requests 2.32.5
 
