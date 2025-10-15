@@ -20,3 +20,7 @@ class Config:
     @property
     def PORT(self):
         return int(self._config['PORT'])
+
+    @property
+    def DATABASE_PATH(self):
+        return self._config['DATABASE_PATH']

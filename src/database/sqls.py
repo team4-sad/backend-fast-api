@@ -1,3 +1,4 @@
+CREATE_TABLE_NEWS_SQL = """
 CREATE TABLE news (
 	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
 	header TEXT NOT NULL,
@@ -7,3 +8,4 @@ CREATE TABLE news (
 	description TEXT,
 	news_id INTEGER NOT NULL
 );
+"""
