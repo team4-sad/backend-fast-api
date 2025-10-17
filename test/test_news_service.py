@@ -9,7 +9,7 @@ from src.parsers.news_parser import NewsParser
 from src.services.news_service import NewsService
 from test.mock.classes.mock_corrupted_news_repository import MockCorruptedNewsRepository
 from test.mock.classes.mock_news_repository import MockNewsRepository
-from test.utils import mock
+from test.utils import html_mock
 
 
 class NewsServiceTest(unittest.TestCase):
@@ -70,7 +70,7 @@ class NewsServiceTest(unittest.TestCase):
             SingularNewsModel(
                 header='Студенты МИИГАиК на фестивале "Открытый город"',
                 date_created='22.09.2025',
-                content_html=mock("singular_news_content.html")
+                content_html=html_mock("singular_news_content.html")
             )
         )
 

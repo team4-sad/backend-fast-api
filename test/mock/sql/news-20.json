@@ -1,0 +1,162 @@
+[
+    {
+        "header": "Запуск нового веб-сайта компании",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/1",
+        "cover_url": "https://example.com/images/cover1.jpg",
+        "description": "Мы рады объявить о запуске нашего нового корпоративного веб-сайта с улучшенным дизайном и функционалом.",
+        "news_id": 1001
+    },
+    {
+        "header": "Техническое обслуживание серверов",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/2",
+        "cover_url": "https://example.com/images/cover2.jpg",
+        "description": "Запланировано техническое обслуживание на 15 января. Сервис будет недоступен с 02:00 до 06:00.",
+        "news_id": 1002
+    },
+    {
+        "header": "Партнерство с технологическим гигантом",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/3",
+        "cover_url": "https://example.com/images/partnership.jpg",
+        "description": "Заключено стратегическое партнерство с ведущей технологической компанией для развития инноваций.",
+        "news_id": 1003
+    },
+    {
+        "header": "Итоги года и новые горизонты",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/4",
+        "cover_url": null,
+        "description": "Подводим итоги уходящего года и делимся планами по развитию на следующий год.",
+        "news_id": 1004
+    },
+    {
+        "header": "Новые вакансии в отделе разработки",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/5",
+        "cover_url": "https://example.com/images/career.jpg",
+        "description": "Мы расширяем команду разработки и ищем талантливых Python и JavaScript разработчиков.",
+        "news_id": 1005
+    },
+    {
+        "header": "Обновление мобильного приложения",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/6",
+        "cover_url": "https://example.com/images/mobile-app.jpg",
+        "description": "Вышло крупное обновление мобильного приложения с новыми функциями и улучшенным интерфейсом.",
+        "news_id": 1006
+    },
+    {
+        "header": "Успешное завершение проекта Apollo",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/7",
+        "cover_url": "https://example.com/images/project-apollo.jpg",
+        "description": "Проект Apollo успешно завершен. Благодарим всю команду за проделанную работу.",
+        "news_id": 1007
+    },
+    {
+        "header": "Вебинар по машинному обучению",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/8",
+        "cover_url": null,
+        "description": "Приглашаем на бесплатный вебинар по основам машинного обучения и искусственного интеллекта.",
+        "news_id": 1008
+    },
+    {
+        "header": "Открытие нового офиса в Берлине",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/9",
+        "cover_url": "https://example.com/images/berlin-office.jpg",
+        "description": "Мы рады объявить об открытии нашего нового европейского офиса в столице Германии.",
+        "news_id": 1009
+    },
+    {
+        "header": "Победа в конкурсе инноваций",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/10",
+        "cover_url": "https://example.com/images/award.jpg",
+        "description": "Наша компания заняла первое место в ежегодном конкурсе технологических инноваций.",
+        "news_id": 1010
+    },
+    {
+        "header": "Внедрение новых стандартов безопасности",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/11",
+        "cover_url": "https://example.com/images/security.jpg",
+        "description": "Внедрены новые протоколы безопасности для защиты данных наших пользователей.",
+        "news_id": 1011
+    },
+    {
+        "header": "Корпоративное обучение сотрудников",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/12",
+        "cover_url": null,
+        "description": "Запущена программа корпоративного обучения для повышения квалификации наших сотрудников.",
+        "news_id": 1012
+    },
+    {
+        "header": "Интеграция с популярными платформами",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/13",
+        "cover_url": "https://example.com/images/integration.jpg",
+        "description": "Добавлена интеграция с популярными CRM и ERP системами для удобства наших клиентов.",
+        "news_id": 1013
+    },
+    {
+        "header": "Экологическая инициатива компании",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/14",
+        "cover_url": "https://example.com/images/eco-friendly.jpg",
+        "description": "Запускаем программу по сокращению углеродного следа и переходу на зеленую энергию.",
+        "news_id": 1014
+    },
+    {
+        "header": "Релиз новой документации API",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/15",
+        "cover_url": null,
+        "description": "Опубликована обновленная документация для разработчиков с примерами и лучшими практиками.",
+        "news_id": 1015
+    },
+    {
+        "header": "Участие в международной конференции",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/16",
+        "cover_url": "https://example.com/images/conference.jpg",
+        "description": "Наша команда примет участие в крупнейшей технологической конференции года.",
+        "news_id": 1016
+    },
+    {
+        "header": "Улучшение пользовательского опыта",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/17",
+        "cover_url": "https://example.com/images/ux-improvement.jpg",
+        "description": "Внедрены значительные улучшения пользовательского интерфейса на основе обратной связи.",
+        "news_id": 1017
+    },
+    {
+        "header": "Новая система мониторинга",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/18",
+        "cover_url": null,
+        "description": "Запущена система реального времени для мониторинга производительности и доступности сервисов.",
+        "news_id": 1018
+    },
+    {
+        "header": "Благотворительная акция компании",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/19",
+        "cover_url": "https://example.com/images/charity.jpg",
+        "description": "Компания организовала благотворительную акцию в поддержку местных образовательных учреждений.",
+        "news_id": 1019
+    },
+    {
+        "header": "Планы по развитию облачной инфраструктуры",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/20",
+        "cover_url": "https://example.com/images/cloud-infrastructure.jpg",
+        "description": "Анонсируем масштабное расширение облачной инфраструктуры в новых регионах.",
+        "news_id": 1020
+    }
+]
