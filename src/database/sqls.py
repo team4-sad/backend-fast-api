@@ -26,5 +26,5 @@ SEARCH_NEWS_SQL = """
 GET_COUNT_NEWS_SQL = """
     SELECT COUNT(*) as total_count
     FROM news 
-    WHERE search_header LIKE '%' || ? || '%'
+    WHERE search_header LIKE '%' || LOWER(?) || '%'
 """
