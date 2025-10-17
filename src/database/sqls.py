@@ -18,7 +18,7 @@ CREATE INDEX idx_news_search_header ON news(search_header);
 SEARCH_NEWS_SQL = """
     SELECT * 
     FROM news 
-    WHERE search_header LIKE '%' || ? || '%'
+    WHERE search_header LIKE '%' || LOWER(?) || '%'
     ORDER BY date DESC 
     LIMIT ? OFFSET ?
 """
