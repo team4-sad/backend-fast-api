@@ -55,8 +55,56 @@ class DbNewsRepositoryTest(TestCase):
                 )
             ],
             pagination=PaginationModel(
-                is_previous_page=False,
-                is_next_page=False,
+                has_previous_page=False,
+                has_next_page=False,
                 current_page=1
             )
+        ))
+
+    def test_caps_search_test(self):
+        self.fill_up("news-5.json")
+        result = self.db_news_repository.search_news_list("ТЕХ")
+        self.assertEqual(result, NewsListResponseModel(
+            news_list=[
+                NewsModel(
+                    id="1002",
+                    header="Техническое обслуживание серверов",
+                    date_created="17.10.2025",
+                    description="Запланировано техническое обслуживание на 15 января. Сервис будет недоступен с 02:00 до 06:00.",
+                    image_link="https://example.com/images/cover2.jpg",
+                    news_link="https://example.com/news/2"
+                ),
+                NewsModel(
+                    id="1003",
+                    header="Партнерство с технологическим гигантом",
+                    date_created="17.10.2025",
+                    description="Заключено стратегическое партнерство с ведущей технологической компанией для развития инноваций.",
+                    image_link="https://example.com/images/partnership.jpg",
+                    news_link="https://example.com/news/3"
+                )
+            ],
+            pagination=PaginationModel(
+                has_previous_page=False,
+                has_next_page=False,
+                current_page=1
+            )
+        ))
+
+
+    def test_pagination_search_db(self):
+        self.fill_up("news-20.json")
+        result = self.db_news_repository.search_news_list("е")
+        page = 1
+        while result.pagination.has_next_page:
+            self.assertEqual(result.pagination, PaginationModel(
+                has_previous_page=page != 1,
+                has_next_page=True,
+                current_page=page
+            ))
+            page += 1
+            result = self.db_news_repository.search_news_list("а", page)
+        self.assertEqual(result.pagination, PaginationModel(
+            has_previous_page=True,
+            has_next_page=False,
+            current_page=page
         ))

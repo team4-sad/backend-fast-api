@@ -55,9 +55,9 @@ class NewsServiceTest(unittest.TestCase):
                                           'сплочению коллектива.')
                 ],
                 pagination=PaginationModel(
-                    is_previous_page=False,
+                    has_previous_page=False,
                     current_page=1,
-                    is_next_page=True
+                    has_next_page=True
                 )
             )
 

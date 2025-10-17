@@ -111,19 +111,19 @@ class ParserTest(TestCase):
 
     def test_prev_pagination(self):
         result = self.parser.parse_pagination(self.news_list_html)
-        self.assertEqual(result.is_previous_page, False)
+        self.assertEqual(result.has_previous_page, False)
 
     def test_next_pagination(self):
         result = self.parser.parse_pagination(self.news_list_html)
-        self.assertEqual(result.is_next_page, True)
+        self.assertEqual(result.has_next_page, True)
 
     def test_last_page_previous_pagination(self):
         result = self.parser.parse_pagination(self.news_list_last_page_html)
-        self.assertEqual(result.is_previous_page, True)
+        self.assertEqual(result.has_previous_page, True)
 
     def test_last_page_next_pagination(self):
         result = self.parser.parse_pagination(self.news_list_last_page_html)
-        self.assertEqual(result.is_next_page, False)
+        self.assertEqual(result.has_next_page, False)
 
     def test_invalid_pagination_html(self):
         with self.assertRaises(InvalidPaginationHTML):
