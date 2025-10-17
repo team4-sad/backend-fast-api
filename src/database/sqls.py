@@ -19,3 +19,9 @@ SEARCH_NEWS_SQL = """
     ORDER BY date DESC 
     LIMIT ? OFFSET ?
 """
+
+GET_COUNT_NEWS_SQL = """
+    SELECT COUNT(*) as total_count
+    FROM news 
+    WHERE header LIKE '%' || ? || '%' COLLATE NOCASE
+"""
