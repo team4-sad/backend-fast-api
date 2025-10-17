@@ -1,3 +1,4 @@
+import re
 import sqlite3
 from typing import List, Tuple, Optional
 
@@ -36,6 +37,10 @@ class SQLiteDatabase:
             print(f"Ошибка проверки существования таблицы: {e}")
             return False
 
+    def execute_script(self, script: str) -> None:
+        self._cursor.executescript(script)
+        self._connection.commit()
+
     def execute_query(self, query: str, params: Tuple = ()) -> None:
         self._cursor.execute(query, params)
         self._connection.commit()
@@ -70,3 +75,5 @@ class SQLiteDatabase:
     def select_where(self, table_name: str, condition: str, columns: str = "*") -> List[Tuple]:
         query = f"SELECT {columns} FROM {table_name} WHERE {condition}"
         return self.fetch_all(query)
+
+

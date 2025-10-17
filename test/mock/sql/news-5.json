@@ -1,0 +1,47 @@
+[
+    {
+        "header": "Техническое обслуживание серверов",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/2",
+        "cover_url": "https://example.com/images/cover2.jpg",
+        "description": "Запланировано техническое обслуживание на 15 января. Сервис будет недоступен с 02:00 до 06:00.",
+        "news_id": 1002,
+        "search_header": "техническое обслуживание серверов"
+    },
+    {
+        "header": "Партнерство с технологическим гигантом",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/3",
+        "cover_url": "https://example.com/images/partnership.jpg",
+        "description": "Заключено стратегическое партнерство с ведущей технологической компанией для развития инноваций.",
+        "news_id": 1003,
+        "search_header": "партнерство с технологическим гигантом"
+    },
+    {
+        "header": "Итоги года и новые горизонты",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/4",
+        "cover_url": null,
+        "description": "Подводим итоги уходящего года и делимся планами по развитию на следующий год.",
+        "news_id": 1004,
+        "search_header": "итоги года и новые горизонты"
+    },
+    {
+        "header": "Новые вакансии в отделе разработки",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/5",
+        "cover_url": "https://example.com/images/career.jpg",
+        "description": "Мы расширяем команду разработки и ищем талантливых Python и JavaScript разработчиков.",
+        "news_id": 1005,
+        "search_header": "новые вакансии в отделе разработки"
+    },
+    {
+        "header": "Планы по развитию облачной инфраструктуры",
+        "date": "17.10.2025",
+        "link": "https://example.com/news/20",
+        "cover_url": "https://example.com/images/cloud-infrastructure.jpg",
+        "description": "Анонсируем масштабное расширение облачной инфраструктуры в новых регионах.",
+        "news_id": 1020,
+        "search_header": "планы по развитию облачной инфраструктуры"
+    }
+]

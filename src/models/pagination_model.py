@@ -3,6 +3,6 @@ import dataclasses
 
 @dataclasses.dataclass
 class PaginationModel:
-    is_previous_page: bool
+    has_previous_page: bool
     current_page: int
-    is_next_page: bool
+    has_next_page: bool
