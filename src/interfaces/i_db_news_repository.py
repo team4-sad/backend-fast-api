@@ -1,9 +1,9 @@
 import abc
 
-from src.models.news_model import NewsModel
+from src.models.news_list_response_model import NewsListResponseModel
 
 
 class IDbNewsRepository(abc.ABC):
 
-    def get_searched_news_list(self, search_str: str) -> list[NewsModel]:
+    def search_news_list(self, search_str: str) -> list[NewsListResponseModel]:
         pass
