@@ -19,6 +19,7 @@ async def get_news_list(page: int = 1):
     news_list = loader.news_service.get_news_list(page_numb=page)
     return news_list
 
+
 @router.get(
     "/{news_id}",
     tags=["news"],
