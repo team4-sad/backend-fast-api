@@ -1,6 +1,6 @@
 from typing import Callable
 from bs4 import BeautifulSoup
-
+import re
 from src.enums.required_news_fields import RequiredNewsFields
 from src.exceptions.invalid_news_html import InvalidNewsHTML
 from src.exceptions.invalid_pagination_html import InvalidPaginationHTML
@@ -12,9 +12,9 @@ from src.models.singular_news_model import SingularNewsModel
 
 class NewsParser:
     def __init__(
-        self,
-        base_link_url: str,
-        on_not_found_field: Callable[[str, RequiredNewsFields], None] | None = None
+            self,
+            base_link_url: str,
+            on_not_found_field: Callable[[str, RequiredNewsFields], None] | None = None
     ):
         self.base_link_url = base_link_url
         self.on_not_found_field = on_not_found_field
@@ -32,15 +32,18 @@ class NewsParser:
 
         for tag_news in all_news:
             try:
-                header = tag_news.find("h3", class_="news-item-header").text
+                header = tag_news.find("h3", class_="news-item-header").text.strip()
+                header = normalize_spaces(header)
             except AttributeError:
                 self.on_not_found_field(str(tag_news), RequiredNewsFields.header)
                 continue
 
             raw_description = tag_news.find("div", class_="news-item-text").text
-            description = raw_description.replace(f"\n{header}\n", "")
+            description = raw_description.replace(f"\n{header}\n", "").strip()
             if description == "":
                 description = None
+            else:
+                description = normalize_spaces(description)
 
             try:
                 date = tag_news.find("div", class_="news-item-date").text
@@ -88,7 +91,7 @@ class NewsParser:
         soup = BeautifulSoup(html, "html.parser")
 
         try:
-            header = soup.find("h1").text
+            header = normalize_spaces(soup.find("h1").text.strip())
         except AttributeError:
             raise InvalidSingularNewsHTML(html, RequiredNewsFields.header)
 
@@ -103,3 +106,14 @@ class NewsParser:
             raise InvalidSingularNewsHTML(html, RequiredNewsFields.content)
 
         return SingularNewsModel(header, date, content)
+
+
+def normalize_spaces(text, replace_n: bool = True) -> str:
+    if not isinstance(text, str):
+        raise TypeError("Input must be a string")
+    text = text.replace('\t', ' ')
+    text = text.replace('\r', ' ')
+    if replace_n:
+        text = text.replace('\n', ' ')
+    text = re.sub(r' +', ' ', text)
+    return text

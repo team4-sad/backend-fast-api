@@ -59,6 +59,10 @@ class SQLiteDatabase:
         query = f"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})"
         self.execute_query(query, tuple(data.values()))
 
+    def insert_many(self, table_name: str, data: List[dict]) -> None:
+        for d in data:
+            self.insert(table_name, d)
+
     def update(self, table_name: str, data: dict, condition: str) -> None:
         set_clause = ", ".join([f"{key} = ?" for key in data.keys()])
         query = f"UPDATE {table_name} SET {set_clause} WHERE {condition}"
@@ -76,4 +80,7 @@ class SQLiteDatabase:
         query = f"SELECT {columns} FROM {table_name} WHERE {condition}"
         return self.fetch_all(query)
 
-
+    def dump_to_file(self, file_path: str) -> None:
+        with open(file_path, 'w', encoding="utf-8") as f:
+            for line in self._connection.iterdump():
+                f.write(f"{line}\n")

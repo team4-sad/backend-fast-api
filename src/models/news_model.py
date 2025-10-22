@@ -20,3 +20,14 @@ class NewsModel:
             description=db_obj[5],
             id=str(db_obj[6]),
         )
+
+    def to_db(self) -> dict:
+        return {
+            "header": self.header,
+            "date": self.date_created,
+            "link": self.news_link,
+            "cover_url": self.image_link,
+            "description": self.description,
+            "news_id": self.id,
+            "search_header": self.header.lower(),
+        }
