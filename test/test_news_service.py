@@ -109,7 +109,7 @@ class NewsServiceTest(unittest.TestCase):
             self.corrupted_news_service.get_singular_news(1)
         self.assertEqual(e.exception, CodeException('Failed to process singular news', 424))
 
-    def test_db_news_repository(self):
+    def test_search_news(self):
         self.fill_up("news-5.json")
         result = self.news_service.search_news(search_text="тех", page=1)
         self.assertEqual(
@@ -133,24 +133,22 @@ class NewsServiceTest(unittest.TestCase):
                         description='Заключено стратегическое партнерство с ведущей технологической компанией для развития инноваций.'
                     )
                 ],
-                pagination=
-                    PaginationModel(
-                        has_previous_page=False,
-                        current_page=1,
-                        has_next_page=False
-                    )
+                pagination=PaginationModel(
+                    has_previous_page=False,
+                    current_page=1,
+                    has_next_page=False
+                )
             )
         )
 
-    def test_db_news_repository_empty(self):
+    def test_search_news_empty(self):
         self.fill_up("news-5.json")
         result = self.news_service.search_news(search_text="бобры", page=1)
         self.assertEqual(
             result,
             NewsListResponseModel(
                 news_list=[],
-                pagination=
-                PaginationModel(
+                pagination=PaginationModel(
                     has_previous_page=False,
                     current_page=1,
                     has_next_page=False

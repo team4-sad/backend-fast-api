@@ -1,5 +1,5 @@
 from src.database.sqlite_database import SQLiteDatabase
-from src.database.sqls import SEARCH_NEWS_SQL, GET_COUNT_NEWS_SQL, GET_DATE_NEWS_SQL
+from src.database.sqls import SEARCH_NEWS_SQL, GET_COUNT_NEWS_SQL
 from src.interfaces.i_db_news_repository import IDbNewsRepository
 from src.models.news_list_response_model import NewsListResponseModel
 from src.models.news_model import NewsModel

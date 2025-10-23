@@ -20,11 +20,14 @@ news_repository = NewsRepository(
     base_news_list_url=config.BASE_NEWS_LIST_URL
 )
 
+migration_repository = MigrationNewsRepository(db=database)
+db_news_repository = DbNewsRepository(database=database)
+
 news_parser = NewsParser(base_link_url=config.BASE_LINK_URL)
 
 news_service = NewsService(
     news_parser=news_parser,
     news_repository=news_repository,
-    migration_news_repository=MigrationNewsRepository(db=database),
-    db_news_repository=DbNewsRepository(database)
+    migration_news_repository=migration_repository,
+    db_news_repository=db_news_repository
 )

@@ -1,6 +1,4 @@
 from collections.abc import Callable
-from functools import reduce
-
 from src.exceptions.code_exception import CodeException
 from src.exceptions.invalid_news_html import InvalidNewsHTML
 from src.exceptions.invalid_pagination_html import InvalidPaginationHTML
@@ -100,12 +98,12 @@ class NewsService(INewsService):
             page += 1
 
     def search_news(
-            self,
-            search_text: str,
-            page: int = 1
-    )->NewsListResponseModel:
+        self,
+        search_text: str,
+        page: int = 1
+    ) -> NewsListResponseModel:
         try:
             news_list_response_model = self.db_news_repository.search_news_list(search_str=search_text, page=page)
-        except:
+        except Exception as _:
             raise CodeException(message="something went wrong", error_code=503)
         return news_list_response_model

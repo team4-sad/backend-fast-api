@@ -32,6 +32,7 @@ async def get_singular_news(news_id: int):
     singular_news = loader.news_service.get_singular_news(news_id=news_id)
     return singular_news
 
+
 @router.get(
     "/search",
     tags=["news"],
