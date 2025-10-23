@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import date
 
 from src.common.utils import date2str
 from src.database.sqlite_database import SQLiteDatabase

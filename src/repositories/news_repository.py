@@ -10,7 +10,7 @@ class NewsRepository(INewsRepository):
 
     def get_news_list(self, page: int) -> str:
         if page <= 0:
-            raise ValueError("page is unavailable range (<=0)")
+            raise ValueError("page is in unavailable range (<=0)")
         news_list_page = requests.get(f"{self.base_news_list_url}{page}", verify=False)
         news_list_page.raise_for_status()
         return news_list_page.text
