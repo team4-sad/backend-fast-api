@@ -1,4 +1,7 @@
 import dataclasses
+from datetime import datetime, date
+
+from src.common.utils import str2date, str2datetime
 
 
 @dataclasses.dataclass
@@ -31,3 +34,10 @@ class NewsModel:
             "news_id": self.id,
             "search_header": self.header.lower(),
         }
+
+    @property
+    def date_date_created(self):
+        try:
+            return str2date(self.date_created)
+        except ValueError:
+            return str2datetime(self.date_created).date()

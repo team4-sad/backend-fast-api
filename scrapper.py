@@ -24,7 +24,7 @@ with sqlite_db as db:
     )
     parser = NewsParser(config.BASE_LINK_URL)
 
-    page = 200
+    page = 3
     while True:
         print("PAGE: ", page)
         html = news_repository.get_news_list(page)

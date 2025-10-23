@@ -28,3 +28,16 @@ GET_COUNT_NEWS_SQL = """
     FROM news 
     WHERE search_header LIKE '%' || LOWER(?) || '%'
 """
+
+GET_DATE_NEWS_SQL = """
+    SELECT * 
+    FROM news 
+    WHERE date = ?;
+"""
+
+GET_LAST_NEWS_SQL = """
+    SELECT *
+    FROM news
+    ORDER BY strftime('%Y-%m-%d', substr(date, 7, 4) || '-' || substr(date, 4, 2) || '-' || substr(date, 1, 2)) DESC
+    LIMIT 1;
+"""
