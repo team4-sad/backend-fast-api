@@ -14,5 +14,5 @@ class IMigrationNewsRepository(abc.ABC):
     def get_last_saved_news(self) -> NewsModel | None:
         pass
 
-    def get_date_news(self, search_date: str) -> list[NewsModel]:
+    def get_news_by_date(self, search_date: str) -> list[NewsModel]:
         pass

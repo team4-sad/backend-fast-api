@@ -13,18 +13,18 @@ urllib3.disable_warnings(InsecureRequestWarning)
 
 config = Config()
 
+news_repository = NewsRepository(
+    base_news_list_url=config.BASE_NEWS_LIST_URL,
+    base_singular_news_url=config.BASE_SINGULAR_NEWS
+)
+parser = NewsParser(config.BASE_LINK_URL)
+
 sqlite_db = SQLiteDatabase()
 with sqlite_db as db:
     if not sqlite_db.table_exists("news"):
         sqlite_db.execute_script(CREATE_TABLE_NEWS_SQL)
 
-    news_repository = NewsRepository(
-        base_news_list_url=config.BASE_NEWS_LIST_URL,
-        base_singular_news_url=config.BASE_SINGULAR_NEWS
-    )
-    parser = NewsParser(config.BASE_LINK_URL)
-
-    page = 3
+    page = 1
     while True:
         print("PAGE: ", page)
         html = news_repository.get_news_list(page)
@@ -40,4 +40,6 @@ with sqlite_db as db:
             break
         page += 1
 
-    sqlite_db.dump_to_file(f"dump-{datetime.now().strftime('%Y%m%d%H%M%S')}.sql")
+    sql_file_name = f"dump-news-{datetime.now().strftime('%d%m%Y-%H%M%S')}.sql"
+    print(f"Scrapping finished - {sql_file_name}")
+    sqlite_db.dump_to_file(sql_file_name)

@@ -25,6 +25,6 @@ class MigrationNewsRepository(IMigrationNewsRepository):
             return None
         return NewsModel.from_db(raw_news)
 
-    def get_date_news(self, search_date: date) -> list[NewsModel]:
+    def get_news_by_date(self, search_date: date) -> list[NewsModel]:
         news = self._db.fetch_all(GET_DATE_NEWS_SQL, (date2str(search_date), ))
         return [NewsModel.from_db(i) for i in news]

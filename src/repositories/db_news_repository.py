@@ -1,6 +1,3 @@
-from datetime import datetime, date, timedelta
-
-from src.common.utils import date2str
 from src.database.sqlite_database import SQLiteDatabase
 from src.database.sqls import SEARCH_NEWS_SQL, GET_COUNT_NEWS_SQL, GET_DATE_NEWS_SQL
 from src.interfaces.i_db_news_repository import IDbNewsRepository

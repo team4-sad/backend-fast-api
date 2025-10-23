@@ -67,7 +67,7 @@ class NewsService(INewsService):
         last_db_news = self.migration_news_repository.get_last_saved_news()
         if last_db_news is not None:
             last_saved_date = last_db_news.date_date_created
-            news_with_last_saved_date = self.migration_news_repository.get_date_news(last_saved_date)
+            news_with_last_saved_date = self.migration_news_repository.get_news_by_date(last_saved_date)
         else:
             last_saved_date = None
             news_with_last_saved_date = []
