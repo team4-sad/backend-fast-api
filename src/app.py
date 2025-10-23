@@ -2,12 +2,9 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 from src.exceptions.code_exception import CodeException
-from src.handlers import test
 from src.handlers import news
 
 app = FastAPI()
-
-app.include_router(test.router)
 app.include_router(news.router)
 
 
