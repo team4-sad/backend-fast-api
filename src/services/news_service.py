@@ -24,7 +24,7 @@ class NewsService(INewsService):
     ):
         self.news_parser = news_parser
         self.news_repository = news_repository
-        self.migration_news_repository = migration_news_repository,
+        self.migration_news_repository = migration_news_repository
         self.db_news_repository = db_news_repository
 
     def get_news_list(self, page_numb: int) -> NewsListResponseModel:
