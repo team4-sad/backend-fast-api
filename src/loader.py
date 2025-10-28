@@ -9,21 +9,21 @@ from src.services.news_service import NewsService
 
 config = Config()
 
-database = SQLiteDatabase(config.DATABASE_PATH)
+database = SQLiteDatabase(config.database_path)
 database.connect()
 
 if not database.table_exists("news"):
     database.execute_script(CREATE_TABLE_NEWS_SQL)
 
 news_repository = NewsRepository(
-    base_singular_news_url=config.BASE_SINGULAR_NEWS,
-    base_news_list_url=config.BASE_NEWS_LIST_URL
+    base_singular_news_url=config.base_singular_news,
+    base_news_list_url=config.base_news_list_url
 )
 
 migration_repository = MigrationNewsRepository(db=database)
 db_news_repository = DbNewsRepository(database=database)
 
-news_parser = NewsParser(base_link_url=config.BASE_LINK_URL)
+news_parser = NewsParser(base_link_url=config.base_link_url)
 
 news_service = NewsService(
     news_parser=news_parser,

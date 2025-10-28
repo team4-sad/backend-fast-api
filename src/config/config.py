@@ -6,21 +6,25 @@ class Config:
         self._config = dotenv_values(path_env)
 
     @property
-    def BASE_SINGULAR_NEWS(self):
+    def base_singular_news(self):
         return self._config['BASE_SINGULAR_NEWS']
 
     @property
-    def BASE_NEWS_LIST_URL(self):
+    def base_news_list_url(self):
         return self._config['BASE_NEWS_LIST_URL']
 
     @property
-    def BASE_LINK_URL(self):
+    def base_link_url(self):
         return self._config['BASE_LINK_URL']
 
     @property
-    def PORT(self):
+    def port(self):
         return int(self._config['PORT'])
 
     @property
-    def DATABASE_PATH(self):
+    def database_path(self):
         return self._config['DATABASE_PATH']
+
+    @property
+    def schedule_api_url(self):
+        return self._config['SCHEDULE_API_URL']
