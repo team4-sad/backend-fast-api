@@ -2,15 +2,17 @@ import unittest
 
 from bs4 import BeautifulSoup
 
+from src.config.config import Config
 from src.repositories.news_repository import NewsRepository
 
 
 class NewsRepositoryTest(unittest.TestCase):
 
     def setUp(self):
+        config = Config(path_env="../.env")
         self.news_repository = NewsRepository(
-            base_singular_news_url="https://miigaik.ru/about/news",
-            base_news_list_url="https://miigaik.ru/about/news/?PAGEN_2="
+            base_singular_news_url=config.base_singular_news,
+            base_news_list_url=config.base_news_list_url
         )
 
     def test_get_list_news_html(self):

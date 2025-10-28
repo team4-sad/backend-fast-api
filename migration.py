@@ -16,8 +16,8 @@ config = Config()
 
 db = SQLiteDatabase()
 
-news_parser = NewsParser(config.BASE_LINK_URL)
-news_repository = NewsRepository(config.BASE_NEWS_LIST_URL, config.BASE_SINGULAR_NEWS)
+news_parser = NewsParser(config.base_link_url)
+news_repository = NewsRepository(config.base_news_list_url, config.base_singular_news)
 migration_repository = MigrationNewsRepository(db)
 db_news_repository = DbNewsRepository(database=db)
 news_service = NewsService(news_parser, news_repository, migration_repository, db_news_repository)

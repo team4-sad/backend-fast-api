@@ -14,10 +14,10 @@ urllib3.disable_warnings(InsecureRequestWarning)
 config = Config()
 
 news_repository = NewsRepository(
-    base_news_list_url=config.BASE_NEWS_LIST_URL,
-    base_singular_news_url=config.BASE_SINGULAR_NEWS
+    base_news_list_url=config.base_news_list_url,
+    base_singular_news_url=config.base_singular_news
 )
-parser = NewsParser(config.BASE_LINK_URL)
+parser = NewsParser(config.base_link_url)
 
 sqlite_db = SQLiteDatabase()
 with sqlite_db as db:
