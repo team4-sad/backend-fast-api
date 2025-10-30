@@ -6,6 +6,18 @@ services:
       - "8888:8000"
     volumes:
       - .:/app
+      - ./database.db:/app/database.db
     environment:
       - PYTHONUNBUFFERED=1
     restart: always
+
+  news_migration:
+    build:
+      context: .
+      dockerfile: migration.Dockerfile
+    container_name: migration_miigaik_news
+    environment:
+      - INTERVAL_MINUTES=1
+    volumes:
+      - ./database.db:/app/database.db
+    restart: unless-stopped
