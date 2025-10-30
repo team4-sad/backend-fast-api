@@ -17,7 +17,7 @@ services:
       dockerfile: migration.Dockerfile
     container_name: migration_miigaik_news
     environment:
-      - INTERVAL_MINUTES=1
+      - INTERVAL_MINUTES=10
     volumes:
       - ./database.db:/app/database.db
     restart: unless-stopped
