@@ -1,4 +1,6 @@
 from unittest import TestCase
+
+from src.config.config import Config
 from src.enums.required_news_fields import RequiredNewsFields
 from src.exceptions.invalid_news_html import InvalidNewsHTML
 from src.exceptions.invalid_pagination_html import InvalidPaginationHTML
@@ -28,7 +30,9 @@ class ParserTest(TestCase):
         self.singular_news_invalid_date_html = html_mock("singular_news_invalid_date.html")
         self.singular_news_invalid_content_html = html_mock("singular_news_invalid_content.html")
 
-        self.parser = NewsParser(base_link_url="https://miigaik.ru")
+
+        config = Config(path_env="../.env")
+        self.parser = NewsParser(base_link_url=config.base_link_url)
 
     def test_parse_news_list(self):
         result = self.parser.parse_news_list(self.news_list_html)

@@ -1,6 +1,7 @@
 import os
 import unittest
 
+from src.config.config import Config
 from src.database.sqlite_database import SQLiteDatabase
 from src.database.sqls import CREATE_TABLE_NEWS_SQL
 from src.exceptions.code_exception import CodeException
@@ -20,19 +21,21 @@ from test.utils import html_mock, json_mock
 
 class NewsServiceTest(unittest.TestCase):
     def setUp(self):
+        config = Config(path_env="../.env")
+
         self.database = SQLiteDatabase(TEST_DATABASE_NAME)
         self.database.connect()
         if not self.database.table_exists("news"):
             self.database.execute_script(CREATE_TABLE_NEWS_SQL)
         self.db_news_repository = DbNewsRepository(database=self.database)
         self.news_service = NewsService(
-            news_parser=NewsParser(base_link_url="https://miigaik.ru"),
+            news_parser=NewsParser(base_link_url=config.base_link_url),
             news_repository=MockNewsRepository(),
             db_news_repository=self.db_news_repository,
             migration_news_repository=MigrationNewsRepository(db=SQLiteDatabase())
         )
         self.corrupted_news_service = NewsService(
-            news_parser=NewsParser(base_link_url="https://miigaik.ru"),
+            news_parser=NewsParser(config.base_link_url),
             news_repository=MockCorruptedNewsRepository(),
             db_news_repository=self.db_news_repository,
             migration_news_repository=MigrationNewsRepository(db=SQLiteDatabase())

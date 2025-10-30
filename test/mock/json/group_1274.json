@@ -1,0 +1,445 @@
+{
+  "groupName": "2023-ФГиИБ-ПИ-1б",
+  "schedule": {
+    "вторник": [
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 2,
+        "lessonDate": "2025-10-14T00:00:00Z",
+        "lessonOrderNumber": 1,
+        "lessonStartTime": "09:00:00",
+        "lessonEndTime": "10:30:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 390,
+        "classroomName": "Военный учебный центр",
+        "classroomFloor": 1,
+        "classroomType": "Специализированная лаборатория",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Военная подготовка",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Виктор",
+            "lastName": "Назаров",
+            "patronymic": "Георгиевич"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 2,
+        "lessonDate": "2025-10-14T00:00:00Z",
+        "lessonOrderNumber": 2,
+        "lessonStartTime": "10:40:00",
+        "lessonEndTime": "12:10:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 390,
+        "classroomName": "Военный учебный центр",
+        "classroomFloor": 1,
+        "classroomType": "Специализированная лаборатория",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Военная подготовка",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Виктор",
+            "lastName": "Назаров",
+            "patronymic": "Георгиевич"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 2,
+        "lessonDate": "2025-10-14T00:00:00Z",
+        "lessonOrderNumber": 3,
+        "lessonStartTime": "12:50:00",
+        "lessonEndTime": "14:20:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 390,
+        "classroomName": "Военный учебный центр",
+        "classroomFloor": 1,
+        "classroomType": "Специализированная лаборатория",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Военная подготовка",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Виктор",
+            "lastName": "Назаров",
+            "patronymic": "Георгиевич"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 2,
+        "lessonDate": "2025-10-14T00:00:00Z",
+        "lessonOrderNumber": 4,
+        "lessonStartTime": "14:30:00",
+        "lessonEndTime": "16:00:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 390,
+        "classroomName": "Военный учебный центр",
+        "classroomFloor": 1,
+        "classroomType": "Специализированная лаборатория",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Военная подготовка",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Виктор",
+            "lastName": "Назаров",
+            "patronymic": "Георгиевич"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 2,
+        "lessonDate": "2025-10-14T00:00:00Z",
+        "lessonOrderNumber": 5,
+        "lessonStartTime": "16:10:00",
+        "lessonEndTime": "17:40:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 390,
+        "classroomName": "Военный учебный центр",
+        "classroomFloor": 1,
+        "classroomType": "Специализированная лаборатория",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Военная подготовка",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Виктор",
+            "lastName": "Назаров",
+            "patronymic": "Георгиевич"
+          }
+        ]
+      }
+    ],
+    "пятница": [
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 5,
+        "lessonDate": "2025-10-17T00:00:00Z",
+        "lessonOrderNumber": 3,
+        "lessonStartTime": "12:50:00",
+        "lessonEndTime": "14:20:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 410,
+        "classroomName": "303 к.2",
+        "classroomFloor": 3,
+        "classroomType": "Компьютерный класс",
+        "classroomBuilding": "2-ой корпус",
+        "disciplineName": "Экономическое обоснование проектов",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Олеся",
+            "lastName": "Чужина",
+            "patronymic": "Михайловна"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 5,
+        "lessonDate": "2025-10-17T00:00:00Z",
+        "lessonOrderNumber": 4,
+        "lessonStartTime": "14:30:00",
+        "lessonEndTime": "16:00:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 412,
+        "classroomName": "508 к.2",
+        "classroomFloor": 5,
+        "classroomType": "Компьютерный класс",
+        "classroomBuilding": "2-ой корпус",
+        "disciplineName": "Веб-технологии",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Аброр",
+            "lastName": "Махкамбоев",
+            "patronymic": "Ихтиёр угли"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 5,
+        "lessonDate": "2025-10-17T00:00:00Z",
+        "lessonOrderNumber": 5,
+        "lessonStartTime": "16:10:00",
+        "lessonEndTime": "17:40:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 412,
+        "classroomName": "508 к.2",
+        "classroomFloor": 5,
+        "classroomType": "Компьютерный класс",
+        "classroomBuilding": "2-ой корпус",
+        "disciplineName": "Учебная (проектно-технологическая) практика",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Роман",
+            "lastName": "Злоников",
+            "patronymic": "Русланович"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 5,
+        "lessonDate": "2025-10-17T00:00:00Z",
+        "lessonOrderNumber": 6,
+        "lessonStartTime": "17:50:00",
+        "lessonEndTime": "19:20:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 336,
+        "classroomName": "450",
+        "classroomFloor": 4,
+        "classroomType": "Компьютерный класс",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Информационные технологии",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Дмитрий",
+            "lastName": "Кондрашин",
+            "patronymic": "Михайлович"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 5,
+        "lessonDate": "2025-10-17T00:00:00Z",
+        "lessonOrderNumber": 7,
+        "lessonStartTime": "19:30:00",
+        "lessonEndTime": "21:00:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 346,
+        "classroomName": "3 к.3",
+        "classroomFloor": 1,
+        "classroomType": "Компьютерный класс",
+        "classroomBuilding": "3-ий корпус",
+        "disciplineName": "Проектирование сетей и систем передачи информации",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Игорь",
+            "lastName": "Кондауров",
+            "patronymic": "Николаевич"
+          }
+        ]
+      }
+    ],
+    "среда": [
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 3,
+        "lessonDate": "2025-10-15T00:00:00Z",
+        "lessonOrderNumber": 2,
+        "lessonStartTime": "10:40:00",
+        "lessonEndTime": "12:10:00",
+        "lessonType": "Лекционные занятия",
+        "classroomId": 405,
+        "classroomName": "503",
+        "classroomFloor": 5,
+        "classroomType": "Смешанный тип",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Теория и алгоритмы распознавания образов",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Людмила",
+            "lastName": "Чабан",
+            "patronymic": "Николаевна"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 3,
+        "lessonDate": "2025-10-15T00:00:00Z",
+        "lessonOrderNumber": 3,
+        "lessonStartTime": "12:50:00",
+        "lessonEndTime": "14:20:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 372,
+        "classroomName": "170",
+        "classroomFloor": 1,
+        "classroomType": "Компьютерный класс",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Теория и алгоритмы распознавания образов",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Людмила",
+            "lastName": "Чабан",
+            "patronymic": "Николаевна"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 3,
+        "lessonDate": "2025-10-15T00:00:00Z",
+        "lessonOrderNumber": 4,
+        "lessonStartTime": "14:30:00",
+        "lessonEndTime": "16:00:00",
+        "lessonType": "Лекционные занятия",
+        "classroomId": 330,
+        "classroomName": "94",
+        "classroomFloor": 2,
+        "classroomType": "Специализированная лаборатория",
+        "classroomBuilding": "Старый корпус",
+        "disciplineName": "Экономическое обоснование проектов",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Олеся",
+            "lastName": "Чужина",
+            "patronymic": "Михайловна"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 3,
+        "lessonDate": "2025-10-15T00:00:00Z",
+        "lessonOrderNumber": 5,
+        "lessonStartTime": "16:10:00",
+        "lessonEndTime": "17:40:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 414,
+        "classroomName": "510 к.2",
+        "classroomFloor": 5,
+        "classroomType": "Компьютерный класс",
+        "classroomBuilding": "2-ой корпус",
+        "disciplineName": "Веб-технологии",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Аброр",
+            "lastName": "Махкамбоев",
+            "patronymic": "Ихтиёр угли"
+          }
+        ]
+      }
+    ],
+    "четверг": [
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 4,
+        "lessonDate": "2025-10-16T00:00:00Z",
+        "lessonOrderNumber": 3,
+        "lessonStartTime": "12:50:00",
+        "lessonEndTime": "14:20:00",
+        "lessonType": "Лекционные занятия",
+        "classroomId": 360,
+        "classroomName": "60",
+        "classroomFloor": 3,
+        "classroomType": "Смешанный тип",
+        "classroomBuilding": "Старый корпус",
+        "disciplineName": "Основы права",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Филипп",
+            "lastName": "Михайлов",
+            "patronymic": "Николаевич"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 4,
+        "lessonDate": "2025-10-16T00:00:00Z",
+        "lessonOrderNumber": 4,
+        "lessonStartTime": "14:30:00",
+        "lessonEndTime": "16:00:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 433,
+        "classroomName": "364",
+        "classroomFloor": 3,
+        "classroomType": "Спортивное",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Элективные курсы по физической культуре и спорту",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Марина",
+            "lastName": "Черенкова",
+            "patronymic": "Викторовна"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 4,
+        "lessonDate": "2025-10-16T00:00:00Z",
+        "lessonOrderNumber": 5,
+        "lessonStartTime": "16:10:00",
+        "lessonEndTime": "17:40:00",
+        "lessonType": "Лекционные занятия",
+        "classroomId": 437,
+        "classroomName": "53",
+        "classroomFloor": 3,
+        "classroomType": "Лекционная аудитория",
+        "classroomBuilding": "Старый корпус",
+        "disciplineName": "Проектирование сетей и систем передачи информации",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Игорь",
+            "lastName": "Кондауров",
+            "patronymic": "Николаевич"
+          }
+        ]
+      },
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 4,
+        "lessonDate": "2025-10-16T00:00:00Z",
+        "lessonOrderNumber": 6,
+        "lessonStartTime": "17:50:00",
+        "lessonEndTime": "19:20:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 360,
+        "classroomName": "60",
+        "classroomFloor": 3,
+        "classroomType": "Смешанный тип",
+        "classroomBuilding": "Старый корпус",
+        "disciplineName": "Основы права",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Филипп",
+            "lastName": "Михайлов",
+            "patronymic": "Николаевич"
+          }
+        ]
+      }
+    ]
+  }
+}
