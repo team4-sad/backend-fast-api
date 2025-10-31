@@ -9,8 +9,8 @@ from src.models.news_model import NewsModel
 
 class MigrationNewsRepository(IMigrationNewsRepository):
 
-    def __init__(self, db: SQLiteDatabase):
-        self._db = db
+    def __init__(self, database: SQLiteDatabase):
+        self._db = database
 
     def save_single_news(self, single_news: NewsModel):
         self._db.insert("news", single_news.to_db())

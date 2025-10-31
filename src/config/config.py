@@ -26,5 +26,5 @@ class Config:
         return self._config['DATABASE_PATH']
 
     @property
-    def schedule_api_url(self):
-        return self._config['SCHEDULE_API_URL']
+    def base_schedule_api_url(self):
+        return self._config['BASE_SCHEDULE_API_URL']

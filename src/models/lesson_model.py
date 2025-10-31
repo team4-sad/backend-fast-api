@@ -1,16 +1,14 @@
 import dataclasses
 
+from src.models.origin_lesson_model import OriginLessonModel
 from src.models.teacher_model import TeacherModel
 
 
 @dataclasses.dataclass
 class LessonModel:
-    day_of_week: int
     lesson_order_number: int
     classroom_id: int
     classroom_floor: int
-    group_name: str
-    lesson_date: str
     lesson_start_time: str
     lesson_end_time: str
     lesson_type: str
@@ -20,25 +18,20 @@ class LessonModel:
     discipline_name: str
     teachers: list[TeacherModel]
     subgroup: str = ""
-    link: str = ""
 
     @staticmethod
-    def from_json(json_obj: dict):
+    def from_origin(origin: OriginLessonModel):
         return LessonModel(
-            day_of_week=json_obj["dayOfWeek"],
-            lesson_order_number=json_obj["lessonOrderNumber"],
-            classroom_id=json_obj["classroomId"],
-            classroom_floor=json_obj["classroomFloor"],
-            group_name=json_obj["groupName"],
-            lesson_date=json_obj["lessonDate"],
-            lesson_start_time=json_obj["lessonStartTime"],
-            lesson_end_time=json_obj["lessonEndTime"],
-            lesson_type=json_obj["lessonType"],
-            classroom_name=json_obj["classroomName"],
-            classroom_type=json_obj["classroomType"],
-            classroom_building=json_obj["classroomBuilding"],
-            discipline_name=json_obj["disciplineName"],
-            teachers=[TeacherModel.from_json(i) for i in json_obj['teachers']],
-            subgroup=json_obj["subgroup"],
-            link=json_obj["link"],
+            lesson_order_number=origin.lesson_order_number,
+            classroom_id=origin.classroom_id,
+            classroom_floor=origin.classroom_floor,
+            lesson_start_time=origin.lesson_start_time,
+            lesson_end_time=origin.lesson_end_time,
+            lesson_type=origin.lesson_type,
+            classroom_name=origin.classroom_name,
+            classroom_type=origin.classroom_type,
+            classroom_building=origin.classroom_building,
+            discipline_name=origin.discipline_name,
+            teachers=origin.teachers,
+            subgroup=origin.subgroup
         )

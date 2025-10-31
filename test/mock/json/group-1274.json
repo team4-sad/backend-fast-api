@@ -1,0 +1,57 @@
+{
+  "groupName": "2023-ФГиИБ-ПИ-1б",
+  "schedule": {
+    "вторник": [
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 2,
+        "lessonDate": "2025-10-14T00:00:00Z",
+        "lessonOrderNumber": 1,
+        "lessonStartTime": "09:00:00",
+        "lessonEndTime": "10:30:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 390,
+        "classroomName": "Военный учебный центр",
+        "classroomFloor": 1,
+        "classroomType": "Специализированная лаборатория",
+        "classroomBuilding": "Главный корпус",
+        "disciplineName": "Военная подготовка",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Виктор",
+            "lastName": "Назаров",
+            "patronymic": "Георгиевич"
+          }
+        ]
+      }
+    ],
+    "пятница": [
+      {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "subgroup": "",
+        "dayOfWeek": 5,
+        "lessonDate": "2025-10-17T00:00:00Z",
+        "lessonOrderNumber": 3,
+        "lessonStartTime": "12:50:00",
+        "lessonEndTime": "14:20:00",
+        "lessonType": "Практические занятия",
+        "classroomId": 410,
+        "classroomName": "303 к.2",
+        "classroomFloor": 3,
+        "classroomType": "Компьютерный класс",
+        "classroomBuilding": "2-ой корпус",
+        "disciplineName": "Экономическое обоснование проектов",
+        "link": "",
+        "teachers": [
+          {
+            "firstName": "Олеся",
+            "lastName": "Чужина",
+            "patronymic": "Михайловна"
+          }
+        ]
+      }
+    ]
+  }
+}

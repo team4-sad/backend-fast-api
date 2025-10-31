@@ -32,13 +32,13 @@ class NewsServiceTest(unittest.TestCase):
             news_parser=NewsParser(base_link_url=config.base_link_url),
             news_repository=MockNewsRepository(),
             db_news_repository=self.db_news_repository,
-            migration_news_repository=MigrationNewsRepository(db=SQLiteDatabase())
+            migration_news_repository=MigrationNewsRepository(database=SQLiteDatabase())
         )
         self.corrupted_news_service = NewsService(
             news_parser=NewsParser(config.base_link_url),
             news_repository=MockCorruptedNewsRepository(),
             db_news_repository=self.db_news_repository,
-            migration_news_repository=MigrationNewsRepository(db=SQLiteDatabase())
+            migration_news_repository=MigrationNewsRepository(database=SQLiteDatabase())
         )
 
     def fill_up(self, name: str) -> None:
