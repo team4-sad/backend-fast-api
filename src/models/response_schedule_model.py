@@ -1,16 +1,17 @@
 import dataclasses
 
-from src.models.schedule_model import ScheduleModel
+from src.models.day_model import DayModel
+from src.models.origin_response_schedule_model import OriginResponseScheduleModel
 
 
 @dataclasses.dataclass
 class ResponseScheduleModel:
     group_name: str
-    schedule: ScheduleModel = None
+    schedule: list[DayModel]
 
     @staticmethod
-    def from_json(json_obj: dict):
+    def from_origin(origin: OriginResponseScheduleModel):
         return ResponseScheduleModel(
-            group_name= json_obj['groupName'],
-            schedule = ScheduleModel.from_json(json_obj['schedule'])
+            group_name=origin.group_name,
+            schedule=DayModel.from_origin(origin=origin.schedule)
         )
