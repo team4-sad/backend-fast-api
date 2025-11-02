@@ -1,0 +1,1902 @@
+[
+    {
+        "groupName": "2019-ГФ-ПГ-1с(до)",
+        "id": 980,
+        "currentWeekScheduleLink": "group/980/44"
+    },
+    {
+        "groupName": "2019-ЗФ-ПГ-1с(дзо)",
+        "id": 1094,
+        "currentWeekScheduleLink": "group/1094/44"
+    },
+    {
+        "groupName": "2019-ЗФ-ПГ-1с(зо)",
+        "id": 1090,
+        "currentWeekScheduleLink": "group/1090/44"
+    },
+    {
+        "groupName": "2019-ФОП-ЭиОЭПиССН-1с",
+        "id": 760,
+        "currentWeekScheduleLink": "group/760/44"
+    },
+    {
+        "groupName": "2019-ФОП-ЭиОЭПиССН-2с",
+        "id": 1174,
+        "currentWeekScheduleLink": "group/1174/44"
+    },
+    {
+        "groupName": "2020-ГФ-ГиДЗг-1б(до)",
+        "id": 976,
+        "currentWeekScheduleLink": "group/976/44"
+    },
+    {
+        "groupName": "2020-ГФ-ПГ-1с",
+        "id": 689,
+        "currentWeekScheduleLink": "group/689/44"
+    },
+    {
+        "groupName": "2020-ГФ-ПГ-1с(до)",
+        "id": 979,
+        "currentWeekScheduleLink": "group/979/44"
+    },
+    {
+        "groupName": "2020-ГФ-ПГ-2с",
+        "id": 690,
+        "currentWeekScheduleLink": "group/690/44"
+    },
+    {
+        "groupName": "2020-ГФ-ПГ-3с",
+        "id": 691,
+        "currentWeekScheduleLink": "group/691/44"
+    },
+    {
+        "groupName": "2020-ГФ-ПГ-4с",
+        "id": 911,
+        "currentWeekScheduleLink": "group/911/44"
+    },
+    {
+        "groupName": "2020-ЗФ-ГиДЗг-1б(дзо)",
+        "id": 927,
+        "currentWeekScheduleLink": "group/927/44"
+    },
+    {
+        "groupName": "2020-ЗФ-ГиДЗг-1б(зо)",
+        "id": 926,
+        "currentWeekScheduleLink": "group/926/44"
+    },
+    {
+        "groupName": "2020-ЗФ-ЗиК-1б(дзо)",
+        "id": 1086,
+        "currentWeekScheduleLink": "group/1086/44"
+    },
+    {
+        "groupName": "2020-ЗФ-ЗиК-1б(зо)",
+        "id": 1084,
+        "currentWeekScheduleLink": "group/1084/44"
+    },
+    {
+        "groupName": "2020-ЗФ-ПГ-1с(дзо)",
+        "id": 1088,
+        "currentWeekScheduleLink": "group/1088/44"
+    },
+    {
+        "groupName": "2020-ЗФ-ПГ-1с(зо)",
+        "id": 1085,
+        "currentWeekScheduleLink": "group/1085/44"
+    },
+    {
+        "groupName": "2020-ФАиГ-АРХ-1б",
+        "id": 713,
+        "currentWeekScheduleLink": "group/713/44"
+    },
+    {
+        "groupName": "2020-ФАиГ-АРХ-2б",
+        "id": 1049,
+        "currentWeekScheduleLink": "group/1049/44"
+    },
+    {
+        "groupName": "2020-ФОП-ЭиОЭПиССН-1с",
+        "id": 1157,
+        "currentWeekScheduleLink": "group/1157/44"
+    },
+    {
+        "groupName": "2020-ФОП-ЭиОЭПиССН-2с",
+        "id": 951,
+        "currentWeekScheduleLink": "group/951/44"
+    },
+    {
+        "groupName": "2020-ФУТ-ЗиК-1б(до)",
+        "id": 973,
+        "currentWeekScheduleLink": "group/973/44"
+    },
+    {
+        "groupName": "2021-ГФ-ГиДЗакс-1б",
+        "id": 832,
+        "currentWeekScheduleLink": "group/832/44"
+    },
+    {
+        "groupName": "2021-ГФ-ГиДЗг-1б",
+        "id": 679,
+        "currentWeekScheduleLink": "group/679/44"
+    },
+    {
+        "groupName": "2021-ГФ-ГиДЗг-1б(вв)",
+        "id": 1175,
+        "currentWeekScheduleLink": "group/1175/44"
+    },
+    {
+        "groupName": "2021-ГФ-ГиДЗг-1б(до)",
+        "id": 975,
+        "currentWeekScheduleLink": "group/975/44"
+    },
+    {
+        "groupName": "2021-ГФ-ГиДЗипр-1б",
+        "id": 989,
+        "currentWeekScheduleLink": "group/989/44"
+    },
+    {
+        "groupName": "2021-ГФ-ГиДЗкгин-1б",
+        "id": 1060,
+        "currentWeekScheduleLink": "group/1060/44"
+    },
+    {
+        "groupName": "2021-ГФ-ПГ-1с",
+        "id": 681,
+        "currentWeekScheduleLink": "group/681/44"
+    },
+    {
+        "groupName": "2021-ГФ-ПГ-1с(до)",
+        "id": 978,
+        "currentWeekScheduleLink": "group/978/44"
+    },
+    {
+        "groupName": "2021-ГФ-ПГ-2с",
+        "id": 682,
+        "currentWeekScheduleLink": "group/682/44"
+    },
+    {
+        "groupName": "2021-ГФ-ПГ-3с",
+        "id": 683,
+        "currentWeekScheduleLink": "group/683/44"
+    },
+    {
+        "groupName": "2021-ГФ-ПГигонгк-1с",
+        "id": 1343,
+        "currentWeekScheduleLink": "group/1343/44"
+    },
+    {
+        "groupName": "2021-ЗФ-ГиДЗг-1б(дзо)",
+        "id": 924,
+        "currentWeekScheduleLink": "group/924/44"
+    },
+    {
+        "groupName": "2021-ЗФ-ГиДЗг-1б(зо)",
+        "id": 923,
+        "currentWeekScheduleLink": "group/923/44"
+    },
+    {
+        "groupName": "2021-ЗФ-ЗиК-1б(дзо)",
+        "id": 1081,
+        "currentWeekScheduleLink": "group/1081/44"
+    },
+    {
+        "groupName": "2021-ЗФ-ЗиК-1б(зо)",
+        "id": 1079,
+        "currentWeekScheduleLink": "group/1079/44"
+    },
+    {
+        "groupName": "2021-ЗФ-ПГ-1с(дзо)",
+        "id": 1083,
+        "currentWeekScheduleLink": "group/1083/44"
+    },
+    {
+        "groupName": "2021-ЗФ-ПГиг-1с(зо)",
+        "id": 1341,
+        "currentWeekScheduleLink": "group/1341/44"
+    },
+    {
+        "groupName": "2021-ЗФ-ПГигос-1с(зо)",
+        "id": 1342,
+        "currentWeekScheduleLink": "group/1342/44"
+    },
+    {
+        "groupName": "2021-КФ-КиГ-1б",
+        "id": 732,
+        "currentWeekScheduleLink": "group/732/44"
+    },
+    {
+        "groupName": "2021-КФ-КиГ-2б",
+        "id": 734,
+        "currentWeekScheduleLink": "group/734/44"
+    },
+    {
+        "groupName": "2021-КФ-КиГ-3б",
+        "id": 735,
+        "currentWeekScheduleLink": "group/735/44"
+    },
+    {
+        "groupName": "2021-ФАиГ-АРХ-1б",
+        "id": 711,
+        "currentWeekScheduleLink": "group/711/44"
+    },
+    {
+        "groupName": "2021-ФАиГ-ГРАД-1б",
+        "id": 962,
+        "currentWeekScheduleLink": "group/962/44"
+    },
+    {
+        "groupName": "2021-ФГиИБ-ИБ-1б",
+        "id": 749,
+        "currentWeekScheduleLink": "group/749/44"
+    },
+    {
+        "groupName": "2021-ФГиИБ-ИБ-2б",
+        "id": 1115,
+        "currentWeekScheduleLink": "group/1115/44"
+    },
+    {
+        "groupName": "2021-ФГиИБ-ИСиТ-1б",
+        "id": 770,
+        "currentWeekScheduleLink": "group/770/44"
+    },
+    {
+        "groupName": "2021-ФГиИБ-ИСиТ-2б",
+        "id": 876,
+        "currentWeekScheduleLink": "group/876/44"
+    },
+    {
+        "groupName": "2021-ФГиИБ-ПИ-1б",
+        "id": 686,
+        "currentWeekScheduleLink": "group/686/44"
+    },
+    {
+        "groupName": "2021-ФГиИБ-ПИ-2б",
+        "id": 1135,
+        "currentWeekScheduleLink": "group/1135/44"
+    },
+    {
+        "groupName": "2021-ФОП-ЛТиЛТ-1б",
+        "id": 751,
+        "currentWeekScheduleLink": "group/751/44"
+    },
+    {
+        "groupName": "2021-ФОП-ОПТ-1б",
+        "id": 752,
+        "currentWeekScheduleLink": "group/752/44"
+    },
+    {
+        "groupName": "2021-ФОП-ОЭПиС-2асп",
+        "id": 888,
+        "currentWeekScheduleLink": "group/888/44"
+    },
+    {
+        "groupName": "2021-ФОП-ЭиОЭПиССН-1с",
+        "id": 754,
+        "currentWeekScheduleLink": "group/754/44"
+    },
+    {
+        "groupName": "2021-ФУТ-ЗиК-1б(до)",
+        "id": 972,
+        "currentWeekScheduleLink": "group/972/44"
+    },
+    {
+        "groupName": "2021-ФУТ-ЗиК(ЗиО)-1б",
+        "id": 822,
+        "currentWeekScheduleLink": "group/822/44"
+    },
+    {
+        "groupName": "2021-ФУТ-ЗиК(КН)-1б",
+        "id": 786,
+        "currentWeekScheduleLink": "group/786/44"
+    },
+    {
+        "groupName": "2021-ФУТ-ЗиК(КН)-1б(вв)",
+        "id": 1176,
+        "currentWeekScheduleLink": "group/1176/44"
+    },
+    {
+        "groupName": "2021-ФУТ-ЗиК(КН)-2б(вв)",
+        "id": 1177,
+        "currentWeekScheduleLink": "group/1177/44"
+    },
+    {
+        "groupName": "2021-ФУТ-ЗиК(Упр)-1б",
+        "id": 789,
+        "currentWeekScheduleLink": "group/789/44"
+    },
+    {
+        "groupName": "2021-ФУТ-САУ-1б",
+        "id": 970,
+        "currentWeekScheduleLink": "group/970/44"
+    },
+    {
+        "groupName": "2021-ФУТ-ЮС-1б",
+        "id": 969,
+        "currentWeekScheduleLink": "group/969/44"
+    },
+    {
+        "groupName": "2021-ФУТ-ЮС-1б(вв)",
+        "id": 1178,
+        "currentWeekScheduleLink": "group/1178/44"
+    },
+    {
+        "groupName": "2022-ГФ-АКС-1асп",
+        "id": 891,
+        "currentWeekScheduleLink": "group/891/44"
+    },
+    {
+        "groupName": "2022-ГФ-ГиДЗакс-1б",
+        "id": 1153,
+        "currentWeekScheduleLink": "group/1153/44"
+    },
+    {
+        "groupName": "2022-ГФ-ГиДЗг-1б",
+        "id": 1061,
+        "currentWeekScheduleLink": "group/1061/44"
+    },
+    {
+        "groupName": "2022-ГФ-ГиДЗипр-1б",
+        "id": 1071,
+        "currentWeekScheduleLink": "group/1071/44"
+    },
+    {
+        "groupName": "2022-ГФ-ГиДЗкгин-1б",
+        "id": 846,
+        "currentWeekScheduleLink": "group/846/44"
+    },
+    {
+        "groupName": "2022-ГФ-ПГ-1с",
+        "id": 847,
+        "currentWeekScheduleLink": "group/847/44"
+    },
+    {
+        "groupName": "2022-ГФ-ПГ-2с",
+        "id": 848,
+        "currentWeekScheduleLink": "group/848/44"
+    },
+    {
+        "groupName": "2022-ГФ-ПГ-3с",
+        "id": 849,
+        "currentWeekScheduleLink": "group/849/44"
+    },
+    {
+        "groupName": "2022-ГФ-ПГ-4с",
+        "id": 1055,
+        "currentWeekScheduleLink": "group/1055/44"
+    },
+    {
+        "groupName": "2022-ГФ-ПГ-5с",
+        "id": 910,
+        "currentWeekScheduleLink": "group/910/44"
+    },
+    {
+        "groupName": "2022-ГФ-ПГигонгк-1с",
+        "id": 1458,
+        "currentWeekScheduleLink": "group/1458/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ГиДЗг-1б(дзо-у)",
+        "id": 936,
+        "currentWeekScheduleLink": "group/936/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ГиДЗг-1б(дзо)",
+        "id": 921,
+        "currentWeekScheduleLink": "group/921/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ГиДЗг-1б(зо)",
+        "id": 920,
+        "currentWeekScheduleLink": "group/920/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ЗиК-1б(дзо)",
+        "id": 1076,
+        "currentWeekScheduleLink": "group/1076/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ЗиК-1б(зо)",
+        "id": 1074,
+        "currentWeekScheduleLink": "group/1074/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ЗиК-1м(зо)",
+        "id": 1028,
+        "currentWeekScheduleLink": "group/1028/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ПГ-1с(дзо-у)",
+        "id": 938,
+        "currentWeekScheduleLink": "group/938/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ПГ-1с(дзо)",
+        "id": 1078,
+        "currentWeekScheduleLink": "group/1078/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ПГ-1с(зо)",
+        "id": 1075,
+        "currentWeekScheduleLink": "group/1075/44"
+    },
+    {
+        "groupName": "2022-ЗФ-ПГигонгк-1с(зо)",
+        "id": 1020,
+        "currentWeekScheduleLink": "group/1020/44"
+    },
+    {
+        "groupName": "2022-КФ-КиГ-1б",
+        "id": 852,
+        "currentWeekScheduleLink": "group/852/44"
+    },
+    {
+        "groupName": "2022-КФ-КиГ-2б",
+        "id": 854,
+        "currentWeekScheduleLink": "group/854/44"
+    },
+    {
+        "groupName": "2022-КФ-КиГ-3б",
+        "id": 855,
+        "currentWeekScheduleLink": "group/855/44"
+    },
+    {
+        "groupName": "2022-КФ-КиГ-4б",
+        "id": 842,
+        "currentWeekScheduleLink": "group/842/44"
+    },
+    {
+        "groupName": "2022-ФАиГ-АРХ-1б",
+        "id": 857,
+        "currentWeekScheduleLink": "group/857/44"
+    },
+    {
+        "groupName": "2022-ФАиГ-ГРАД-1б",
+        "id": 1015,
+        "currentWeekScheduleLink": "group/1015/44"
+    },
+    {
+        "groupName": "2022-ФГиИБ-ИБ-1б",
+        "id": 860,
+        "currentWeekScheduleLink": "group/860/44"
+    },
+    {
+        "groupName": "2022-ФГиИБ-ИБ-1б(вв)",
+        "id": 1180,
+        "currentWeekScheduleLink": "group/1180/44"
+    },
+    {
+        "groupName": "2022-ФГиИБ-ИБ-2б",
+        "id": 1046,
+        "currentWeekScheduleLink": "group/1046/44"
+    },
+    {
+        "groupName": "2022-ФГиИБ-ИСиТ-1б",
+        "id": 870,
+        "currentWeekScheduleLink": "group/870/44"
+    },
+    {
+        "groupName": "2022-ФГиИБ-ИСиТ-2б",
+        "id": 1117,
+        "currentWeekScheduleLink": "group/1117/44"
+    },
+    {
+        "groupName": "2022-ФГиИБ-ИСиТ-3б",
+        "id": 1016,
+        "currentWeekScheduleLink": "group/1016/44"
+    },
+    {
+        "groupName": "2022-ФГиИБ-ПИ-1б",
+        "id": 850,
+        "currentWeekScheduleLink": "group/850/44"
+    },
+    {
+        "groupName": "2022-ФОП-ЛТиЛТ-1б",
+        "id": 861,
+        "currentWeekScheduleLink": "group/861/44"
+    },
+    {
+        "groupName": "2022-ФОП-ОПТ-1б",
+        "id": 862,
+        "currentWeekScheduleLink": "group/862/44"
+    },
+    {
+        "groupName": "2022-ФОП-ОЭПиС-1асп",
+        "id": 887,
+        "currentWeekScheduleLink": "group/887/44"
+    },
+    {
+        "groupName": "2022-ФОП-ЭиОЭПиССН-1с",
+        "id": 863,
+        "currentWeekScheduleLink": "group/863/44"
+    },
+    {
+        "groupName": "2022-ФУТ-ЗиК-1асп",
+        "id": 901,
+        "currentWeekScheduleLink": "group/901/44"
+    },
+    {
+        "groupName": "2022-ФУТ-ЗиК(ЗиО)-1б",
+        "id": 820,
+        "currentWeekScheduleLink": "group/820/44"
+    },
+    {
+        "groupName": "2022-ФУТ-ЗиК(КН)-1б",
+        "id": 865,
+        "currentWeekScheduleLink": "group/865/44"
+    },
+    {
+        "groupName": "2022-ФУТ-ЗиК(КН)-1б(ВВ)",
+        "id": 964,
+        "currentWeekScheduleLink": "group/964/44"
+    },
+    {
+        "groupName": "2022-ФУТ-ЗиК(КН)-2б(ВВ)",
+        "id": 965,
+        "currentWeekScheduleLink": "group/965/44"
+    },
+    {
+        "groupName": "2022-ФУТ-ЗиК(Упр)-1б",
+        "id": 866,
+        "currentWeekScheduleLink": "group/866/44"
+    },
+    {
+        "groupName": "2022-ФУТ-САУ-1б",
+        "id": 1024,
+        "currentWeekScheduleLink": "group/1024/44"
+    },
+    {
+        "groupName": "2022-ФУТ-УпрК-1б",
+        "id": 1023,
+        "currentWeekScheduleLink": "group/1023/44"
+    },
+    {
+        "groupName": "2023-ГФ-АКС-1асп",
+        "id": 1221,
+        "currentWeekScheduleLink": "group/1221/44"
+    },
+    {
+        "groupName": "2023-ГФ-Г-1асп",
+        "id": 1219,
+        "currentWeekScheduleLink": "group/1219/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГДЗ-1см",
+        "id": 1183,
+        "currentWeekScheduleLink": "group/1183/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГДЗ-2см",
+        "id": 1184,
+        "currentWeekScheduleLink": "group/1184/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГДЗ-3см",
+        "id": 1185,
+        "currentWeekScheduleLink": "group/1185/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГДЗ-4см",
+        "id": 1186,
+        "currentWeekScheduleLink": "group/1186/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГиДЗакс-1б",
+        "id": 1188,
+        "currentWeekScheduleLink": "group/1188/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГиДЗакс-1м",
+        "id": 1190,
+        "currentWeekScheduleLink": "group/1190/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГиДЗг-1б",
+        "id": 1192,
+        "currentWeekScheduleLink": "group/1192/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГиДЗг-1м",
+        "id": 1194,
+        "currentWeekScheduleLink": "group/1194/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГиДЗипр-1б",
+        "id": 1197,
+        "currentWeekScheduleLink": "group/1197/44"
+    },
+    {
+        "groupName": "2023-ГФ-ГиДЗкгин-1б",
+        "id": 1199,
+        "currentWeekScheduleLink": "group/1199/44"
+    },
+    {
+        "groupName": "2023-ГФ-ПГ-1с",
+        "id": 1203,
+        "currentWeekScheduleLink": "group/1203/44"
+    },
+    {
+        "groupName": "2023-ГФ-ПГ-2с",
+        "id": 1204,
+        "currentWeekScheduleLink": "group/1204/44"
+    },
+    {
+        "groupName": "2023-ГФ-ПГ-3с",
+        "id": 1205,
+        "currentWeekScheduleLink": "group/1205/44"
+    },
+    {
+        "groupName": "2023-ГФ-ПГ-4с",
+        "id": 1206,
+        "currentWeekScheduleLink": "group/1206/44"
+    },
+    {
+        "groupName": "2023-ГФ-ПГигонгк-1с",
+        "id": 1600,
+        "currentWeekScheduleLink": "group/1600/44"
+    },
+    {
+        "groupName": "2023-ЗФ-ГиДЗг-1б(дзо-у)",
+        "id": 1238,
+        "currentWeekScheduleLink": "group/1238/44"
+    },
+    {
+        "groupName": "2023-ЗФ-ГиДЗг-1б(дзо)",
+        "id": 1239,
+        "currentWeekScheduleLink": "group/1239/44"
+    },
+    {
+        "groupName": "2023-ЗФ-ГиДЗг-1б(зо)",
+        "id": 1237,
+        "currentWeekScheduleLink": "group/1237/44"
+    },
+    {
+        "groupName": "2023-ЗФ-ЗиК-1б(дзо)",
+        "id": 1234,
+        "currentWeekScheduleLink": "group/1234/44"
+    },
+    {
+        "groupName": "2023-ЗФ-ЗиК-1б(зо)",
+        "id": 1232,
+        "currentWeekScheduleLink": "group/1232/44"
+    },
+    {
+        "groupName": "2023-ЗФ-ЗиК-1м(зо)",
+        "id": 1231,
+        "currentWeekScheduleLink": "group/1231/44"
+    },
+    {
+        "groupName": "2023-ЗФ-ПГ-1с(дзо-у)",
+        "id": 1226,
+        "currentWeekScheduleLink": "group/1226/44"
+    },
+    {
+        "groupName": "2023-ЗФ-ПГ-1с(дзо)",
+        "id": 1227,
+        "currentWeekScheduleLink": "group/1227/44"
+    },
+    {
+        "groupName": "2023-ЗФ-ПГ-1с(зо)",
+        "id": 1225,
+        "currentWeekScheduleLink": "group/1225/44"
+    },
+    {
+        "groupName": "2023-КФ-К-1асп",
+        "id": 1217,
+        "currentWeekScheduleLink": "group/1217/44"
+    },
+    {
+        "groupName": "2023-КФ-КГ-1см",
+        "id": 1255,
+        "currentWeekScheduleLink": "group/1255/44"
+    },
+    {
+        "groupName": "2023-КФ-КГ-2см",
+        "id": 1254,
+        "currentWeekScheduleLink": "group/1254/44"
+    },
+    {
+        "groupName": "2023-КФ-КГ-3см",
+        "id": 1253,
+        "currentWeekScheduleLink": "group/1253/44"
+    },
+    {
+        "groupName": "2023-КФ-КиГ-1б",
+        "id": 1250,
+        "currentWeekScheduleLink": "group/1250/44"
+    },
+    {
+        "groupName": "2023-КФ-КиГ-1м",
+        "id": 1248,
+        "currentWeekScheduleLink": "group/1248/44"
+    },
+    {
+        "groupName": "2023-КФ-КиГ-2б",
+        "id": 1247,
+        "currentWeekScheduleLink": "group/1247/44"
+    },
+    {
+        "groupName": "2023-КФ-КиГ-2м",
+        "id": 1246,
+        "currentWeekScheduleLink": "group/1246/44"
+    },
+    {
+        "groupName": "2023-КФ-КиГ-3б",
+        "id": 1245,
+        "currentWeekScheduleLink": "group/1245/44"
+    },
+    {
+        "groupName": "2023-КФ-КиГ-4б",
+        "id": 1244,
+        "currentWeekScheduleLink": "group/1244/44"
+    },
+    {
+        "groupName": "2023-КФ-ЭиП-1б",
+        "id": 1340,
+        "currentWeekScheduleLink": "group/1340/44"
+    },
+    {
+        "groupName": "2023-ФАиГ-АРХ-1б",
+        "id": 1266,
+        "currentWeekScheduleLink": "group/1266/44"
+    },
+    {
+        "groupName": "2023-ФАиГ-АРХ-1м",
+        "id": 1265,
+        "currentWeekScheduleLink": "group/1265/44"
+    },
+    {
+        "groupName": "2023-ФАиГ-ГРАД-1б",
+        "id": 1262,
+        "currentWeekScheduleLink": "group/1262/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-Геоин-1асп",
+        "id": 1215,
+        "currentWeekScheduleLink": "group/1215/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИБ-1б",
+        "id": 1291,
+        "currentWeekScheduleLink": "group/1291/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИБ-1б(вв)",
+        "id": 1290,
+        "currentWeekScheduleLink": "group/1290/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИБ-1м",
+        "id": 1289,
+        "currentWeekScheduleLink": "group/1289/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИБ-2б",
+        "id": 1288,
+        "currentWeekScheduleLink": "group/1288/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИСиТ-1б",
+        "id": 1286,
+        "currentWeekScheduleLink": "group/1286/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИСиТ-1м",
+        "id": 1284,
+        "currentWeekScheduleLink": "group/1284/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИСиТ-1см",
+        "id": 1283,
+        "currentWeekScheduleLink": "group/1283/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИСиТ-2б",
+        "id": 1282,
+        "currentWeekScheduleLink": "group/1282/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИСиТ-2см",
+        "id": 1280,
+        "currentWeekScheduleLink": "group/1280/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИСиТ-3б",
+        "id": 1461,
+        "currentWeekScheduleLink": "group/1461/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИСиТ-3см",
+        "id": 1278,
+        "currentWeekScheduleLink": "group/1278/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИСиТ-4см",
+        "id": 1277,
+        "currentWeekScheduleLink": "group/1277/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ИСиТибикс-1м",
+        "id": 1275,
+        "currentWeekScheduleLink": "group/1275/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ПИ-1б",
+        "id": 1274,
+        "currentWeekScheduleLink": "group/1274/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ПИ-1м",
+        "id": 1273,
+        "currentWeekScheduleLink": "group/1273/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ПИ-1см",
+        "id": 1272,
+        "currentWeekScheduleLink": "group/1272/44"
+    },
+    {
+        "groupName": "2023-ФГиИБ-ПИ-2см",
+        "id": 1270,
+        "currentWeekScheduleLink": "group/1270/44"
+    },
+    {
+        "groupName": "2023-ФОП-ЛТиЛТ-1б",
+        "id": 1299,
+        "currentWeekScheduleLink": "group/1299/44"
+    },
+    {
+        "groupName": "2023-ФОП-ОПТ-1б",
+        "id": 1297,
+        "currentWeekScheduleLink": "group/1297/44"
+    },
+    {
+        "groupName": "2023-ФОП-ОПТ-1м",
+        "id": 1296,
+        "currentWeekScheduleLink": "group/1296/44"
+    },
+    {
+        "groupName": "2023-ФОП-ОЭПиС-1асп",
+        "id": 1213,
+        "currentWeekScheduleLink": "group/1213/44"
+    },
+    {
+        "groupName": "2023-ФОП-ЭиОЭПиССН-1с",
+        "id": 1294,
+        "currentWeekScheduleLink": "group/1294/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗиК-1асп",
+        "id": 1211,
+        "currentWeekScheduleLink": "group/1211/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗиК(ЗиО)-1б",
+        "id": 1335,
+        "currentWeekScheduleLink": "group/1335/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗиК(ЗиО)-1м",
+        "id": 1334,
+        "currentWeekScheduleLink": "group/1334/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗиК(КН)-1б",
+        "id": 1331,
+        "currentWeekScheduleLink": "group/1331/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗиК(Упр)-1б",
+        "id": 1327,
+        "currentWeekScheduleLink": "group/1327/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗиК(Упр)-1м",
+        "id": 1326,
+        "currentWeekScheduleLink": "group/1326/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-10см",
+        "id": 1324,
+        "currentWeekScheduleLink": "group/1324/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-11см",
+        "id": 1323,
+        "currentWeekScheduleLink": "group/1323/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-12см",
+        "id": 1322,
+        "currentWeekScheduleLink": "group/1322/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-13см",
+        "id": 1321,
+        "currentWeekScheduleLink": "group/1321/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-14см",
+        "id": 1320,
+        "currentWeekScheduleLink": "group/1320/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-1см",
+        "id": 1318,
+        "currentWeekScheduleLink": "group/1318/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-2см",
+        "id": 1317,
+        "currentWeekScheduleLink": "group/1317/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-3см",
+        "id": 1316,
+        "currentWeekScheduleLink": "group/1316/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-4см",
+        "id": 1315,
+        "currentWeekScheduleLink": "group/1315/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-5см",
+        "id": 1314,
+        "currentWeekScheduleLink": "group/1314/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-6см",
+        "id": 1313,
+        "currentWeekScheduleLink": "group/1313/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-7см",
+        "id": 1312,
+        "currentWeekScheduleLink": "group/1312/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-8см",
+        "id": 1311,
+        "currentWeekScheduleLink": "group/1311/44"
+    },
+    {
+        "groupName": "2023-ФУТ-ЗК-9см",
+        "id": 1310,
+        "currentWeekScheduleLink": "group/1310/44"
+    },
+    {
+        "groupName": "2023-ФУТ-САУ-1б",
+        "id": 1307,
+        "currentWeekScheduleLink": "group/1307/44"
+    },
+    {
+        "groupName": "2023-ФУТ-УпрК-1б",
+        "id": 1306,
+        "currentWeekScheduleLink": "group/1306/44"
+    },
+    {
+        "groupName": "2024-ГФ-АФ-1а",
+        "id": 1390,
+        "currentWeekScheduleLink": "group/1390/44"
+    },
+    {
+        "groupName": "2024-ГФ-Геодезия-1а",
+        "id": 1391,
+        "currentWeekScheduleLink": "group/1391/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗ-1см",
+        "id": 1382,
+        "currentWeekScheduleLink": "group/1382/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗ-2см",
+        "id": 1429,
+        "currentWeekScheduleLink": "group/1429/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗ-3см",
+        "id": 1430,
+        "currentWeekScheduleLink": "group/1430/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗ-4см",
+        "id": 1431,
+        "currentWeekScheduleLink": "group/1431/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗакс-1б",
+        "id": 1349,
+        "currentWeekScheduleLink": "group/1349/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗакс-1м",
+        "id": 1381,
+        "currentWeekScheduleLink": "group/1381/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗг-1б",
+        "id": 1419,
+        "currentWeekScheduleLink": "group/1419/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗг-1м",
+        "id": 1380,
+        "currentWeekScheduleLink": "group/1380/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗг-2б",
+        "id": 1460,
+        "currentWeekScheduleLink": "group/1460/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗипр-1б",
+        "id": 1420,
+        "currentWeekScheduleLink": "group/1420/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗкгин-1б",
+        "id": 1421,
+        "currentWeekScheduleLink": "group/1421/44"
+    },
+    {
+        "groupName": "2024-ГФ-ГиДЗуптп-1м",
+        "id": 1457,
+        "currentWeekScheduleLink": "group/1457/44"
+    },
+    {
+        "groupName": "2024-ГФ-ПГ-1с",
+        "id": 1350,
+        "currentWeekScheduleLink": "group/1350/44"
+    },
+    {
+        "groupName": "2024-ГФ-ПГ-2с",
+        "id": 1404,
+        "currentWeekScheduleLink": "group/1404/44"
+    },
+    {
+        "groupName": "2024-ГФ-ПГ-3с",
+        "id": 1405,
+        "currentWeekScheduleLink": "group/1405/44"
+    },
+    {
+        "groupName": "2024-ГФ-ПГигос-1с",
+        "id": 1407,
+        "currentWeekScheduleLink": "group/1407/44"
+    },
+    {
+        "groupName": "2024-ЗФ-ГиДЗ-1б(дзо)",
+        "id": 1454,
+        "currentWeekScheduleLink": "group/1454/44"
+    },
+    {
+        "groupName": "2024-ЗФ-ГиДЗ-1б(зо)",
+        "id": 1351,
+        "currentWeekScheduleLink": "group/1351/44"
+    },
+    {
+        "groupName": "2024-ЗФ-ЗиК-1б(дзо)",
+        "id": 1455,
+        "currentWeekScheduleLink": "group/1455/44"
+    },
+    {
+        "groupName": "2024-ЗФ-ЗиК-1б(зо)",
+        "id": 1355,
+        "currentWeekScheduleLink": "group/1355/44"
+    },
+    {
+        "groupName": "2024-ЗФ-ЗиК-1м(зо)",
+        "id": 1389,
+        "currentWeekScheduleLink": "group/1389/44"
+    },
+    {
+        "groupName": "2024-ЗФ-ПГ-1с(дзо)",
+        "id": 1456,
+        "currentWeekScheduleLink": "group/1456/44"
+    },
+    {
+        "groupName": "2024-ЗФ-ПГ-1с(зо)",
+        "id": 1352,
+        "currentWeekScheduleLink": "group/1352/44"
+    },
+    {
+        "groupName": "2024-ЗФ-ПГиго-1с(зо)",
+        "id": 1428,
+        "currentWeekScheduleLink": "group/1428/44"
+    },
+    {
+        "groupName": "2024-КФ-ГЭ-1а",
+        "id": 1395,
+        "currentWeekScheduleLink": "group/1395/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-1б",
+        "id": 1359,
+        "currentWeekScheduleLink": "group/1359/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-1м",
+        "id": 1371,
+        "currentWeekScheduleLink": "group/1371/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-1см",
+        "id": 1372,
+        "currentWeekScheduleLink": "group/1372/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-2б",
+        "id": 1408,
+        "currentWeekScheduleLink": "group/1408/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-2м",
+        "id": 1427,
+        "currentWeekScheduleLink": "group/1427/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-2см",
+        "id": 1435,
+        "currentWeekScheduleLink": "group/1435/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-3б",
+        "id": 1425,
+        "currentWeekScheduleLink": "group/1425/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-3см",
+        "id": 1436,
+        "currentWeekScheduleLink": "group/1436/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-4б",
+        "id": 1426,
+        "currentWeekScheduleLink": "group/1426/44"
+    },
+    {
+        "groupName": "2024-КФ-КГ-4см",
+        "id": 1437,
+        "currentWeekScheduleLink": "group/1437/44"
+    },
+    {
+        "groupName": "2024-КФ-ЭиП-1б",
+        "id": 1365,
+        "currentWeekScheduleLink": "group/1365/44"
+    },
+    {
+        "groupName": "2024-ФАиГ-АРХ-1б",
+        "id": 1353,
+        "currentWeekScheduleLink": "group/1353/44"
+    },
+    {
+        "groupName": "2024-ФАиГ-АРХ-1м",
+        "id": 1373,
+        "currentWeekScheduleLink": "group/1373/44"
+    },
+    {
+        "groupName": "2024-ФАиГ-АРХ-2б",
+        "id": 1411,
+        "currentWeekScheduleLink": "group/1411/44"
+    },
+    {
+        "groupName": "2024-ФАиГ-Град-1б",
+        "id": 1354,
+        "currentWeekScheduleLink": "group/1354/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ГК-1а",
+        "id": 1392,
+        "currentWeekScheduleLink": "group/1392/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИБ-1б",
+        "id": 1357,
+        "currentWeekScheduleLink": "group/1357/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИБ-1м",
+        "id": 1378,
+        "currentWeekScheduleLink": "group/1378/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИБ-2б",
+        "id": 1424,
+        "currentWeekScheduleLink": "group/1424/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИС-1б",
+        "id": 1358,
+        "currentWeekScheduleLink": "group/1358/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИС-1м",
+        "id": 1374,
+        "currentWeekScheduleLink": "group/1374/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИС-1см",
+        "id": 1375,
+        "currentWeekScheduleLink": "group/1375/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИС-2б",
+        "id": 1417,
+        "currentWeekScheduleLink": "group/1417/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИС-2см",
+        "id": 1432,
+        "currentWeekScheduleLink": "group/1432/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИС-3см",
+        "id": 1433,
+        "currentWeekScheduleLink": "group/1433/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ИС-4см",
+        "id": 1434,
+        "currentWeekScheduleLink": "group/1434/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ПИ-1б",
+        "id": 1362,
+        "currentWeekScheduleLink": "group/1362/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ПИ-1м",
+        "id": 1376,
+        "currentWeekScheduleLink": "group/1376/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ПИ-1см",
+        "id": 1377,
+        "currentWeekScheduleLink": "group/1377/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ПИ-2см",
+        "id": 1438,
+        "currentWeekScheduleLink": "group/1438/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ПИ-3см",
+        "id": 1439,
+        "currentWeekScheduleLink": "group/1439/44"
+    },
+    {
+        "groupName": "2024-ФГиИБ-ПИ-4см",
+        "id": 1440,
+        "currentWeekScheduleLink": "group/1440/44"
+    },
+    {
+        "groupName": "2024-ФОП-ЛТиЛТ-1б",
+        "id": 1360,
+        "currentWeekScheduleLink": "group/1360/44"
+    },
+    {
+        "groupName": "2024-ФОП-ОиОЭПиК-1а",
+        "id": 1394,
+        "currentWeekScheduleLink": "group/1394/44"
+    },
+    {
+        "groupName": "2024-ФОП-ОПТ-1б",
+        "id": 1361,
+        "currentWeekScheduleLink": "group/1361/44"
+    },
+    {
+        "groupName": "2024-ФОП-ОПТ-1м",
+        "id": 1379,
+        "currentWeekScheduleLink": "group/1379/44"
+    },
+    {
+        "groupName": "2024-ФОП-ЭиОЭПиССН-1с",
+        "id": 1366,
+        "currentWeekScheduleLink": "group/1366/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ГиМУС-1б",
+        "id": 1369,
+        "currentWeekScheduleLink": "group/1369/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗиК(КН)-1б(ВВ)",
+        "id": 1462,
+        "currentWeekScheduleLink": "group/1462/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗиКзио-1б",
+        "id": 1356,
+        "currentWeekScheduleLink": "group/1356/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗиКзио-1м",
+        "id": 1387,
+        "currentWeekScheduleLink": "group/1387/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗиКкн-1б",
+        "id": 1422,
+        "currentWeekScheduleLink": "group/1422/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗиКупр-1б",
+        "id": 1423,
+        "currentWeekScheduleLink": "group/1423/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗиКупр-1м",
+        "id": 1386,
+        "currentWeekScheduleLink": "group/1386/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-10см",
+        "id": 1449,
+        "currentWeekScheduleLink": "group/1449/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-11см",
+        "id": 1450,
+        "currentWeekScheduleLink": "group/1450/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-12см",
+        "id": 1451,
+        "currentWeekScheduleLink": "group/1451/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-13см",
+        "id": 1452,
+        "currentWeekScheduleLink": "group/1452/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-14см",
+        "id": 1453,
+        "currentWeekScheduleLink": "group/1453/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-15см",
+        "id": 1464,
+        "currentWeekScheduleLink": "group/1464/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-1см",
+        "id": 1388,
+        "currentWeekScheduleLink": "group/1388/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-2см",
+        "id": 1441,
+        "currentWeekScheduleLink": "group/1441/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-3см",
+        "id": 1442,
+        "currentWeekScheduleLink": "group/1442/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-4см",
+        "id": 1443,
+        "currentWeekScheduleLink": "group/1443/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-5см",
+        "id": 1444,
+        "currentWeekScheduleLink": "group/1444/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-6см",
+        "id": 1445,
+        "currentWeekScheduleLink": "group/1445/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-7см",
+        "id": 1446,
+        "currentWeekScheduleLink": "group/1446/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-8см",
+        "id": 1447,
+        "currentWeekScheduleLink": "group/1447/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗК-9см",
+        "id": 1448,
+        "currentWeekScheduleLink": "group/1448/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЗКиМЗ-1а",
+        "id": 1393,
+        "currentWeekScheduleLink": "group/1393/44"
+    },
+    {
+        "groupName": "2024-ФУТ-М-1м",
+        "id": 1384,
+        "currentWeekScheduleLink": "group/1384/44"
+    },
+    {
+        "groupName": "2024-ФУТ-МОС-1б",
+        "id": 1368,
+        "currentWeekScheduleLink": "group/1368/44"
+    },
+    {
+        "groupName": "2024-ФУТ-САУ-1б",
+        "id": 1363,
+        "currentWeekScheduleLink": "group/1363/44"
+    },
+    {
+        "groupName": "2024-ФУТ-УК-1б",
+        "id": 1364,
+        "currentWeekScheduleLink": "group/1364/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЭК-1б",
+        "id": 1367,
+        "currentWeekScheduleLink": "group/1367/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЭК-1см",
+        "id": 1383,
+        "currentWeekScheduleLink": "group/1383/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЮС-1б",
+        "id": 1370,
+        "currentWeekScheduleLink": "group/1370/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЮС-1б(ВВ)",
+        "id": 1463,
+        "currentWeekScheduleLink": "group/1463/44"
+    },
+    {
+        "groupName": "2024-ФУТ-ЮС-1м",
+        "id": 1385,
+        "currentWeekScheduleLink": "group/1385/44"
+    },
+    {
+        "groupName": "2025-ГФ-АФ-1а",
+        "id": 1567,
+        "currentWeekScheduleLink": "group/1567/44"
+    },
+    {
+        "groupName": "2025-ГФ-Геодезия-1а",
+        "id": 1568,
+        "currentWeekScheduleLink": "group/1568/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗ-1см",
+        "id": 1476,
+        "currentWeekScheduleLink": "group/1476/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗ-2см",
+        "id": 1477,
+        "currentWeekScheduleLink": "group/1477/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗ-3см",
+        "id": 1478,
+        "currentWeekScheduleLink": "group/1478/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗакс-1б",
+        "id": 1481,
+        "currentWeekScheduleLink": "group/1481/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗакс-1м",
+        "id": 1482,
+        "currentWeekScheduleLink": "group/1482/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗг-1б",
+        "id": 1483,
+        "currentWeekScheduleLink": "group/1483/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗг-2б",
+        "id": 1485,
+        "currentWeekScheduleLink": "group/1485/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗипр-1б",
+        "id": 1486,
+        "currentWeekScheduleLink": "group/1486/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗкгин-1б",
+        "id": 1487,
+        "currentWeekScheduleLink": "group/1487/44"
+    },
+    {
+        "groupName": "2025-ГФ-ГиДЗуптп-1м",
+        "id": 1488,
+        "currentWeekScheduleLink": "group/1488/44"
+    },
+    {
+        "groupName": "2025-ГФ-ПГ-1с",
+        "id": 1489,
+        "currentWeekScheduleLink": "group/1489/44"
+    },
+    {
+        "groupName": "2025-ГФ-ПГ-2с",
+        "id": 1490,
+        "currentWeekScheduleLink": "group/1490/44"
+    },
+    {
+        "groupName": "2025-ГФ-ПГ-3с",
+        "id": 1491,
+        "currentWeekScheduleLink": "group/1491/44"
+    },
+    {
+        "groupName": "2025-ГФ-ПГ-4с",
+        "id": 1492,
+        "currentWeekScheduleLink": "group/1492/44"
+    },
+    {
+        "groupName": "2025-ГФ-ПГигос-1с",
+        "id": 1493,
+        "currentWeekScheduleLink": "group/1493/44"
+    },
+    {
+        "groupName": "2025-ГФ-ПГигос-2с",
+        "id": 1603,
+        "currentWeekScheduleLink": "group/1603/44"
+    },
+    {
+        "groupName": "2025-ЗФ-ГиДЗ-1б(дзо)",
+        "id": 1573,
+        "currentWeekScheduleLink": "group/1573/44"
+    },
+    {
+        "groupName": "2025-ЗФ-ГиДЗ-1б(зо)",
+        "id": 1574,
+        "currentWeekScheduleLink": "group/1574/44"
+    },
+    {
+        "groupName": "2025-ЗФ-ЗиК-1б(дзо)",
+        "id": 1575,
+        "currentWeekScheduleLink": "group/1575/44"
+    },
+    {
+        "groupName": "2025-ЗФ-ЗиК-1б(зо)",
+        "id": 1576,
+        "currentWeekScheduleLink": "group/1576/44"
+    },
+    {
+        "groupName": "2025-ЗФ-ЗиК-1м(зо)",
+        "id": 1577,
+        "currentWeekScheduleLink": "group/1577/44"
+    },
+    {
+        "groupName": "2025-ЗФ-ЗиК-2м(зо)",
+        "id": 1583,
+        "currentWeekScheduleLink": "group/1583/44"
+    },
+    {
+        "groupName": "2025-ЗФ-ПГ-1с(дзо)",
+        "id": 1578,
+        "currentWeekScheduleLink": "group/1578/44"
+    },
+    {
+        "groupName": "2025-ЗФ-ПГ-1с(зо)",
+        "id": 1579,
+        "currentWeekScheduleLink": "group/1579/44"
+    },
+    {
+        "groupName": "2025-ЗФ-ПГ-2с(зо)",
+        "id": 1582,
+        "currentWeekScheduleLink": "group/1582/44"
+    },
+    {
+        "groupName": "2025-КФ-ГЭ-1а",
+        "id": 1569,
+        "currentWeekScheduleLink": "group/1569/44"
+    },
+    {
+        "groupName": "2025-КФ-КГ-1б",
+        "id": 1494,
+        "currentWeekScheduleLink": "group/1494/44"
+    },
+    {
+        "groupName": "2025-КФ-КГ-1м",
+        "id": 1495,
+        "currentWeekScheduleLink": "group/1495/44"
+    },
+    {
+        "groupName": "2025-КФ-КГ-1см",
+        "id": 1496,
+        "currentWeekScheduleLink": "group/1496/44"
+    },
+    {
+        "groupName": "2025-КФ-КГ-2б",
+        "id": 1497,
+        "currentWeekScheduleLink": "group/1497/44"
+    },
+    {
+        "groupName": "2025-КФ-КГ-2м",
+        "id": 1498,
+        "currentWeekScheduleLink": "group/1498/44"
+    },
+    {
+        "groupName": "2025-КФ-КГ-2см",
+        "id": 1499,
+        "currentWeekScheduleLink": "group/1499/44"
+    },
+    {
+        "groupName": "2025-КФ-КГ-3б",
+        "id": 1500,
+        "currentWeekScheduleLink": "group/1500/44"
+    },
+    {
+        "groupName": "2025-КФ-КГ-3см",
+        "id": 1501,
+        "currentWeekScheduleLink": "group/1501/44"
+    },
+    {
+        "groupName": "2025-КФ-КГ-4б",
+        "id": 1502,
+        "currentWeekScheduleLink": "group/1502/44"
+    },
+    {
+        "groupName": "2025-КФ-ЭиП-1б",
+        "id": 1504,
+        "currentWeekScheduleLink": "group/1504/44"
+    },
+    {
+        "groupName": "2025-КФ-ЭиП-2б",
+        "id": 1505,
+        "currentWeekScheduleLink": "group/1505/44"
+    },
+    {
+        "groupName": "2025-ФАиГ-АРХ-1б",
+        "id": 1563,
+        "currentWeekScheduleLink": "group/1563/44"
+    },
+    {
+        "groupName": "2025-ФАиГ-АРХ-1м",
+        "id": 1564,
+        "currentWeekScheduleLink": "group/1564/44"
+    },
+    {
+        "groupName": "2025-ФАиГ-АРХ-2б",
+        "id": 1565,
+        "currentWeekScheduleLink": "group/1565/44"
+    },
+    {
+        "groupName": "2025-ФАиГ-Град-1б",
+        "id": 1566,
+        "currentWeekScheduleLink": "group/1566/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ГК-1а",
+        "id": 1570,
+        "currentWeekScheduleLink": "group/1570/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ИБ-1б",
+        "id": 1506,
+        "currentWeekScheduleLink": "group/1506/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ИБ-1м",
+        "id": 1507,
+        "currentWeekScheduleLink": "group/1507/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ИС-1б",
+        "id": 1510,
+        "currentWeekScheduleLink": "group/1510/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ИС-1см",
+        "id": 1512,
+        "currentWeekScheduleLink": "group/1512/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ИС-2б",
+        "id": 1513,
+        "currentWeekScheduleLink": "group/1513/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ИС-2см",
+        "id": 1514,
+        "currentWeekScheduleLink": "group/1514/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ПИ-1б",
+        "id": 1518,
+        "currentWeekScheduleLink": "group/1518/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ПИ-1м",
+        "id": 1519,
+        "currentWeekScheduleLink": "group/1519/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ПИ-1см",
+        "id": 1520,
+        "currentWeekScheduleLink": "group/1520/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ПИ-2б",
+        "id": 1521,
+        "currentWeekScheduleLink": "group/1521/44"
+    },
+    {
+        "groupName": "2025-ФГиИБ-ПИ-2см",
+        "id": 1522,
+        "currentWeekScheduleLink": "group/1522/44"
+    },
+    {
+        "groupName": "2025-ФОП-ЛТиЛТ-1б",
+        "id": 1525,
+        "currentWeekScheduleLink": "group/1525/44"
+    },
+    {
+        "groupName": "2025-ФОП-ОиОЭПиК-1а",
+        "id": 1571,
+        "currentWeekScheduleLink": "group/1571/44"
+    },
+    {
+        "groupName": "2025-ФОП-ОПТ-1м",
+        "id": 1528,
+        "currentWeekScheduleLink": "group/1528/44"
+    },
+    {
+        "groupName": "2025-ФОП-ЭиОЭПиССН-1с",
+        "id": 1530,
+        "currentWeekScheduleLink": "group/1530/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ГиМУС-1б",
+        "id": 1532,
+        "currentWeekScheduleLink": "group/1532/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗиКзио-1б",
+        "id": 1534,
+        "currentWeekScheduleLink": "group/1534/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗиКзио-1м",
+        "id": 1535,
+        "currentWeekScheduleLink": "group/1535/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗиКкн-1б",
+        "id": 1536,
+        "currentWeekScheduleLink": "group/1536/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗиКупр-1б",
+        "id": 1537,
+        "currentWeekScheduleLink": "group/1537/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗиКупр-1м",
+        "id": 1538,
+        "currentWeekScheduleLink": "group/1538/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-10см",
+        "id": 1539,
+        "currentWeekScheduleLink": "group/1539/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-11см",
+        "id": 1540,
+        "currentWeekScheduleLink": "group/1540/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-12см",
+        "id": 1541,
+        "currentWeekScheduleLink": "group/1541/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-13см",
+        "id": 1542,
+        "currentWeekScheduleLink": "group/1542/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-14см",
+        "id": 1543,
+        "currentWeekScheduleLink": "group/1543/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-15см",
+        "id": 1544,
+        "currentWeekScheduleLink": "group/1544/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-1см",
+        "id": 1545,
+        "currentWeekScheduleLink": "group/1545/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-2см",
+        "id": 1546,
+        "currentWeekScheduleLink": "group/1546/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-3см",
+        "id": 1547,
+        "currentWeekScheduleLink": "group/1547/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-4см",
+        "id": 1548,
+        "currentWeekScheduleLink": "group/1548/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-5см",
+        "id": 1549,
+        "currentWeekScheduleLink": "group/1549/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-6см",
+        "id": 1550,
+        "currentWeekScheduleLink": "group/1550/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-7см",
+        "id": 1551,
+        "currentWeekScheduleLink": "group/1551/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-8см",
+        "id": 1552,
+        "currentWeekScheduleLink": "group/1552/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗК-9см",
+        "id": 1553,
+        "currentWeekScheduleLink": "group/1553/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЗКиМЗ-1а",
+        "id": 1572,
+        "currentWeekScheduleLink": "group/1572/44"
+    },
+    {
+        "groupName": "2025-ФУТ-М-1м",
+        "id": 1554,
+        "currentWeekScheduleLink": "group/1554/44"
+    },
+    {
+        "groupName": "2025-ФУТ-МОС-1б",
+        "id": 1555,
+        "currentWeekScheduleLink": "group/1555/44"
+    },
+    {
+        "groupName": "2025-ФУТ-САУ-1б",
+        "id": 1556,
+        "currentWeekScheduleLink": "group/1556/44"
+    },
+    {
+        "groupName": "2025-ФУТ-УК-1б",
+        "id": 1557,
+        "currentWeekScheduleLink": "group/1557/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЭК-1б",
+        "id": 1558,
+        "currentWeekScheduleLink": "group/1558/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЭК-1см",
+        "id": 1559,
+        "currentWeekScheduleLink": "group/1559/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЮС-1б",
+        "id": 1560,
+        "currentWeekScheduleLink": "group/1560/44"
+    },
+    {
+        "groupName": "2025-ФУТ-ЮС-1м",
+        "id": 1562,
+        "currentWeekScheduleLink": "group/1562/44"
+    }
+]
