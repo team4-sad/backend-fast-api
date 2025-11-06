@@ -2,7 +2,7 @@ import unittest
 
 from src.config.config import Config
 from src.exceptions.invalid_group_exception import InvalidGroupException
-from src.models.origin_response_schedule_model import OriginResponseScheduleModel
+from src.models.origin_response_group_schedule_model import OriginResponseGroupScheduleModel
 from src.models.origin_schedule_model import OriginScheduleModel
 from src.repositories.schedule_repository import ScheduleRepository
 
@@ -20,8 +20,8 @@ class ScheduleRepositoryTest(unittest.TestCase):
     def test_get_incorrect_group_schedule(self):
         with self.assertRaises(InvalidGroupException) as e:
             self.schedule_repository.fetch_group(group_id="121", date_start="2025-10-13", date_end="2025-10-19")
-        self.assertEqual(121, e.exception.group_id)
+        self.assertEqual("121", e.exception.group_id)
 
     def test_get_empty_group_schedule(self):
         result = self.schedule_repository.fetch_group(group_id="832", date_start="2025-10-13", date_end="2025-10-19")
-        self.assertEqual(result, OriginResponseScheduleModel(group_name="2021-ГФ-ГиДЗакс-1б", schedule=OriginScheduleModel()))
+        self.assertEqual(result, OriginResponseGroupScheduleModel(group_name="2021-ГФ-ГиДЗакс-1б", schedule=OriginScheduleModel()))

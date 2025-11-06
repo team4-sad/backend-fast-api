@@ -4,7 +4,7 @@ from src.exceptions.code_exception import CodeException
 from src.exceptions.invalid_schedule_exception import InvalidScheduleException
 from src.models.day_model import DayModel
 from src.models.lesson_model import LessonModel
-from src.models.response_schedule_model import ResponseScheduleModel
+from src.models.response_group_schedule_model import ResponseGroupScheduleModel
 from src.models.teacher_model import TeacherModel
 from src.services.schedule_service import ScheduleService
 from test.mock.classes.mock_schedule_repository import MockScheduleRepository, CorruptedNotFoundMockScheduleRepository, \
@@ -22,7 +22,7 @@ class ScheduleServiceTest(unittest.TestCase):
         result = self.schedule_service.fetch_group_schedule("123", "123", "123")
         self.assertEqual(
             result,
-            ResponseScheduleModel(
+            ResponseGroupScheduleModel(
                 group_name="2023-ФГиИБ-ПИ-1б",
                 schedule=[
                     DayModel(
@@ -87,4 +87,4 @@ class ScheduleServiceTest(unittest.TestCase):
 
     def test_empty_group_schedule(self):
         result = self.corrupted_empty_schedule_service.fetch_group_schedule("123", "123", "123")
-        self.assertEqual(result, ResponseScheduleModel(group_name='2023-ФГиИБ-ПИ-1б', schedule=[]))
+        self.assertEqual(result, ResponseGroupScheduleModel(group_name='2023-ФГиИБ-ПИ-1б', schedule=[]))

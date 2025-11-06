@@ -17,6 +17,7 @@ class LessonModel:
     classroom_building: str
     discipline_name: str
     teachers: list[TeacherModel]
+    groups: list[str] | None = None
     subgroup: str = ""
 
     @staticmethod
@@ -33,5 +34,6 @@ class LessonModel:
             classroom_building=origin.classroom_building,
             discipline_name=origin.discipline_name,
             teachers=origin.teachers,
-            subgroup=origin.subgroup
+            subgroup=origin.subgroup,
+            groups=origin.groups
         )
