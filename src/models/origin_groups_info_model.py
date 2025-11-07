@@ -2,14 +2,14 @@ import dataclasses
 
 
 @dataclasses.dataclass
-class OriginGroupInfoModel:
+class OriginGroupsInfoModel:
     group_name: str
     id: int
     current_week_schedule_link: str
 
     @staticmethod
     def from_json(json: dict):
-        return OriginGroupInfoModel(
+        return OriginGroupsInfoModel(
             group_name=json["groupName"],
             id=json["id"],
             current_week_schedule_link=json["currentWeekScheduleLink"],
