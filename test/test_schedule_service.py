@@ -2,10 +2,13 @@ import unittest
 
 from src.exceptions.code_exception import CodeException
 from src.exceptions.invalid_schedule_exception import InvalidScheduleException
+from src.models.classrooms_info_model import ClassroomsInfoModel
 from src.models.day_model import DayModel
+from src.models.groups_info_model import GroupsInfoModel
 from src.models.lesson_model import LessonModel
-from src.models.response_schedule_model import ResponseScheduleModel
+from src.models.response_group_schedule_model import ResponseGroupScheduleModel
 from src.models.teacher_model import TeacherModel
+from src.models.teachers_info_model import TeachersInfoModel
 from src.services.schedule_service import ScheduleService
 from test.mock.classes.mock_schedule_repository import MockScheduleRepository, CorruptedNotFoundMockScheduleRepository, \
     CorruptedExceptionMockScheduleRepository, EmptyMockScheduleRepository
@@ -22,7 +25,7 @@ class ScheduleServiceTest(unittest.TestCase):
         result = self.schedule_service.fetch_group_schedule("123", "123", "123")
         self.assertEqual(
             result,
-            ResponseScheduleModel(
+            ResponseGroupScheduleModel(
                 group_name="2023-ФГиИБ-ПИ-1б",
                 schedule=[
                     DayModel(
@@ -87,4 +90,43 @@ class ScheduleServiceTest(unittest.TestCase):
 
     def test_empty_group_schedule(self):
         result = self.corrupted_empty_schedule_service.fetch_group_schedule("123", "123", "123")
-        self.assertEqual(result, ResponseScheduleModel(group_name='2023-ФГиИБ-ПИ-1б', schedule=[]))
+        self.assertEqual(result, ResponseGroupScheduleModel(group_name='2023-ФГиИБ-ПИ-1б', schedule=[]))
+
+    def test_get_groups_list(self):
+        result = self.schedule_service.fetch_groups_list(group_name="2023-ГФ-АКС-1асп")
+        self.assertEqual(result, [GroupsInfoModel(group_name='2023-ГФ-АКС-1асп', id=1)])
+
+    def test_get_exception_groups_list(self):
+        with self.assertRaises(CodeException) as e:
+            self.corrupted_exception_schedule_service.fetch_groups_list(group_name="2023-ГФ-АКС-1асп")
+        self.assertEqual(e.exception, CodeException('Error getting group list', 503))
+
+    def test_empty_groups_list(self):
+        result = self.corrupted_empty_schedule_service.fetch_groups_list(group_name="2023-ГФ-АКС-1асп")
+        self.assertEqual(result, [])
+
+    def test_get_teachers_list(self):
+        result = self.schedule_service.fetch_teachers_list(teacher_name="антон")
+        self.assertEqual(result, [TeachersInfoModel(id=1, teacher=TeacherModel(first_name='',last_name='',patronymic=''))])
+
+    def test_get_exception_teachers_list(self):
+        with self.assertRaises(CodeException) as e:
+            self.corrupted_exception_schedule_service.fetch_teachers_list(teacher_name="антон")
+        self.assertEqual(e.exception, CodeException('Error getting teachers list', 503))
+
+    def test_empty_teachers_list(self):
+        result = self.corrupted_empty_schedule_service.fetch_teachers_list(teacher_name="антон")
+        self.assertEqual(result, [])
+
+    def test_get_classrooms_list(self):
+        result = self.schedule_service.fetch_classrooms_list(classroom="103")
+        self.assertEqual(result, [ClassroomsInfoModel(classroom_id=1, classroom_name='')])
+
+    def test_get_exception_classrooms_list(self):
+        with self.assertRaises(CodeException) as e:
+            self.corrupted_exception_schedule_service.fetch_classrooms_list(classroom="103")
+        self.assertEqual(e.exception, CodeException('Error getting classrooms list', 503))
+
+    def test_empty_classrooms_list(self):
+        result = self.corrupted_empty_schedule_service.fetch_classrooms_list(classroom="103")
+        self.assertEqual(result, [])

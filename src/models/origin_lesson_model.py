@@ -9,7 +9,6 @@ class OriginLessonModel:
     lesson_order_number: int
     classroom_id: int
     classroom_floor: int
-    group_name: str
     lesson_date: str
     lesson_start_time: str
     lesson_end_time: str
@@ -19,8 +18,10 @@ class OriginLessonModel:
     classroom_building: str
     discipline_name: str
     teachers: list[TeacherModel]
-    subgroup: str = ""
-    link: str = ""
+    group_name: str | None = None
+    groups: list[str] | None = None
+    subgroup: str | None = None
+    link: str | None = None
 
     @property
     def get_name_of_week(self):
@@ -37,7 +38,7 @@ class OriginLessonModel:
             lesson_order_number=json_obj["lessonOrderNumber"],
             classroom_id=json_obj["classroomId"],
             classroom_floor=json_obj["classroomFloor"],
-            group_name=json_obj["groupName"],
+            group_name=json_obj["groupName"] if "groupName" in json_obj else None,
             lesson_date=json_obj["lessonDate"],
             lesson_start_time=json_obj["lessonStartTime"],
             lesson_end_time=json_obj["lessonEndTime"],
@@ -47,6 +48,7 @@ class OriginLessonModel:
             classroom_building=json_obj["classroomBuilding"],
             discipline_name=json_obj["disciplineName"],
             teachers=[TeacherModel.from_json(i) for i in json_obj['teachers']],
-            subgroup=json_obj["subgroup"],
-            link=json_obj["link"],
+            subgroup=json_obj["subgroup"] if "subgroup" in json_obj else None,
+            link=json_obj["link"] if "link" in json_obj else None,
+            groups=json_obj["groups"] if "groups" in json_obj else None
         )
