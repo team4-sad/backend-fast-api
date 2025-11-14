@@ -5,7 +5,6 @@ from src.models.classrooms_info_model import ClassroomsInfoModel
 from src.models.groups_info_model import GroupsInfoModel
 from src.models.response_group_schedule_model import ResponseGroupScheduleModel
 from src.models.response_teacher_schedule_model import ResponseTeacherScheduleModel
-from src.models.teacher_model import TeacherModel
 from src.models.teachers_info_model import TeachersInfoModel
 
 router = APIRouter(prefix='/schedule')
