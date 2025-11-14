@@ -20,7 +20,7 @@ router = APIRouter(prefix='/schedule')
     },
 )
 async def get_group_schedule(group_id: str, start_date: str, end_date: str):
-    group_schedule = loader.schedule_service.fetch_group(group_id=group_id, date_start=start_date, date_end=end_date)
+    group_schedule = loader.schedule_service.fetch_group_schedule(group_id=group_id, date_start=start_date, date_end=end_date)
     return group_schedule
 
 
