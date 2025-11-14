@@ -47,7 +47,7 @@ class OriginLessonModel:
             classroom_type=json_obj["classroomType"],
             classroom_building=json_obj["classroomBuilding"],
             discipline_name=json_obj["disciplineName"],
-            teachers=[TeacherModel.from_json(i) for i in json_obj['teachers']],
+            teachers=[TeacherModel.from_json(i) for i in json_obj['teachers']] if "teachers" in json_obj else None,
             subgroup=json_obj["subgroup"] if "subgroup" in json_obj else None,
             link=json_obj["link"] if "link" in json_obj else None,
             groups=json_obj["groups"] if "groups" in json_obj else None

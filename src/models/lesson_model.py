@@ -16,9 +16,9 @@ class LessonModel:
     classroom_type: str
     classroom_building: str
     discipline_name: str
-    teachers: list[TeacherModel]
+    teachers: list[TeacherModel] | None = None
     groups: list[str] | None = None
-    subgroup: str = ""
+    subgroup: str | None = ""
 
     @staticmethod
     def from_origin(origin: OriginLessonModel):
