@@ -15,7 +15,7 @@ class IScheduleService(abc.ABC):
     def fetch_teacher_schedule(self, teacher_id: str, date_start: str, date_end: str) -> ResponseTeacherScheduleModel:
         pass
 
-    def fetch_audience_schedule(self, classroom_id: str, date_start: str, date_end: str) -> ResponseClassroomScheduleModel:
+    def fetch_classroom_schedule(self, classroom_id: str, date_start: str, date_end: str) -> ResponseClassroomScheduleModel:
         pass
 
     def fetch_groups_list(self, group_name: str) -> GroupsInfoModel:

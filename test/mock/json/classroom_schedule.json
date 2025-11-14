@@ -1,0 +1,88 @@
+{
+    "classroomName": "506",
+    "schedule": {
+        "понедельник": [
+            {
+                "groups": [
+                    "2025-КФ-КГ-2б"
+                ],
+                "dayOfWeek": 1,
+                "lessonDate": "2025-11-10T00:00:00Z",
+                "lessonOrderNumber": 2,
+                "lessonStartTime": "10:40:00",
+                "lessonEndTime": "12:10:00",
+                "lessonType": "Практические занятия",
+                "classroomId": 406,
+                "classroomName": "506",
+                "classroomFloor": 5,
+                "classroomType": "Смешанный тип",
+                "classroomBuilding": "Главный корпус",
+                "disciplineName": "Землеведение",
+                "teachers": [
+                    {
+                        "firstName": "Нина",
+                        "lastName": "Фомина",
+                        "patronymic": "Васильевна"
+                    }
+                ],
+                "isAdditionalEvent": false,
+                "isRegularLesson": true,
+                "additionalEventInfo": {}
+            },
+            {
+                "groups": [
+                    "2025-ГФ-ГиДЗипр-1б"
+                ],
+                "dayOfWeek": 1,
+                "lessonDate": "2025-11-10T00:00:00Z",
+                "lessonOrderNumber": 3,
+                "lessonStartTime": "12:50:00",
+                "lessonEndTime": "14:20:00",
+                "lessonType": "Практические занятия",
+                "classroomId": 406,
+                "classroomName": "506",
+                "classroomFloor": 5,
+                "classroomType": "Смешанный тип",
+                "classroomBuilding": "Главный корпус",
+                "disciplineName": "Высшая математика",
+                "teachers": [
+                    {
+                        "firstName": "Галина",
+                        "lastName": "Емгушева",
+                        "patronymic": "Петровна"
+                    }
+                ],
+                "isAdditionalEvent": false,
+                "isRegularLesson": true,
+                "additionalEventInfo": {}
+            },
+            {
+                "groups": [
+                    "2024-КФ-ЭиП-1б"
+                ],
+                "dayOfWeek": 1,
+                "lessonDate": "2025-11-10T00:00:00Z",
+                "lessonOrderNumber": 4,
+                "lessonStartTime": "14:30:00",
+                "lessonEndTime": "16:00:00",
+                "lessonType": "Практические занятия",
+                "classroomId": 406,
+                "classroomName": "506",
+                "classroomFloor": 5,
+                "classroomType": "Смешанный тип",
+                "classroomBuilding": "Главный корпус",
+                "disciplineName": "Ландшафтоведение",
+                "teachers": [
+                    {
+                        "firstName": "Нина",
+                        "lastName": "Фомина",
+                        "patronymic": "Васильевна"
+                    }
+                ],
+                "isAdditionalEvent": false,
+                "isRegularLesson": true,
+                "additionalEventInfo": {}
+            }
+        ]
+    }
+}

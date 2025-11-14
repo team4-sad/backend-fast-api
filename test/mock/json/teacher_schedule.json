@@ -1,0 +1,65 @@
+{
+    "teacher": {
+        "firstName": "Евгений",
+        "lastName": "Лебедев",
+        "patronymic": "Денисович"
+    },
+    "schedule": {
+        "четверг": [
+            {
+                "dayOfWeek": 4,
+                "lessonDate": "2025-11-13T00:00:00Z",
+                "lessonOrderNumber": 1,
+                "lessonStartTime": "09:00:00",
+                "lessonEndTime": "10:30:00",
+                "lessonType": "Практические занятия",
+                "classroomId": 409,
+                "classroomName": "302 к.2",
+                "classroomFloor": 3,
+                "classroomType": "Компьютерный класс",
+                "classroomBuilding": "2-ой корпус",
+                "disciplineName": "Информатика",
+                "link": "",
+                "groups": [
+                    "2025-ФГиИБ-ПИ-2б"
+                ]
+            },
+            {
+                "dayOfWeek": 4,
+                "lessonDate": "2025-11-13T00:00:00Z",
+                "lessonOrderNumber": 2,
+                "lessonStartTime": "10:40:00",
+                "lessonEndTime": "12:10:00",
+                "lessonType": "Практические занятия",
+                "classroomId": 409,
+                "classroomName": "302 к.2",
+                "classroomFloor": 3,
+                "classroomType": "Компьютерный класс",
+                "classroomBuilding": "2-ой корпус",
+                "disciplineName": "Информатика",
+                "link": "",
+                "groups": [
+                    "2025-ФГиИБ-ПИ-2б"
+                ]
+            },
+            {
+                "dayOfWeek": 4,
+                "lessonDate": "2025-11-13T00:00:00Z",
+                "lessonOrderNumber": 3,
+                "lessonStartTime": "12:50:00",
+                "lessonEndTime": "14:20:00",
+                "lessonType": "Практические занятия",
+                "classroomId": 409,
+                "classroomName": "302 к.2",
+                "classroomFloor": 3,
+                "classroomType": "Компьютерный класс",
+                "classroomBuilding": "2-ой корпус",
+                "disciplineName": "Информатика",
+                "link": "",
+                "groups": [
+                    "2025-ФГиИБ-ПИ-1б"
+                ]
+            }
+        ]
+    }
+}
