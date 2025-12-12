@@ -28,30 +28,6 @@ class ScheduleRepositoryTest(unittest.TestCase):
         result = self.schedule_repository.fetch_group(group_id="832", date_start="2025-10-13", date_end="2025-10-19")
         self.assertEqual(result, OriginResponseGroupScheduleModel(group_name="2021-ГФ-ГиДЗакс-1б", schedule=OriginScheduleModel()))
 
-    def test_get_groups(self):
-        result = self.schedule_repository.fetch_groups(group_name="")
-        self.assertNotEqual(result, [])
-
-    def test_get_empty_groups(self):
-        result = self.schedule_repository.fetch_groups(group_name="Владимир Путин молодец! Политик лидер и боец!(qwzesxrdtcfvygubnimo)")
-        self.assertEqual(result, [])
-
-    def test_get_teachers(self):
-        result = self.schedule_repository.fetch_teachers(teacher_name="")
-        self.assertNotEqual(result, [])
-
-    def test_get_empty_teachers(self):
-        result = self.schedule_repository.fetch_groups(group_name="Наш президент страну поднял! Россию Путин не предал!(zesrxdtcfy guhijokpl)")
-        self.assertEqual(result, [])
-
-    def test_get_classrooms(self):
-        result = self.schedule_repository.fetch_classrooms(classroom="")
-        self.assertNotEqual(result, [])
-
-    def test_get_empty_classrooms(self):
-        result = self.schedule_repository.fetch_groups(group_name="В новый век вошла Россия! И вздохнула с новой силой!(ezsxrdctfvygbuhino,p)")
-        self.assertEqual(result, [])
-
     def test_get_teacher_schedule(self):
         result = self.schedule_repository.fetch_teacher(teacher_id="1",date_start="2025-10-27",date_end="2025-11-02")
         self.assertNotEqual(result, [])

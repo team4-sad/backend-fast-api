@@ -6,14 +6,14 @@ from urllib3.exceptions import InsecureRequestWarning
 from src.config.config import Config
 from src.database.sqls import CREATE_TABLE_NEWS_SQL
 from src.parsers.news_parser import NewsParser
-from src.repositories.news_repository import NewsRepository
+from src.repositories.miigaik_news_repository import MiigaikNewsRepository
 from src.database.sqlite_database import SQLiteDatabase
 
 urllib3.disable_warnings(InsecureRequestWarning)
 
 config = Config()
 
-news_repository = NewsRepository(
+news_repository = MiigaikNewsRepository(
     base_news_list_url=config.base_news_list_url,
     base_singular_news_url=config.base_singular_news
 )

@@ -4,6 +4,7 @@ from src.exceptions.invalid_group_exception import InvalidGroupException
 from src.exceptions.invalid_teacher_exception import InvalidTeacherException
 from src.interfaces.i_schedule_repository import IScheduleRepository
 from src.interfaces.i_schedule_service import IScheduleService
+from src.interfaces.i_signature_repository import ISignatureRepository
 from src.models.classrooms_info_model import ClassroomsInfoModel
 from src.models.groups_info_model import GroupsInfoModel
 from src.models.response_classroom_schedule_model import ResponseClassroomScheduleModel
@@ -13,8 +14,9 @@ from src.models.teachers_info_model import TeachersInfoModel
 
 
 class ScheduleService(IScheduleService):
-    def __init__(self, schedule_repository: IScheduleRepository):
+    def __init__(self, schedule_repository: IScheduleRepository, signature_repository: ISignatureRepository):
         self.schedule_repository = schedule_repository
+        self.signature_repository = signature_repository
 
     def fetch_group_schedule(self, group_id: str, date_start: str, date_end: str) -> ResponseGroupScheduleModel:
         try:
@@ -63,21 +65,21 @@ class ScheduleService(IScheduleService):
 
     def fetch_groups_list(self, group_name: str) -> list[GroupsInfoModel]:
         try:
-            raw_model = self.schedule_repository.fetch_groups(group_name=group_name)
+            raw_model = self.signature_repository.fetch_groups(group_name=group_name)
         except Exception as _:
             raise CodeException(message="Error getting group list", error_code=503)
         return [GroupsInfoModel.from_origin(obj) for obj in raw_model]
 
     def fetch_teachers_list(self, teacher_name: str) -> list[TeachersInfoModel]:
         try:
-            raw_model = self.schedule_repository.fetch_teachers(teacher_name=teacher_name)
+            raw_model = self.signature_repository.fetch_teachers(teacher_name=teacher_name)
         except Exception as _:
             raise CodeException(message="Error getting teachers list", error_code=503)
         return [TeachersInfoModel.from_origin(obj) for obj in raw_model]
 
     def fetch_classrooms_list(self, classroom: str) -> list[ClassroomsInfoModel]:
         try:
-            raw_model = self.schedule_repository.fetch_classrooms(classroom=classroom)
+            raw_model = self.signature_repository.fetch_classrooms(classroom=classroom)
         except Exception as _:
             raise CodeException(message="Error getting classrooms list", error_code=503)
         return [ClassroomsInfoModel.from_origin(obj) for obj in raw_model]

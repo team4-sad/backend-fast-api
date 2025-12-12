@@ -13,14 +13,16 @@ from src.models.teachers_info_model import TeachersInfoModel
 from src.services.schedule_service import ScheduleService
 from test.mock.classes.mock_schedule_repository import MockScheduleRepository, CorruptedNotFoundMockScheduleRepository, \
     CorruptedExceptionMockScheduleRepository, EmptyMockScheduleRepository
+from test.mock.classes.mock_signature_repository import MockSignatureRepository, \
+    CorruptedNotFoundMockSignatureRepository, CorruptedExceptionMockSignatureRepository, EmptyMockSignatureRepository
 
 
 class ScheduleServiceTest(unittest.TestCase):
     def setUp(self):
-        self.schedule_service = ScheduleService(MockScheduleRepository())
-        self.corrupted_not_found_schedule_service = ScheduleService(CorruptedNotFoundMockScheduleRepository())
-        self.corrupted_exception_schedule_service = ScheduleService(CorruptedExceptionMockScheduleRepository())
-        self.corrupted_empty_schedule_service = ScheduleService(EmptyMockScheduleRepository())
+        self.schedule_service = ScheduleService(MockScheduleRepository(),MockSignatureRepository())
+        self.corrupted_not_found_schedule_service = ScheduleService(CorruptedNotFoundMockScheduleRepository(), CorruptedNotFoundMockSignatureRepository())
+        self.corrupted_exception_schedule_service = ScheduleService(CorruptedExceptionMockScheduleRepository(),CorruptedExceptionMockSignatureRepository())
+        self.corrupted_empty_schedule_service = ScheduleService(EmptyMockScheduleRepository(),EmptyMockSignatureRepository())
 
     def test_get_schedule_group(self):
         result = self.schedule_service.fetch_group_schedule("", "", "")

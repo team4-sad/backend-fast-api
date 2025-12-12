@@ -3,14 +3,14 @@ import unittest
 from bs4 import BeautifulSoup
 
 from src.config.config import Config
-from src.repositories.news_repository import NewsRepository
+from src.repositories.miigaik_news_repository import MiigaikNewsRepository
 
 
 class NewsRepositoryTest(unittest.TestCase):
 
     def setUp(self):
         config = Config(path_env="../.env")
-        self.news_repository = NewsRepository(
+        self.news_repository = MiigaikNewsRepository(
             base_singular_news_url=config.base_singular_news,
             base_news_list_url=config.base_news_list_url
         )

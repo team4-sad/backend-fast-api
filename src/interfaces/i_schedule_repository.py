@@ -17,12 +17,3 @@ class IScheduleRepository(abc.ABC):
 
     def fetch_classroom(self, classroom_id: str, date_start: str, date_end: str) -> OriginResponseClassroomScheduleModel:
         pass
-
-    def fetch_groups(self, group_name: str) -> list[OriginGroupsInfoModel]:
-        pass
-
-    def fetch_teachers(self, teacher_name: str) -> list[OriginTeachersInfoModel]:
-        pass
-
-    def fetch_classrooms(self, classroom: str) -> list[OriginClassroomsInfoModel]:
-        pass

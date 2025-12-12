@@ -3,7 +3,7 @@ from src.exceptions.code_exception import CodeException
 from src.exceptions.invalid_news_html import InvalidNewsHTML
 from src.exceptions.invalid_pagination_html import InvalidPaginationHTML
 from src.exceptions.invalid_singular_news_html import InvalidSingularNewsHTML
-from src.interfaces.i_db_news_repository import IDbNewsRepository
+from src.interfaces.i_db_search_news_repository import IDbSearchNewsRepository
 from src.interfaces.i_migration_news_repository import IMigrationNewsRepository
 from src.interfaces.i_news_repository import INewsRepository
 from src.interfaces.i_news_service import INewsService
@@ -20,7 +20,7 @@ class NewsService(INewsService):
         news_parser: NewsParser,
         news_repository: INewsRepository,
         migration_news_repository: IMigrationNewsRepository,
-        db_news_repository: IDbNewsRepository
+        db_news_repository: IDbSearchNewsRepository
     ):
         self.news_parser = news_parser
         self.news_repository = news_repository
