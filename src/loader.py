@@ -6,8 +6,10 @@ from src.repositories.db_news_repository import DbNewsRepository
 from src.repositories.migration_news_repository import MigrationNewsRepository
 from src.repositories.news_repository import NewsRepository
 from src.repositories.schedule_repository import ScheduleRepository
+from src.services.lk_service import LkService
 from src.services.news_service import NewsService
 from src.services.schedule_service import ScheduleService
+from test.mock.classes.mock_lk_repository import MockLkRepository
 
 config = Config()
 
@@ -42,4 +44,10 @@ schedule_repository = ScheduleRepository(
 
 schedule_service = ScheduleService(
     schedule_repository=schedule_repository
+)
+
+lk_repository = MockLkRepository()
+
+lk_service = LkService(
+    lk_repository=lk_repository
 )
