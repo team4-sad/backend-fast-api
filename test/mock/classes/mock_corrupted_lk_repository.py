@@ -4,6 +4,5 @@ from src.models.lk_profile_model import LkProfileModel
 
 
 class MockCorruptedLkRepository(ILkRepository):
-
     def get_me(self, access_token: str) -> LkProfileModel:
-        raise LkException('')
+        raise LkException('mock exception')

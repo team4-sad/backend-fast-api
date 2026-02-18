@@ -5,7 +5,6 @@ from test.utils import json_mock
 
 
 class MockLkRepository(ILkRepository):
-
     def get_me(self, access_token: str) -> LkProfileModel:
         if access_token == "":
             raise LkNotAuthorizedException()

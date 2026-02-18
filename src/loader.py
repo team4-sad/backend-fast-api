@@ -47,6 +47,7 @@ schedule_service = ScheduleService(
 )
 
 lk_repository = MockLkRepository()
+
 lk_service = LkService(
     lk_repository=lk_repository
 )
