@@ -2,11 +2,12 @@ from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 
 from src.exceptions.code_exception import CodeException
-from src.handlers import news, schedule
+from src.handlers import news, schedule, lk
 
 app = FastAPI()
 app.include_router(news.router)
 app.include_router(schedule.router)
+app.include_router(lk.router)
 
 
 @app.exception_handler(CodeException)
