@@ -1,5 +1,6 @@
 from src.exceptions.lk_not_authorized_exception import LkNotAuthorizedException
 from src.interfaces.i_lk_repository import ILkRepository
+from src.models.lk_course_record_model import LkCourseRecordModel
 from src.models.lk_profile_model import LkProfileModel
 from test.utils import json_mock
 
@@ -10,3 +11,9 @@ class MockLkRepository(ILkRepository):
             raise LkNotAuthorizedException()
         else:
             return LkProfileModel.from_json(json_mock("lk_profile_mock.json"))
+
+    def get_academic_records(self, access_token: str) -> list[LkCourseRecordModel]:
+        if access_token == "":
+            raise LkNotAuthorizedException()
+        else:
+            return [LkCourseRecordModel.from_json(i) for i in json_mock("lk_academic_records_mock.json")]
