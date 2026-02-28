@@ -3,6 +3,7 @@ from src.exceptions.lk_exception import LkException
 from src.exceptions.lk_not_authorized_exception import LkNotAuthorizedException
 from src.interfaces.i_lk_repository import ILkRepository
 from src.interfaces.i_lk_service import ILkService
+from src.models.lk_course_record_model import LkCourseRecordModel
 from src.models.lk_profile_model import LkProfileModel
 
 
@@ -18,3 +19,12 @@ class LkService(ILkService):
         except LkNotAuthorizedException as e:
             raise CodeException(str(e), 401)
         return profile
+
+    def get_academic_records(self, access_token: str) -> list[LkCourseRecordModel]:
+        try:
+            records = self.lk_repository.get_academic_records(access_token=access_token)
+        except LkException as e:
+            raise CodeException(str(e), 503)
+        except LkNotAuthorizedException as e:
+            raise CodeException(str(e), 401)
+        return records

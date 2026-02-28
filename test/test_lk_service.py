@@ -3,14 +3,17 @@ from unittest import TestCase
 from src.exceptions.code_exception import CodeException
 from src.models.education_info_model import EducationInfoModel
 from src.models.item_family_model import ItemFamilyModel
+from src.models.lk_academic_record_model import LkAcademicRecordModel
+from src.models.lk_course_record_model import LkCourseRecordModel
 from src.models.lk_profile_model import LkProfileModel
+from src.models.lk_semester_record_model import LkSemesterRecordModel
 from src.services.lk_service import LkService
 from test.mock.classes.mock_corrupted_lk_repository import MockCorruptedLkRepository
 from test.mock.classes.mock_lk_repository import MockLkRepository
 
 
 class LkServiceTest(TestCase):
-    def test_success_lk_service(self):
+    def test_success_lk_service_get_me(self):
         result = LkService(lk_repository=MockLkRepository()).get_me("1")
         self.assertEqual(
             LkProfileModel(
@@ -50,12 +53,129 @@ class LkServiceTest(TestCase):
                 ]
             ), result)
 
-    def test_empty_key_lk_service(self):
+    def test_empty_key_lk_service_get_me(self):
         with self.assertRaises(CodeException) as e:
             LkService(lk_repository=MockLkRepository()).get_me("")
         self.assertEqual(e.exception, CodeException('Not Authorized', 401))
 
-    def test_corrupted_lk_service(self):
+    def test_corrupted_lk_service_get_me(self):
         with self.assertRaises(CodeException) as e:
             LkService(lk_repository=MockCorruptedLkRepository()).get_me("")
+        self.assertEqual(e.exception, CodeException('Lk error: mock exception', 503))
+
+    def test_success_lk_service_get_academic_records(self):
+        result = LkService(lk_repository=MockLkRepository()).get_academic_records("1")
+        self.assertEqual([
+            LkCourseRecordModel(
+                course=1,
+                records=[
+                    LkSemesterRecordModel(
+                        semester=1,
+                        records=[
+                            LkAcademicRecordModel(
+                                subject='Математика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Королева Татьяна Михайловна']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Основы права',
+                                type='Зачёт',
+                                rate='Зачёт',
+                                teachers=['Михайлов Филипп Николаевич']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Физика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Старцев Сергей Александрович']
+                            )
+                        ]
+                    ),
+                    LkSemesterRecordModel(
+                        semester=2,
+                        records=[
+                            LkAcademicRecordModel(
+                                subject='Математика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Королева Татьяна Михайловна']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Основы права',
+                                type='Зачёт',
+                                rate='Зачёт',
+                                teachers=['Михайлов Филипп Николаевич']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Физика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Старцев Сергей Александрович']
+                            )
+                        ]
+                    )
+                ]
+            ),
+            LkCourseRecordModel(
+                course=2,
+                records=[
+                    LkSemesterRecordModel(
+                        semester=3,
+                        records=[
+                            LkAcademicRecordModel(
+                                subject='Математика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Королева Татьяна Михайловна']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Основы права',
+                                type='Зачёт',
+                                rate='Зачёт',
+                                teachers=['Михайлов Филипп Николаевич']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Физика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Старцев Сергей Александрович']
+                            )
+                        ]
+                    ),
+                    LkSemesterRecordModel(
+                        semester=4,
+                        records=[
+                            LkAcademicRecordModel(
+                                subject='Математика',
+                                type='Зачёт с оценкой',
+                                rate='4',
+                                teachers=['Королева Татьяна Михайловна']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Основы права',
+                                type='Зачёт',
+                                rate='Зачёт',
+                                teachers=['Михайлов Филипп Николаевич']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Физика',
+                                type='Зачёт с оценкой',
+                                rate='4',
+                                teachers=['Старцев Сергей Александрович']
+                            )
+                        ]
+                    )
+                ]
+            )
+        ], result)
+
+    def test_empty_key_lk_service_get_academic_records(self):
+        with self.assertRaises(CodeException) as e:
+            LkService(lk_repository=MockLkRepository()).get_academic_records("")
+        self.assertEqual(e.exception, CodeException('Not Authorized', 401))
+
+    def test_corrupted_lk_service_get_academic_records(self):
+        with self.assertRaises(CodeException) as e:
+            LkService(lk_repository=MockCorruptedLkRepository()).get_academic_records("")
         self.assertEqual(e.exception, CodeException('Lk error: mock exception', 503))
