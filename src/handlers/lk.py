@@ -4,8 +4,8 @@ from src import loader
 from src.models.lk_course_record_model import LkCourseRecordModel
 from src.models.lk_profile_model import LkProfileModel
 
-
 router = APIRouter(prefix='/lk')
+
 
 @router.get(
     "/me",

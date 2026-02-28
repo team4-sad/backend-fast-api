@@ -10,4 +10,3 @@ class MockCorruptedLkRepository(ILkRepository):
 
     def get_academic_records(self, access_token: str) -> list[LkCourseRecordModel]:
         raise LkException('mock exception')
-

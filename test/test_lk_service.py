@@ -65,114 +65,110 @@ class LkServiceTest(TestCase):
 
     def test_success_lk_service_get_academic_records(self):
         result = LkService(lk_repository=MockLkRepository()).get_academic_records("1")
-        (self.assertEqual
-            (
-            [
-                    LkCourseRecordModel(
-                        number=2,
+        self.assertEqual([
+            LkCourseRecordModel(
+                course=1,
+                records=[
+                    LkSemesterRecordModel(
+                        semester=1,
                         records=[
-                            LkSemesterRecordModel(
-                                number=1,
-                                records=[
-                                    LkAcademicRecordModel(
-                                        subject='Математика',
-                                        type='зачёт с оценкой',
-                                        rate='3',
-                                        teachers=['Королева Татьяна Михайловна']
-                                    ),
-                                    LkAcademicRecordModel(
-                                        subject='Основы права',
-                                        type='зачёт',
-                                        rate='зачёт',
-                                        teachers=['Михайлов Филипп Николаевич']
-                                    ),
-                                    LkAcademicRecordModel(
-                                        subject='Физика',
-                                        type='зачёт с оценкой',
-                                        rate='3',
-                                        teachers=['Преподаватель']
-                                    )
-                                ]
+                            LkAcademicRecordModel(
+                                subject='Математика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Королева Татьяна Михайловна']
                             ),
-                            LkSemesterRecordModel(
-                                number=2,
-                                records=[
-                                    LkAcademicRecordModel(
-                                        subject='Математика',
-                                        type='зачёт с оценкой',
-                                        rate='3',
-                                        teachers=['Королева Татьяна Михайловна']
-                                    ),
-                                    LkAcademicRecordModel(
-                                        subject='Основы права',
-                                        type='зачёт',
-                                        rate='зачёт',
-                                        teachers=['Михайлов Филипп Николаевич']
-                                    ),
-                                    LkAcademicRecordModel(
-                                        subject='Физика',
-                                        type='зачёт с оценкой',
-                                        rate='3',
-                                        teachers=['Преподаватель']
-                                    )
-                                ]
+                            LkAcademicRecordModel(
+                                subject='Основы права',
+                                type='Зачёт',
+                                rate='Зачёт',
+                                teachers=['Михайлов Филипп Николаевич']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Физика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Старцев Сергей Александрович']
                             )
                         ]
                     ),
-                    LkCourseRecordModel(
-                        number=3,
+                    LkSemesterRecordModel(
+                        semester=2,
                         records=[
-                            LkSemesterRecordModel(
-                                number=1,
-                                records=[
-                                    LkAcademicRecordModel(
-                                        subject='Математика',
-                                        type='зачёт с оценкой',
-                                        rate='3',
-                                        teachers=['Королева Татьяна Михайловна']
-                                    ),
-                                    LkAcademicRecordModel(
-                                        subject='Основы права',
-                                        type='зачёт',
-                                        rate='зачёт',
-                                        teachers=['Михайлов Филипп Николаевич']
-                                    ),
-                                    LkAcademicRecordModel(
-                                        subject='Физика',
-                                        type='зачёт с оценкой',
-                                        rate='3',
-                                        teachers=['Преподаватель']
-                                    )
-                                ]
+                            LkAcademicRecordModel(
+                                subject='Математика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Королева Татьяна Михайловна']
                             ),
-                            LkSemesterRecordModel(
-                                number=2,
-                                records=[
-                                    LkAcademicRecordModel(
-                                        subject='Математика2',
-                                        type='зачёт с оценкой',
-                                        rate='4',
-                                        teachers=['Королева Татьяна Михайловна']
-                                    ),
-                                    LkAcademicRecordModel(
-                                        subject='Основы права2',
-                                        type='зачёт',
-                                        rate='зачёт++',
-                                        teachers=['Михайлов Филипп Николаевич']
-                                    ),
-                                    LkAcademicRecordModel(
-                                        subject='Физика2',
-                                        type='зачёт с оценкой',
-                                        rate='4',
-                                        teachers=['Преподаватель']
-                                    )
-                                ]
+                            LkAcademicRecordModel(
+                                subject='Основы права',
+                                type='Зачёт',
+                                rate='Зачёт',
+                                teachers=['Михайлов Филипп Николаевич']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Физика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Старцев Сергей Александрович']
                             )
                         ]
                     )
-                ], result
+                ]
+            ),
+            LkCourseRecordModel(
+                course=2,
+                records=[
+                    LkSemesterRecordModel(
+                        semester=3,
+                        records=[
+                            LkAcademicRecordModel(
+                                subject='Математика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Королева Татьяна Михайловна']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Основы права',
+                                type='Зачёт',
+                                rate='Зачёт',
+                                teachers=['Михайлов Филипп Николаевич']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Физика',
+                                type='Зачёт с оценкой',
+                                rate='3',
+                                teachers=['Старцев Сергей Александрович']
+                            )
+                        ]
+                    ),
+                    LkSemesterRecordModel(
+                        semester=4,
+                        records=[
+                            LkAcademicRecordModel(
+                                subject='Математика',
+                                type='Зачёт с оценкой',
+                                rate='4',
+                                teachers=['Королева Татьяна Михайловна']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Основы права',
+                                type='Зачёт',
+                                rate='Зачёт',
+                                teachers=['Михайлов Филипп Николаевич']
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Физика',
+                                type='Зачёт с оценкой',
+                                rate='4',
+                                teachers=['Старцев Сергей Александрович']
+                            )
+                        ]
+                    )
+                ]
             )
-        )
+        ], result)
 
     def test_empty_key_lk_service_get_academic_records(self):
         with self.assertRaises(CodeException) as e:

@@ -8,7 +8,6 @@ class LkAcademicRecordModel:
     rate: str | None
     teachers: list[str] | None
 
-
     @staticmethod
     def from_json(json: dict):
         return LkAcademicRecordModel(
