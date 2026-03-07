@@ -187,106 +187,100 @@ class LkServiceTest(TestCase):
     def test_success_lk_service_get_education_plan(self):
         result = LkService(lk_repository=MockLkRepository()).get_education_plan("1")
         self.assertEqual(
-            result,
-            [CourseEducationPlanModel
-            (
-                course=1,
-                semesters=[
-                    SemesterEducationPlanModel
-                        (
-                        semester=1,
-                        plan=
-                        [
-                            EducationPlanModel(
-                                index='0124',
-                                discipline='Линейная алгебра',
-                                academic_hours=9998,
-                                credit_units=1,
-                                certification=CertificationModel(
-                                    exam=True,
-                                    credit_with_rate=False,
-                                    credit=False,
-                                    course_work=False,
-                                    course_project=False
+            result, [
+                CourseEducationPlanModel(
+                    course=1,
+                    semesters=[
+                        SemesterEducationPlanModel(
+                            semester=1,
+                            plan=[
+                                EducationPlanModel(
+                                    index='0124',
+                                    discipline='Линейная алгебра',
+                                    academic_hours=9998,
+                                    credit_units=1,
+                                    certification=CertificationModel(
+                                        exam=True,
+                                        credit_with_rate=False,
+                                        credit=False,
+                                        course_work=False,
+                                        course_project=False
+                                    ),
+                                    department='Кафедра высшей математики',
+                                    count_lectures=4999,
+                                    count_laboratories=0,
+                                    count_independent_work=5,
+                                    count_practical=4994,
+                                    exist_essay=False
                                 ),
-                                department='Кафедра высшей математики',
-                                count_lectures=4999,
-                                count_laboratories=0,
-                                count_independent_work=5,
-                                count_practical=4994,
-                                exist_essay=False
-                            ),
-                            EducationPlanModel(
-                                index='0127',
-                                discipline='Математика',
-                                academic_hours=9994,
-                                credit_units=1,
-                                certification=CertificationModel(
-                                    exam=False,
-                                    credit_with_rate=True,
-                                    credit=False,
-                                    course_work=False,
-                                    course_project=False
-                                ),
-                                department='Кафедра высшей математики',
-                                count_lectures=4997,
-                                count_laboratories=0,
-                                count_independent_work=4,
-                                count_practical=4993,
-                                exist_essay=False
-                            )
-                        ]
+                                EducationPlanModel(
+                                    index='0127',
+                                    discipline='Математика',
+                                    academic_hours=9994,
+                                    credit_units=1,
+                                    certification=CertificationModel(
+                                        exam=False,
+                                        credit_with_rate=True,
+                                        credit=False,
+                                        course_work=False,
+                                        course_project=False
+                                    ),
+                                    department='Кафедра высшей математики',
+                                    count_lectures=4997,
+                                    count_laboratories=0,
+                                    count_independent_work=4,
+                                    count_practical=4993,
+                                    exist_essay=False
+                                )
+                            ]
                         ),
-                    SemesterEducationPlanModel(
-                        semester=2,
-                        plan=
-                        [
-                            EducationPlanModel
-                            (
-                                index='0127',
-                                discipline='Математика',
-                                academic_hours=9998,
-                                credit_units=1,
-                                certification=CertificationModel(
-                                    exam=True,
-                                    credit_with_rate=False,
-                                    credit=False,
-                                    course_work=False,
-                                    course_project=False
+                        SemesterEducationPlanModel(
+                            semester=2,
+                            plan=[
+                                EducationPlanModel(
+                                    index='0127',
+                                    discipline='Математика',
+                                    academic_hours=9998,
+                                    credit_units=1,
+                                    certification=CertificationModel(
+                                        exam=True,
+                                        credit_with_rate=False,
+                                        credit=False,
+                                        course_work=False,
+                                        course_project=False
+                                    ),
+                                    department='Кафедра высшей математики',
+                                    count_lectures=4999,
+                                    count_laboratories=0,
+                                    count_independent_work=5,
+                                    count_practical=4994,
+                                    exist_essay=False
                                 ),
-                                department='Кафедра высшей математики',
-                                count_lectures=4999,
-                                count_laboratories=0,
-                                count_independent_work=5,
-                                count_practical=4994,
-                                exist_essay=False
-                            ),
-                            EducationPlanModel
-                            (
-                                index='0243',
-                                discipline='История',
-                                academic_hours=4,
-                                credit_units=1,
-                                certification=CertificationModel(
-                                    exam=True,
-                                    credit_with_rate=False,
-                                    credit=False,
-                                    course_work=False,
-                                    course_project=False
-                                ),
-                                department='Кафедра истории',
-                                count_lectures=4,
-                                count_laboratories=0,
-                                count_independent_work=1,
-                                count_practical=0,
-                                exist_essay=True
-                            )
-                        ]
-                    )
-                ]
-            )]
+                                EducationPlanModel(
+                                    index='0243',
+                                    discipline='История',
+                                    academic_hours=4,
+                                    credit_units=1,
+                                    certification=CertificationModel(
+                                        exam=True,
+                                        credit_with_rate=False,
+                                        credit=False,
+                                        course_work=False,
+                                        course_project=False
+                                    ),
+                                    department='Кафедра истории',
+                                    count_lectures=4,
+                                    count_laboratories=0,
+                                    count_independent_work=1,
+                                    count_practical=0,
+                                    exist_essay=True
+                                )
+                            ]
+                        )
+                    ]
+                )
+            ]
         )
-
 
     def test_empty_key_lk_service_get_education_plan(self):
         with self.assertRaises(CodeException) as e:

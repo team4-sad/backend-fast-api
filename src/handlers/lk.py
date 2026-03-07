@@ -40,7 +40,7 @@ async def get_academic_records(access_token: str = Header(alias="Authorization")
     "/education_plan",
     tags=["lk"],
     responses={
-        200: {"model": list[CourseEducationPlanModel], "description": "Список моделей планов обучения"},
+        200: {"model": list[CourseEducationPlanModel], "description": "Список моделей планов обучения на курс"},
         401: {"model": str, "description": "Ошибка при взаимодействии со сторонним ресурсом"},
         503: {},
     },
