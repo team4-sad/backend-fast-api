@@ -1,0 +1,94 @@
+[
+  {
+    "course": "1",
+    "semesters":
+    [
+      {
+        "semester": "1",
+        "plan": [
+          {
+            "index": "0124",
+            "discipline": "Линейная алгебра",
+            "academic_hours": "9998",
+            "credit_units": "1",
+            "certification": {
+                "exam": true,
+                "credit_with_rate": false,
+                "credit": false,
+                "course_work": false,
+                "course_project": false
+            },
+            "department": "Кафедра высшей математики",
+            "count_lectures": "4999",
+            "count_laboratories": "0",
+            "count_independent_work": "5",
+            "count_practical": "4994",
+            "exist_essay": false
+          },
+          {
+            "index": "0127",
+            "discipline": "Математика",
+            "academic_hours": "9994",
+            "credit_units": "1",
+            "certification": {
+                "exam": false,
+                "credit_with_rate": true,
+                "credit": false,
+                "course_work": false,
+                "course_project": false
+            },
+            "department": "Кафедра высшей математики",
+            "count_lectures": "4997",
+            "count_laboratories": "0",
+            "count_independent_work": "4",
+            "count_practical": "4993",
+            "exist_essay": false
+          }
+        ]
+      },
+      {
+        "semester": "2",
+        "plan": [
+          {
+            "index": "0127",
+            "discipline": "Математика",
+            "academic_hours": "9998",
+            "credit_units": "1",
+            "certification": {
+                "exam": true,
+                "credit_with_rate": false,
+                "credit": false,
+                "course_work": false,
+                "course_project": false
+            },
+            "department": "Кафедра высшей математики",
+            "count_lectures": "4999",
+            "count_laboratories": "0",
+            "count_independent_work": "5",
+            "count_practical": "4994",
+            "exist_essay": false
+          },
+          {
+            "index": "0243",
+            "discipline": "История",
+            "academic_hours": "4",
+            "credit_units": "1",
+            "certification": {
+                "exam": true,
+                "credit_with_rate": false,
+                "credit": false,
+                "course_work": false,
+                "course_project": false
+            },
+            "department": "Кафедра истории",
+            "count_lectures": "4",
+            "count_laboratories": "0",
+            "count_independent_work": "1",
+            "count_practical": "0",
+            "exist_essay": true
+          }
+        ]
+      }
+    ]
+  }
+]
