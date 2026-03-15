@@ -21,7 +21,7 @@ from test.utils import html_mock, json_mock
 
 class NewsServiceTest(unittest.TestCase):
     def setUp(self):
-        config = Config(path_env="../.env")
+        config = Config(path_env=".env")
 
         self.database = SQLiteDatabase(TEST_DATABASE_NAME)
         self.database.connect()

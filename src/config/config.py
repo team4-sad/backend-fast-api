@@ -1,8 +1,17 @@
+import os
+
 from dotenv import dotenv_values
 
 
 class Config:
-    def __init__(self, path_env: str = ".env"):
+    def __init__(self, path_env: str = ".env", is_relative_path: bool = True):
+        if is_relative_path:
+            project_dir = os.path.abspath(os.curdir)
+            if "test" in project_dir:
+                project_dir = project_dir.replace("\\test", "\\")
+            path_env = os.path.join(project_dir, path_env)
+        if not os.path.exists(path_env):
+            raise FileNotFoundError(f"Config file not found: {path_env}")
         self._config = dotenv_values(path_env)
 
     @property

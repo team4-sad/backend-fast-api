@@ -1,3 +1,4 @@
+import os
 import unittest
 
 from src.config.config import Config
@@ -11,7 +12,7 @@ from src.repositories.schedule_repository import ScheduleRepository
 
 class ScheduleRepositoryTest(unittest.TestCase):
     def setUp(self):
-        config = Config(path_env="../.env")
+        config = Config(path_env=".env")
         self.schedule_repository = ScheduleRepository(base_url=config.base_schedule_api_url)
 
     def test_get_different_schedules(self):

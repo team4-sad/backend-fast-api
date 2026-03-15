@@ -31,7 +31,7 @@ class ParserTest(TestCase):
         self.singular_news_invalid_content_html = html_mock("singular_news_invalid_content.html")
 
 
-        config = Config(path_env="../.env")
+        config = Config(path_env=".env")
         self.parser = NewsParser(base_link_url=config.base_link_url)
 
     def test_parse_news_list(self):

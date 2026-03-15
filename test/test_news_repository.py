@@ -9,7 +9,7 @@ from src.repositories.news_repository import NewsRepository
 class NewsRepositoryTest(unittest.TestCase):
 
     def setUp(self):
-        config = Config(path_env="../.env")
+        config = Config(path_env=".env")
         self.news_repository = NewsRepository(
             base_singular_news_url=config.base_singular_news,
             base_news_list_url=config.base_news_list_url
