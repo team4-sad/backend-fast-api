@@ -2,6 +2,7 @@ from fastapi import APIRouter
 
 from src import loader
 from src.models.classrooms_info_model import ClassroomsInfoModel
+from src.models.exam_model import ExamModel
 from src.models.groups_info_model import GroupsInfoModel
 from src.models.response_group_schedule_model import ResponseGroupScheduleModel
 from src.models.response_teacher_schedule_model import ResponseTeacherScheduleModel
@@ -93,3 +94,16 @@ async def get_list_classrooms(classroom: str):
 async def get_list_teachers(teacher: str):
     teachers = loader.schedule_service.fetch_teachers_list(teacher_name=teacher)
     return teachers
+
+
+@router.get(
+    "/exams/{group_id}",
+    tags=["schedule"],
+    responses={
+        200: {"model": list[ExamModel], "description": "Поиск списков экзаменов группы"},
+        503: {"model": str, "description": "Error getting exams list"}
+    },
+)
+async def get_list_exams(group_id: int):
+    exams = loader.schedule_service.fetch_exams_by_group_id(group_id=group_id)
+    return exams

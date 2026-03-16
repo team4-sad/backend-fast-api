@@ -1,5 +1,6 @@
 import abc
 
+from src.models.exam_model import ExamModel
 from src.models.origin_classrooms_info_model import OriginClassroomsInfoModel
 from src.models.origin_groups_info_model import OriginGroupsInfoModel
 from src.models.origin_response_classroom_schedule_model import OriginResponseClassroomScheduleModel
@@ -25,4 +26,7 @@ class IScheduleRepository(abc.ABC):
         pass
 
     def fetch_classrooms(self, classroom: str) -> list[OriginClassroomsInfoModel]:
+        pass
+
+    def fetch_exams_by_group_id(self, group_id: int) -> list[ExamModel]:
         pass
