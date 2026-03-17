@@ -1,15 +1,19 @@
 from datetime import datetime
 from unittest import TestCase
+
+from src.enums.order_document_status import OrderDocumentStatus
 from src.exceptions.code_exception import CodeException
 from src.models.certification_model import CertificationModel
 from src.models.course_education_plan_model import CourseEducationPlanModel
 from src.models.education_info_model import EducationInfoModel
 from src.models.education_plan_model import EducationPlanModel
+from src.models.interval_model import IntervalModel
 from src.models.item_family_model import ItemFamilyModel
 from src.models.lk_academic_record_model import LkAcademicRecordModel
 from src.models.lk_course_record_model import LkCourseRecordModel
 from src.models.lk_profile_model import LkProfileModel
 from src.models.lk_semester_record_model import LkSemesterRecordModel
+from src.models.order_document_model import OrderDocumentModel
 from src.models.semester_education_plan_model import SemesterEducationPlanModel
 from src.services.lk_service import LkService
 from test.mock.classes.mock_corrupted_lk_repository import MockCorruptedLkRepository
@@ -17,7 +21,7 @@ from test.mock.classes.mock_lk_repository import MockLkRepository
 
 
 class LkServiceTest(TestCase):
-    def test_success_lk_service_get_me(self):
+    def test_success_get_me(self):
         result = LkService(lk_repository=MockLkRepository()).get_me("1")
         self.assertEqual(
             LkProfileModel(
@@ -57,17 +61,17 @@ class LkServiceTest(TestCase):
                 ]
             ), result)
 
-    def test_empty_key_lk_service_get_me(self):
+    def test_empty_access_token_get_me(self):
         with self.assertRaises(CodeException) as e:
             LkService(lk_repository=MockLkRepository()).get_me("")
         self.assertEqual(e.exception, CodeException('Not Authorized', 401))
 
-    def test_corrupted_lk_service_get_me(self):
+    def test_corrupted_get_me(self):
         with self.assertRaises(CodeException) as e:
             LkService(lk_repository=MockCorruptedLkRepository()).get_me("")
         self.assertEqual(e.exception, CodeException('Lk error: mock exception', 503))
 
-    def test_success_lk_service_get_academic_records(self):
+    def test_success_get_academic_records(self):
         result = LkService(lk_repository=MockLkRepository()).get_academic_records("1")
         self.assertEqual([
             LkCourseRecordModel(
@@ -174,17 +178,17 @@ class LkServiceTest(TestCase):
             )
         ], result)
 
-    def test_empty_key_lk_service_get_academic_records(self):
+    def test_empty_access_token_get_academic_records(self):
         with self.assertRaises(CodeException) as e:
             LkService(lk_repository=MockLkRepository()).get_academic_records("")
         self.assertEqual(e.exception, CodeException('Not Authorized', 401))
 
-    def test_corrupted_lk_service_get_academic_records(self):
+    def test_corrupted_get_academic_records(self):
         with self.assertRaises(CodeException) as e:
             LkService(lk_repository=MockCorruptedLkRepository()).get_academic_records("")
         self.assertEqual(e.exception, CodeException('Lk error: mock exception', 503))
 
-    def test_success_lk_service_get_education_plan(self):
+    def test_success_get_education_plan(self):
         result = LkService(lk_repository=MockLkRepository()).get_education_plan("1")
         self.assertEqual(
             result, [
@@ -282,7 +286,7 @@ class LkServiceTest(TestCase):
             ]
         )
 
-    def test_empty_key_lk_service_get_education_plan(self):
+    def test_empty_access_token_get_education_plan(self):
         with self.assertRaises(CodeException) as e:
             LkService(lk_repository=MockLkRepository()).get_education_plan("")
         self.assertEqual(e.exception, CodeException('Not Authorized', 401))
@@ -290,4 +294,29 @@ class LkServiceTest(TestCase):
     def test_corrupted_lk_sservice_get_education_plan(self):
         with self.assertRaises(CodeException) as e:
             LkService(lk_repository=MockCorruptedLkRepository()).get_education_plan("")
+        self.assertEqual(e.exception, CodeException('Lk error: mock exception', 503))
+
+    def test_success_get_orders_document(self):
+        result = LkService(lk_repository=MockLkRepository()).get_orders_document("1")
+        self.assertEqual(
+            result,
+            [OrderDocumentModel(
+                id=1337,
+                number='2026-0000001224',
+                name='Тест заказ документа',
+                created_at=datetime(2005, 10, 4, 0, 0, 1),
+                interval=IntervalModel(start_day=2, end_day=5),
+                status=OrderDocumentStatus.complete,
+                comment='Документ готов к выдаче'
+            )]
+        )
+
+    def test_empty_access_token_get_orders_document(self):
+        with self.assertRaises(CodeException) as e:
+            LkService(lk_repository=MockLkRepository()).get_orders_document("")
+        self.assertEqual(e.exception, CodeException('Not Authorized', 401))
+
+    def test_corrupted_lk_sservice_get_orders_document(self):
+        with self.assertRaises(CodeException) as e:
+            LkService(lk_repository=MockCorruptedLkRepository()).get_orders_document("")
         self.assertEqual(e.exception, CodeException('Lk error: mock exception', 503))
