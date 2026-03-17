@@ -70,3 +70,11 @@ class ScheduleRepositoryTest(unittest.TestCase):
         with self.assertRaises(InvalidClassroomException) as e:
             self.schedule_repository.fetch_classroom(classroom_id="-1",date_start="2025-10-27",date_end="2025-11-02")
         self.assertEqual("-1", e.exception.classroom_id)
+
+    def test_get_exam_group(self):
+        result = self.schedule_repository.fetch_exams_by_group_id(group_id="1274")
+        self.assertNotEqual(result, [])
+
+    def test_get_not_exist_exam_group(self):
+        result = self.schedule_repository.fetch_exams_by_group_id(group_id="-1")
+        self.assertEqual(result, [])

@@ -6,6 +6,7 @@ from src.exceptions.invalid_group_exception import InvalidGroupException
 from src.exceptions.invalid_schedule_exception import InvalidScheduleException
 from src.exceptions.invalid_teacher_exception import InvalidTeacherException
 from src.interfaces.i_schedule_repository import IScheduleRepository
+from src.models.exam_model import ExamModel
 from src.models.origin_classrooms_info_model import OriginClassroomsInfoModel
 from src.models.origin_groups_info_model import OriginGroupsInfoModel
 from src.models.origin_response_classroom_schedule_model import OriginResponseClassroomScheduleModel
@@ -69,3 +70,11 @@ class ScheduleRepository(IScheduleRepository):
         response = requests.get(f"{self.base_url}search/classroom?classroomName={classroom}")
         classrooms_list = [OriginClassroomsInfoModel.from_json(obj) for obj in response.json()]
         return classrooms_list
+
+    def fetch_exams_by_group_id(self, group_id: str) -> list[ExamModel]:
+        try:
+            response = requests.get(f"{self.base_url}exam?student_group_id={group_id}")
+            exams_list = [ExamModel.from_json(obj) for obj in response.json()]
+            return exams_list
+        except HTTPError:
+            raise InvalidGroupException(group_id=group_id)

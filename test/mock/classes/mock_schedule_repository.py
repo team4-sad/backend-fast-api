@@ -5,6 +5,7 @@ from src.exceptions.invalid_group_exception import InvalidGroupException
 from src.exceptions.invalid_schedule_exception import InvalidScheduleException
 from src.exceptions.invalid_teacher_exception import InvalidTeacherException
 from src.interfaces.i_schedule_repository import IScheduleRepository
+from src.models.exam_model import ExamModel
 from src.models.origin_classrooms_info_model import OriginClassroomsInfoModel
 from src.models.origin_groups_info_model import OriginGroupsInfoModel
 from src.models.origin_response_classroom_schedule_model import OriginResponseClassroomScheduleModel
@@ -36,6 +37,9 @@ class MockScheduleRepository(IScheduleRepository):
     def fetch_classrooms(self, classroom: str) -> list[OriginClassroomsInfoModel]:
         return [OriginClassroomsInfoModel(classroom_name="", classroom_id=1, current_week_schedule_link="")]
 
+    def fetch_exams_by_group_id(self, group_id: int) -> list[ExamModel]:
+        return [ExamModel.from_json(i) for i in json_mock("exam_schedule.json")]
+
 
 class CorruptedNotFoundMockScheduleRepository(IScheduleRepository):
     def fetch_group(self, group_id: str, date_start: str, date_end: str) -> OriginResponseGroupScheduleModel:
@@ -56,6 +60,9 @@ class CorruptedNotFoundMockScheduleRepository(IScheduleRepository):
 
     def fetch_classrooms(self, classroom: str) -> list[OriginClassroomsInfoModel]:
         raise Exception()
+
+    def fetch_exams_by_group_id(self, group_id: int) -> list[ExamModel]:
+        return [ExamModel.from_json(i) for i in json_mock("exam_not_found_group_schedule.json")]
 
 
 class CorruptedExceptionMockScheduleRepository(IScheduleRepository):
@@ -78,6 +85,9 @@ class CorruptedExceptionMockScheduleRepository(IScheduleRepository):
     def fetch_classrooms(self, classroom: str) -> list[OriginClassroomsInfoModel]:
         raise Exception(503)
 
+    def fetch_exams_by_group_id(self, group_id: int) -> list[ExamModel]:
+        raise Exception(503)
+
 
 class EmptyMockScheduleRepository(IScheduleRepository):
     def fetch_group(self, group_id: str, date_start: str, date_end: str) -> OriginResponseGroupScheduleModel:
@@ -98,3 +108,8 @@ class EmptyMockScheduleRepository(IScheduleRepository):
 
     def fetch_classrooms(self, classroom: str) -> list[OriginClassroomsInfoModel]:
         return []
+
+    def fetch_exams_by_group_id(self, group_id: int) -> list[ExamModel]:
+        return [ExamModel.from_json(i) for i in json_mock("exam_empty_schedule.json")]
+
+

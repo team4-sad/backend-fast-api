@@ -1,0 +1,36 @@
+[
+  {
+    "id": 14795,
+    "studentGroupId": 1274,
+    "studentGroupName": "2023-ФГиИБ-ПИ-1б",
+    "classroomId": 372,
+    "classroomName": "170",
+    "classroomFloor": 1,
+    "classroomBuildingName": "Главный корпус",
+    "classroomTypeName": "Компьютерный класс",
+    "disciplineId": 1076,
+    "disciplineName": "Теория и алгоритмы распознавания образов",
+    "dateAndTime": "2026-01-14 10:00:00",
+    "examinerId": 405,
+    "examinerFirstName": "Людмила",
+    "examinerLastName": "Чабан",
+    "examinerPatronymic": "Николаевна"
+  },
+  {
+    "id": 147302,
+    "studentGroupId": 1274,
+    "studentGroupName": "2023-ФГиИБ-ПИ-1б",
+    "classroomId": 411,
+    "classroomName": "507 к.2",
+    "classroomFloor": 5,
+    "classroomBuildingName": "2-ой корпус",
+    "classroomTypeName": "Компьютерный класс",
+    "disciplineId": 2199,
+    "disciplineName": "Экономическое обоснование проектов",
+    "dateAndTime": "2026-01-21 12:00:00",
+    "examinerId": 416,
+    "examinerFirstName": "Олеся",
+    "examinerLastName": "Чужина",
+    "examinerPatronymic": "Михайловна"
+  }
+]

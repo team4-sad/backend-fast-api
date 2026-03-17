@@ -5,6 +5,7 @@ from src.exceptions.invalid_teacher_exception import InvalidTeacherException
 from src.interfaces.i_schedule_repository import IScheduleRepository
 from src.interfaces.i_schedule_service import IScheduleService
 from src.models.classrooms_info_model import ClassroomsInfoModel
+from src.models.exam_model import ExamModel
 from src.models.groups_info_model import GroupsInfoModel
 from src.models.response_classroom_schedule_model import ResponseClassroomScheduleModel
 from src.models.response_group_schedule_model import ResponseGroupScheduleModel
@@ -81,3 +82,9 @@ class ScheduleService(IScheduleService):
         except Exception as _:
             raise CodeException(message="Error getting classrooms list", error_code=503)
         return [ClassroomsInfoModel.from_origin(obj) for obj in raw_model]
+
+    def fetch_exams_by_group_id(self, group_id: int) -> list[ExamModel]:
+        try:
+            return self.schedule_repository.fetch_exams_by_group_id(group_id=group_id)
+        except Exception as _:
+            raise CodeException(message="Error getting exams list", error_code=503)
