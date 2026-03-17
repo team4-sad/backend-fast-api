@@ -1,4 +1,4 @@
-class InvalidGroupException (Exception):
+class InvalidGroupException(Exception):
     def __str__(self):
         return "Invalid group"
 

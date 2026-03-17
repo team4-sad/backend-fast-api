@@ -18,7 +18,7 @@ class ExamModel:
     examiner_id: int
     examiner_first_name: str
     examiner_last_name: str
-    examiner_patronymic :str
+    examiner_patronymic: str
 
     @staticmethod
     def from_json(json: dict):
@@ -37,13 +37,4 @@ class ExamModel:
             examiner_first_name=json["examinerFirstName"],
             examiner_last_name=json["examinerLastName"],
             examiner_patronymic=json["examinerPatronymic"],
-
         )
-
-    @property
-    def date_date_created(self):
-        try:
-            return str2date(self.date_and_time)
-        except ValueError:
-            return str2datetime(self.date_and_time).date()
-

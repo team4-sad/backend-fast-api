@@ -1,7 +1,4 @@
 import unittest
-
-from pycparser.ply.yacc import resultlimit
-
 from src.exceptions.code_exception import CodeException
 from src.models.classrooms_info_model import ClassroomsInfoModel
 from src.models.day_model import DayModel
@@ -323,45 +320,50 @@ class ScheduleServiceTest(unittest.TestCase):
 
     def test_get_exam_group(self):
         result = self.schedule_service.fetch_exams_by_group_id(group_id=1)
-        self.assertEqual(result,[ExamModel(id=14795,
-           student_group_id=1274,
-           classroom_id=372,
-           classroom_name='170',
-           classroom_floor=1,
-           classroom_building_name='Главный корпус',
-           classroom_type_name='Компьютерный класс',
-           discipline_id=1076,
-           discipline_name='Теория и алгоритмы распознавания образов',
-           date_and_time='2026-01-14 10:00:00',
-           examiner_id=405,
-           examiner_first_name='Людмила',
-           examiner_last_name='Чабан',
-           examiner_patronymic='Николаевна'),
- ExamModel(id=147302,
-           student_group_id=1274,
-           classroom_id=411,
-           classroom_name='507 к.2',
-           classroom_floor=5,
-           classroom_building_name='2-ой корпус',
-           classroom_type_name='Компьютерный класс',
-           discipline_id=2199,
-           discipline_name='Экономическое обоснование проектов',
-           date_and_time='2026-01-21 12:00:00',
-           examiner_id=416,
-           examiner_first_name='Олеся',
-           examiner_last_name='Чужина',
-           examiner_patronymic='Михайловна')])
+        self.assertEqual(result, [
+            ExamModel(
+                id=14795,
+                student_group_id=1274,
+                classroom_id=372,
+                classroom_name='170',
+                classroom_floor=1,
+                classroom_building_name='Главный корпус',
+                classroom_type_name='Компьютерный класс',
+                discipline_id=1076,
+                discipline_name='Теория и алгоритмы распознавания образов',
+                date_and_time='2026-01-14 10:00:00',
+                examiner_id=405,
+                examiner_first_name='Людмила',
+                examiner_last_name='Чабан',
+                examiner_patronymic='Николаевна'
+            ),
+            ExamModel(
+                id=147302,
+                student_group_id=1274,
+                classroom_id=411,
+                classroom_name='507 к.2',
+                classroom_floor=5,
+                classroom_building_name='2-ой корпус',
+                classroom_type_name='Компьютерный класс',
+                discipline_id=2199,
+                discipline_name='Экономическое обоснование проектов',
+                date_and_time='2026-01-21 12:00:00',
+                examiner_id=416,
+                examiner_first_name='Олеся',
+                examiner_last_name='Чужина',
+                examiner_patronymic='Михайловна'
+            )
+        ])
 
     def test_get_not_found_exam_group(self):
         result = self.corrupted_not_found_schedule_service.fetch_exams_by_group_id(group_id=1)
-        self.assertEqual(result,[])
+        self.assertEqual(result, [])
 
-    def test_get_empty_exam_group (self):
+    def test_get_empty_exam_group(self):
         result = self.corrupted_empty_schedule_service.fetch_exams_by_group_id(group_id=1)
-        self.assertEqual(result,[])
+        self.assertEqual(result, [])
 
     def test_get_exception_exam_group(self):
         with self.assertRaises(CodeException) as e:
             self.corrupted_exception_schedule_service.fetch_exams_by_group_id(group_id=1)
         self.assertEqual(e.exception, CodeException('Error getting exams list', 503))
-

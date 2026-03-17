@@ -2,7 +2,6 @@ import requests
 from requests import HTTPError
 
 from src.exceptions.invalid_classroom_exception import InvalidClassroomException
-from src.exceptions.invalid_exam_group_exception import InvalidExamGroupException
 from src.exceptions.invalid_group_exception import InvalidGroupException
 from src.exceptions.invalid_schedule_exception import InvalidScheduleException
 from src.exceptions.invalid_teacher_exception import InvalidTeacherException
@@ -78,5 +77,4 @@ class ScheduleRepository(IScheduleRepository):
             exams_list = [ExamModel.from_json(obj) for obj in response.json()]
             return exams_list
         except HTTPError:
-            raise InvalidExamGroupException(group_id=group_id)
-
+            raise InvalidGroupException(group_id=group_id)
