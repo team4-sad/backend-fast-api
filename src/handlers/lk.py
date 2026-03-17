@@ -50,6 +50,7 @@ async def get_academic_records(access_token: str = Header(alias="Authorization")
     result = loader.lk_service.get_education_plan(access_token=access_token)
     return result
 
+
 @router.get(
     "/document/orders",
     tags=["lk"],

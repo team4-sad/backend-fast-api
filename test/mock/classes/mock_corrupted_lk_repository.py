@@ -18,5 +18,3 @@ class MockCorruptedLkRepository(ILkRepository):
 
     def get_orders_document(self, access_token: str) -> list[OrderDocumentModel]:
         raise LkException('mock exception')
-
-

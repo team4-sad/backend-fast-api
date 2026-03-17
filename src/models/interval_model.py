@@ -6,7 +6,6 @@ class IntervalModel:
     start_day: int
     end_day: int
 
-
     @staticmethod
     def from_json(json: dict):
         return IntervalModel(

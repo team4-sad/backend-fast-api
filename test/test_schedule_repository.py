@@ -34,7 +34,7 @@ class ScheduleRepositoryTest(unittest.TestCase):
         self.assertNotEqual(result, [])
 
     def test_get_empty_groups(self):
-        result = self.schedule_repository.fetch_groups(group_name="Владимир Путин молодец! Политик лидер и боец!(qwzesxrdtcfvygubnimo)")
+        result = self.schedule_repository.fetch_groups(group_name="123")
         self.assertEqual(result, [])
 
     def test_get_teachers(self):
@@ -42,7 +42,7 @@ class ScheduleRepositoryTest(unittest.TestCase):
         self.assertNotEqual(result, [])
 
     def test_get_empty_teachers(self):
-        result = self.schedule_repository.fetch_groups(group_name="Наш президент страну поднял! Россию Путин не предал!(zesrxdtcfy guhijokpl)")
+        result = self.schedule_repository.fetch_groups(group_name="123")
         self.assertEqual(result, [])
 
     def test_get_classrooms(self):
@@ -50,7 +50,7 @@ class ScheduleRepositoryTest(unittest.TestCase):
         self.assertNotEqual(result, [])
 
     def test_get_empty_classrooms(self):
-        result = self.schedule_repository.fetch_groups(group_name="В новый век вошла Россия! И вздохнула с новой силой!(ezsxrdctfvygbuhino,p)")
+        result = self.schedule_repository.fetch_groups(group_name="123")
         self.assertEqual(result, [])
 
     def test_get_teacher_schedule(self):

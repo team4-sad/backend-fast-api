@@ -48,4 +48,3 @@ class LkService(ILkService):
         except LkNotAuthorizedException as e:
             raise CodeException(str(e), 401)
         return documents
-

@@ -300,17 +300,15 @@ class LkServiceTest(TestCase):
         result = LkService(lk_repository=MockLkRepository()).get_orders_document("1")
         self.assertEqual(
             result,
-            [OrderDocumentModel
-                        (
-                            id=1337,
-                            number='1004_124_242',
-                            name='Нейм(имя)',
-                            created_at=datetime(2005, 10, 4, 0, 0, 1),
-                            interval=IntervalModel(start_day=2, end_day=5),
-                            status=OrderDocumentStatus.reject,
-                            comment='Сделайте пжпжпжпжпжпж, очень надо ато уволят'
-                        )
-                    ]
+            [OrderDocumentModel(
+                id=1337,
+                number='2026-0000001224',
+                name='Тест заказ документа',
+                created_at=datetime(2005, 10, 4, 0, 0, 1),
+                interval=IntervalModel(start_day=2, end_day=5),
+                status=OrderDocumentStatus.complete,
+                comment='Документ готов к выдаче'
+            )]
         )
 
     def test_empty_access_token_get_orders_document(self):

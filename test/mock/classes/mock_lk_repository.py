@@ -31,4 +31,3 @@ class MockLkRepository(ILkRepository):
             raise LkNotAuthorizedException()
         else:
             return [OrderDocumentModel.from_json(i) for i in json_mock("lk_document_orders.json")]
-

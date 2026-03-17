@@ -1,5 +1,6 @@
 import enum
 
+
 class OrderDocumentStatus(enum.Enum):
     complete = 'complete'
     reject = 'reject'
