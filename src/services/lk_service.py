@@ -6,6 +6,7 @@ from src.interfaces.i_lk_service import ILkService
 from src.models.course_education_plan_model import CourseEducationPlanModel
 from src.models.lk_course_record_model import LkCourseRecordModel
 from src.models.lk_profile_model import LkProfileModel
+from src.models.order_document_model import OrderDocumentModel
 
 
 class LkService(ILkService):
@@ -39,4 +40,12 @@ class LkService(ILkService):
             raise CodeException(str(e), 401)
         return plans
 
+    def get_orders_document(self, access_token: str) -> list[OrderDocumentModel]:
+        try:
+            documents = self.lk_repository.get_orders_document(access_token=access_token)
+        except LkException as e:
+            raise CodeException(str(e), 503)
+        except LkNotAuthorizedException as e:
+            raise CodeException(str(e), 401)
+        return documents
 
