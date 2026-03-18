@@ -89,7 +89,7 @@ class LkServiceTest(TestCase):
                             LkAcademicRecordModel(
                                 subject='Основы права',
                                 type='Зачёт',
-                                rate='Зачёт',
+                                rate='Зачтено',
                                 teachers=['Михайлов Филипп Николаевич']
                             ),
                             LkAcademicRecordModel(
@@ -104,22 +104,22 @@ class LkServiceTest(TestCase):
                         semester=2,
                         records=[
                             LkAcademicRecordModel(
-                                subject='Математика',
-                                type='Зачёт с оценкой',
-                                rate='3',
-                                teachers=['Королева Татьяна Михайловна']
+                                subject='Основы программирования',
+                                type='Экзамен',
+                                rate='5',
+                                teachers=['Максимова Елена Юрьевна']
                             ),
                             LkAcademicRecordModel(
-                                subject='Основы права',
+                                subject='История России',
                                 type='Зачёт',
-                                rate='Зачёт',
-                                teachers=['Михайлов Филипп Николаевич']
+                                rate='Зачтено',
+                                teachers=["Закатов Александр Николаевич", "Денисов Андрей Олегович"]
                             ),
                             LkAcademicRecordModel(
-                                subject='Физика',
-                                type='Зачёт с оценкой',
-                                rate='3',
-                                teachers=['Старцев Сергей Александрович']
+                                subject='Основы военной подготовки',
+                                type='Зачёт',
+                                rate='Зачтено',
+                                teachers=["Кудакаев Тагир Галимханович", "Чебан Иван Феодорович", "Ильин Олег Юрьевич"]
                             )
                         ]
                     )
@@ -132,22 +132,16 @@ class LkServiceTest(TestCase):
                         semester=3,
                         records=[
                             LkAcademicRecordModel(
-                                subject='Математика',
+                                subject='Дискретная математика',
                                 type='Зачёт с оценкой',
                                 rate='3',
-                                teachers=['Королева Татьяна Михайловна']
+                                teachers=["Чанга Марис Евгеньевич"]
                             ),
                             LkAcademicRecordModel(
-                                subject='Основы права',
-                                type='Зачёт',
-                                rate='Зачёт',
-                                teachers=['Михайлов Филипп Николаевич']
-                            ),
-                            LkAcademicRecordModel(
-                                subject='Физика',
-                                type='Зачёт с оценкой',
-                                rate='3',
-                                teachers=['Старцев Сергей Александрович']
+                                subject="Методы математического моделирования",
+                                type="Зачёт с оценкой",
+                                rate='4',
+                                teachers=['Сёмов Александр Михайлович']
                             )
                         ]
                     ),
@@ -155,22 +149,34 @@ class LkServiceTest(TestCase):
                         semester=4,
                         records=[
                             LkAcademicRecordModel(
-                                subject='Математика',
-                                type='Зачёт с оценкой',
-                                rate='4',
-                                teachers=['Королева Татьяна Михайловна']
-                            ),
-                            LkAcademicRecordModel(
-                                subject='Основы права',
-                                type='Зачёт',
-                                rate='Зачёт',
-                                teachers=['Михайлов Филипп Николаевич']
-                            ),
-                            LkAcademicRecordModel(
                                 subject='Физика',
+                                type='Экзамен',
+                                rate='Неявка',
+                                teachers=["Падалка Наталья Михайловна"]
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Оптика',
+                                type='Экзамен',
+                                rate='2',
+                                teachers=["Падалка Наталья Михайловна"]
+                            ),
+                            LkAcademicRecordModel(
+                                subject='История земельных отношений',
                                 type='Зачёт с оценкой',
-                                rate='4',
-                                teachers=['Старцев Сергей Александрович']
+                                rate=None,
+                                teachers=["Закатов Александр Николаевич", "Денисов Андрей Олегович"]
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Иностранный язык',
+                                type='Экзамен',
+                                rate="5",
+                                teachers=["Чуканова Татьяна Александровна", "Милова Татьяна Николаевна"]
+                            ),
+                            LkAcademicRecordModel(
+                                subject='Психология саморазвития',
+                                type='Зачёт',
+                                rate='Зачтено',
+                                teachers=["Самойленко Светлана Алексеевна"]
                             )
                         ]
                     )
