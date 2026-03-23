@@ -11,7 +11,7 @@ from src.models.pagination_model import PaginationModel
 from src.models.singular_news_model import SingularNewsModel
 from src.parsers.news_parser import NewsParser
 from src.repositories.db_news_repository import DbNewsRepository
-from src.repositories.migration_news_repository import MigrationNewsRepository
+from migration.news.storage.migration_news_repository import NewsStorage
 from src.services.news_service import NewsService
 from test.mock.classes.mock_corrupted_news_repository import MockCorruptedNewsRepository
 from test.mock.classes.mock_news_repository import MockNewsRepository
@@ -32,13 +32,13 @@ class NewsServiceTest(unittest.TestCase):
             news_parser=NewsParser(base_link_url=config.base_link_url),
             news_repository=MockNewsRepository(),
             db_news_repository=self.db_news_repository,
-            migration_news_repository=MigrationNewsRepository(database=SQLiteDatabase())
+            migration_news_repository=NewsStorage(database=SQLiteDatabase())
         )
         self.corrupted_news_service = NewsService(
             news_parser=NewsParser(config.base_link_url),
             news_repository=MockCorruptedNewsRepository(),
             db_news_repository=self.db_news_repository,
-            migration_news_repository=MigrationNewsRepository(database=SQLiteDatabase())
+            migration_news_repository=NewsStorage(database=SQLiteDatabase())
         )
 
     def fill_up(self, name: str) -> None:

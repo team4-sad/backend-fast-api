@@ -3,7 +3,7 @@ from src.database.sqlite_database import SQLiteDatabase
 from src.database.sqls import CREATE_TABLE_NEWS_SQL
 from src.parsers.news_parser import NewsParser
 from src.repositories.db_news_repository import DbNewsRepository
-from src.repositories.migration_news_repository import MigrationNewsRepository
+from migration.news.storage.migration_news_repository import NewsStorage
 from src.repositories.news_repository import NewsRepository
 from src.repositories.schedule_repository import ScheduleRepository
 from src.services.lk_service import LkService
@@ -24,7 +24,7 @@ news_repository = NewsRepository(
     base_news_list_url=config.base_news_list_url
 )
 
-migration_repository = MigrationNewsRepository(database=database)
+migration_repository = NewsStorage(database=database)
 db_news_repository = DbNewsRepository(database=database)
 
 news_parser = NewsParser(

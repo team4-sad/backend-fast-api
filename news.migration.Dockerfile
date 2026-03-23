@@ -19,7 +19,7 @@ ENV INTERVAL_MINUTES=10
 # Создаем стартовый скрипт, который запускает задачу напрямую в цикле
 RUN echo '#!/bin/bash\n\
 while true; do\n\
-    /usr/local/bin/python /app/migration.py\n\
+    /usr/local/bin/python /app/migration/news.py\n\
     echo "Migration completed at $(date)"\n\
     sleep ${INTERVAL_MINUTES}m\n\
 done' > /app/start.sh

@@ -1,10 +1,10 @@
 import abc
-from datetime import date
 
+from src.models.news_list_response_model import NewsListResponseModel
 from src.models.news_model import NewsModel
 
 
-class IMigrationNewsRepository(abc.ABC):
+class INewsStorage(abc.ABC):
     def save_single_news(self, single_news: NewsModel):
         pass
 
@@ -15,4 +15,7 @@ class IMigrationNewsRepository(abc.ABC):
         pass
 
     def get_news_by_date(self, search_date: str) -> list[NewsModel]:
+        pass
+
+    def search_news_list(self, search_str: str, page: int = 1) -> NewsListResponseModel:
         pass

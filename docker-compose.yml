@@ -14,8 +14,8 @@ services:
   news_migration:
     build:
       context: .
-      dockerfile: migration.Dockerfile
-    container_name: migration_miigaik_news
+      dockerfile: news.migration.Dockerfile
+    container_name: miigaik_news_migration
     environment:
       - INTERVAL_MINUTES=10
     volumes:
