@@ -10,13 +10,11 @@ from src.models.news_model import NewsModel
 from src.models.pagination_model import PaginationModel
 from src.models.singular_news_model import SingularNewsModel
 from src.parsers.news_parser import NewsParser
-from src.repositories.db_news_repository import DbNewsRepository
-from src.repositories.migration_news_repository import MigrationNewsRepository
 from src.services.news_service import NewsService
+from src.storage.news_storage import NewsStorage
 from test.mock.classes.mock_corrupted_news_repository import MockCorruptedNewsRepository
 from test.mock.classes.mock_news_repository import MockNewsRepository
-from test.test_db_news_repository import TEST_DATABASE_NAME
-from test.utils import html_mock, json_mock
+from test.utils import html_mock, json_mock, TEST_DATABASE_NAME
 
 
 class NewsServiceTest(unittest.TestCase):
@@ -27,18 +25,16 @@ class NewsServiceTest(unittest.TestCase):
         self.database.connect()
         if not self.database.table_exists("news"):
             self.database.execute_script(CREATE_TABLE_NEWS_SQL)
-        self.db_news_repository = DbNewsRepository(database=self.database)
+        self.news_storage = NewsStorage(database=self.database)
         self.news_service = NewsService(
             news_parser=NewsParser(base_link_url=config.base_link_url),
             news_repository=MockNewsRepository(),
-            db_news_repository=self.db_news_repository,
-            migration_news_repository=MigrationNewsRepository(database=SQLiteDatabase())
+            news_storage=self.news_storage,
         )
         self.corrupted_news_service = NewsService(
             news_parser=NewsParser(config.base_link_url),
             news_repository=MockCorruptedNewsRepository(),
-            db_news_repository=self.db_news_repository,
-            migration_news_repository=MigrationNewsRepository(database=SQLiteDatabase())
+            news_storage=self.news_storage,
         )
 
     def fill_up(self, name: str) -> None:

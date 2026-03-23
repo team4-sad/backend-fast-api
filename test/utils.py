@@ -11,3 +11,6 @@ def html_mock(name: str) -> str:
 def json_mock(name: str):
     with open(TEST_DIR / "mock" / "json" / name, encoding="utf-8", mode="r") as f:
         return json.loads(f.read())
+
+
+TEST_DATABASE_NAME = 'test_database.db'
