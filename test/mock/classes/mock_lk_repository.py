@@ -53,7 +53,7 @@ class MockLkRepository(ILkRepository):
         if access_token == "":
             raise LkNotAuthorizedException()
 
-        order_document_model = OrderDocumentModel(
+        mock_order_document_model = OrderDocumentModel(
             id=len(self.cache),
             number="2026-" + str(len(self.cache)).rjust(10, '0'),
             name=filled_document_form_model.name,
@@ -63,5 +63,5 @@ class MockLkRepository(ILkRepository):
             comment=""
         )
 
-        self.cache.append(order_document_model)
-        return order_document_model
+        self.cache.append(mock_order_document_model)
+        return mock_order_document_model

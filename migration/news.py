@@ -45,15 +45,15 @@ def migrate(
                 news_storage.save_single_news(single_news)
                 has_not_saved_news = True
                 inserted_news.append(single_news)
-        print(f"Complete, added {len(inserted_news)} news")
+        print(f"Completed, added {len(inserted_news)} news")
         if not pagination.has_next_page or not has_not_saved_news:
             break
         page += 1
 
 
 if __name__ == "__main__":
-    config = Config()
-    db = SQLiteDatabase()
+    config = Config(path_env="../.env")
+    db = SQLiteDatabase(db_path="../database.db")
     parser = NewsParser(config.base_link_url)
     repository = NewsRepository(config.base_news_list_url, config.base_singular_news)
     storage = NewsStorage(db)
