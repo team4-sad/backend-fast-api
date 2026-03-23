@@ -10,10 +10,10 @@ class FilledDocumentFormFieldModel (DocumentFormFieldModel):
 
     @staticmethod
     def from_json(json: dict):
-        return FilledDocumentFormFieldModel (
+        return FilledDocumentFormFieldModel(
             label=json["label"],
             type=DocumentFormFieldType(json["type"]),
             is_required=json["is_required"],
-            options=json.get('options'),
+            options=json["options"],
             value=json["value"] if "value" in json else None,
         )

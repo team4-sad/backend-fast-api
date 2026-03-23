@@ -6,7 +6,7 @@ from src.models.interval_model import IntervalModel
 
 
 @dataclasses.dataclass
-class FilledDocumentFormModel (DocumentFormModel):
+class FilledDocumentFormModel(DocumentFormModel):
     user_id: str
     filled_fields: list[FilledDocumentFormFieldModel]
 

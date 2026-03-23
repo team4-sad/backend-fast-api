@@ -394,29 +394,30 @@ class LkServiceTest(TestCase):
 
     @freeze_time("2025-04-01 12:00:00")
     def test_success_send_filled_document_form(self):
-        result = LkService(lk_repository=MockLkRepository()).send_filled_document_form(access_token="1",
-                                                                                       filled_document_form_model=FilledDocumentFormModel(
-                                                                                           name="name",
-                                                                                           description="description",
-                                                                                           interval_make=IntervalModel(
-                                                                                               start_day=1, end_day=5),
-                                                                                           user_id="000005678",
-                                                                                           fields=[
-                                                                                               DocumentFormFieldModel(
-                                                                                                   label='Какую бумажку',
-                                                                                                   type=DocumentFormFieldType.single_line,
-                                                                                                   is_required=True,
-                                                                                                   options=[])
-                                                                                           ],
-                                                                                           filled_fields=[
-                                                                                               FilledDocumentFormFieldModel(
-                                                                                                   label="какую Бумажку",
-                                                                                                   type=DocumentFormFieldType.single_line,
-                                                                                                   is_required=True,
-                                                                                                   options=[],
-                                                                                                   value="вон ту, синенькую"
-                                                                                               )]
-                                                                                       ))
+        result = LkService(lk_repository=MockLkRepository()).send_filled_document_form(
+            access_token="1",
+            filled_document_form_model=FilledDocumentFormModel(
+                name="name",
+                description="description",
+                interval_make=IntervalModel(
+                    start_day=1, end_day=5),
+                user_id="000005678",
+                fields=[
+                    DocumentFormFieldModel(
+                        label='Какую бумажку',
+                        type=DocumentFormFieldType.single_line,
+                        is_required=True,
+                        options=[])
+                ],
+                filled_fields=[
+                    FilledDocumentFormFieldModel(
+                        label="какую Бумажку",
+                        type=DocumentFormFieldType.single_line,
+                        is_required=True,
+                        options=[],
+                        value="вон ту, синенькую"
+                    )]
+            ))
         self.assertEqual(result, OrderDocumentModel(
             id=0,
             name="name",

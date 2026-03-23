@@ -85,13 +85,13 @@ async def get_document_forms(access_token: str = Header(alias="Authorization")):
     "/document/forms",
     tags=["lk"],
     responses={
-        200: {"model": list[FilledDocumentFormModel], "description": "Список заполненных моделей форм документов"},
+        200: {"model": OrderDocumentModel, "description": "Отправка заполненной формы документа"},
         401: {"model": str, "description": "Ошибка при взаимодействии со сторонним ресурсом"},
         503: {},
     },
 )
 async def send_filled_document_form(
-    filled_document_form_model: list[FilledDocumentFormModel],
+    filled_document_form_model: FilledDocumentFormModel,
     access_token: str = Header(alias="Authorization")
 ):
     result = loader.lk_service.send_filled_document_form(
