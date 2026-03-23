@@ -80,6 +80,7 @@ async def get_document_forms(access_token: str = Header(alias="Authorization")):
     result = loader.lk_service.get_document_forms(access_token=access_token)
     return result
 
+
 @router.post(
     "/document/forms",
     tags=["lk"],
@@ -90,8 +91,11 @@ async def get_document_forms(access_token: str = Header(alias="Authorization")):
     },
 )
 async def send_filled_document_form(
-        filled_document_form_model: list[FilledDocumentFormModel],
-        access_token: str = Header(alias="Authorization")
+    filled_document_form_model: list[FilledDocumentFormModel],
+    access_token: str = Header(alias="Authorization")
 ):
-    result = loader.lk_service.send_filled_document_form(access_token=access_token, filled_document_form_model=filled_document_form_model)
+    result = loader.lk_service.send_filled_document_form(
+        access_token=access_token,
+        filled_document_form_model=filled_document_form_model
+    )
     return result

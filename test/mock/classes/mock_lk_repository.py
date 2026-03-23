@@ -45,13 +45,18 @@ class MockLkRepository(ILkRepository):
             raise LkNotAuthorizedException()
         return [DocumentFormModel.from_json(i) for i in json_mock("document_forms_mock.json")]
 
-    def send_filled_document_form(self, access_token: str, filled_document_form_model: FilledDocumentFormModel) -> OrderDocumentModel:
+    def send_filled_document_form(
+        self,
+        access_token: str,
+        filled_document_form_model: FilledDocumentFormModel
+    ) -> OrderDocumentModel:
         if access_token == "":
             raise LkNotAuthorizedException()
+
         order_document_model = OrderDocumentModel(
-            id = len(self.cache),
-            number = "2026-" + str(len(self.cache)).rjust(10, '0'),
-            name = filled_document_form_model.name,
+            id=len(self.cache),
+            number="2026-" + str(len(self.cache)).rjust(10, '0'),
+            name=filled_document_form_model.name,
             created_at=datetime.datetime.now(),
             interval=filled_document_form_model.interval_make,
             status=OrderDocumentStatus.in_progress,
