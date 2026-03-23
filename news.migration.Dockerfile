@@ -4,26 +4,19 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-# Устанавливаем системные зависимости
+# Установка системных зависимостей (cron)
 RUN apt-get update && apt-get install -y cron && apt-get clean
 
-# Устанавливаем Python-зависимости
+# Установка Python-зависимостей
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Копируем приложение
+# Копирование исходного кода
 COPY . /app
 
-# Интервал (в минутах)
+# Переменная окружения для интервала (по умолчанию 10 минут)
 ENV INTERVAL_MINUTES=10
 
-# Создаем стартовый скрипт, который запускает задачу напрямую в цикле
-RUN echo '#!/bin/bash\n\
-while true; do\n\
-    /usr/local/bin/python /app/migration/news.py\n\
-    echo "Migration completed at $(date)"\n\
-    sleep ${INTERVAL_MINUTES}m\n\
-done' > /app/start.sh
+# Создаём пустой файл лога (для tail)
+RUN touch /var/log/cron.log
 
-RUN chmod +x /app/start.sh
-
-CMD ["/bin/bash", "/app/start.sh"]
+CMD ["sh", "-c", "echo \"*/${INTERVAL_MINUTES} * * * * cd /app && PYTHONPATH=/app /usr/local/bin/python /app/migration/news.py --config /app/.env --database /app/database.db >> /var/log/cron.log 2>&1\" > /etc/cron.d/news-migration && chmod 0644 /etc/cron.d/news-migration && crontab /etc/cron.d/news-migration && cron && tail -f /var/log/cron.log"]
