@@ -1,12 +1,19 @@
 from datetime import datetime
 from unittest import TestCase
 
+from freezegun import freeze_time
+
+from src.enums.document_form_field_type import DocumentFormFieldType
 from src.enums.order_document_status import OrderDocumentStatus
 from src.exceptions.code_exception import CodeException
 from src.models.certification_model import CertificationModel
 from src.models.course_education_plan_model import CourseEducationPlanModel
+from src.models.document_form_field_model import DocumentFormFieldModel
+from src.models.document_form_model import DocumentFormModel
 from src.models.education_info_model import EducationInfoModel
 from src.models.education_plan_model import EducationPlanModel
+from src.models.filled_document_form_field_model import FilledDocumentFormFieldModel
+from src.models.filled_document_form_model import FilledDocumentFormModel
 from src.models.interval_model import IntervalModel
 from src.models.item_family_model import ItemFamilyModel
 from src.models.lk_academic_record_model import LkAcademicRecordModel
@@ -326,3 +333,154 @@ class LkServiceTest(TestCase):
         with self.assertRaises(CodeException) as e:
             LkService(lk_repository=MockCorruptedLkRepository()).get_orders_document("")
         self.assertEqual(e.exception, CodeException('Lk error: mock exception', 503))
+
+    def test_success_get_document_forms(self):
+        result = LkService(lk_repository=MockLkRepository()).get_document_forms(access_token="1")
+        self.assertEqual(result,
+                         [
+                             DocumentFormModel(
+                                 name='Допуск',
+                                 description='Описание допуска идк',
+                                 interval_make=IntervalModel(start_day=2, end_day=5),
+                                 fields=[
+                                     DocumentFormFieldModel(
+                                         label='тип зачета',
+                                         type=DocumentFormFieldType.select,
+                                         is_required=True,
+                                         options=['зачет', 'зачет с оценкой', 'экзамен']
+                                     ),
+                                     DocumentFormFieldModel(label='ФИО преподавателя',
+                                                            type=DocumentFormFieldType.single_line,
+                                                            is_required=True,
+                                                            options=[]),
+                                     DocumentFormFieldModel(label='Полное название группы',
+                                                            type=DocumentFormFieldType.single_line,
+                                                            is_required=True,
+                                                            options=[])]),
+                             DocumentFormModel(
+                                 name='Бумажка',
+                                 description='Описание бумажки идк',
+                                 interval_make=IntervalModel(start_day=1, end_day=3),
+                                 fields=[
+                                     DocumentFormFieldModel(
+                                         label='куда вам бумажку?',
+                                         type=DocumentFormFieldType.select,
+                                         is_required=True,
+                                         options=['домой', 'на работу', 'по приколу']),
+                                     DocumentFormFieldModel(label='Какую бумажку',
+                                                            type=DocumentFormFieldType.single_line,
+                                                            is_required=True,
+                                                            options=[])]),
+                             DocumentFormModel(
+                                 name='Важная бумажка',
+                                 description='Описание важной бумажки идк',
+                                 interval_make=IntervalModel(start_day=1, end_day=3),
+                                 fields=[
+                                     DocumentFormFieldModel(
+                                         label='куда вам бумажку?',
+                                         type=DocumentFormFieldType.select,
+                                         is_required=True,
+                                         options=['домой', 'на работу', 'по приколу']),
+                                     DocumentFormFieldModel(
+                                         label='Какую бумажку',
+                                         type=DocumentFormFieldType.single_line,
+                                         is_required=True,
+                                         options=[])])])
+
+    def test_invalid_get_document_forms(self):
+        with self.assertRaises(CodeException) as e:
+            LkService(lk_repository=MockCorruptedLkRepository()).get_document_forms(access_token="1")
+        self.assertEqual(e.exception, CodeException('Lk error: mock exception', 503))
+
+    @freeze_time("2025-04-01 12:00:00")
+    def test_success_send_filled_document_form(self):
+        result = LkService(lk_repository=MockLkRepository()).send_filled_document_form(
+            access_token="1",
+            filled_document_form_model=FilledDocumentFormModel(
+                name="name",
+                description="description",
+                interval_make=IntervalModel(
+                    start_day=1, end_day=5),
+                user_id="000005678",
+                fields=[
+                    DocumentFormFieldModel(
+                        label='Какую бумажку',
+                        type=DocumentFormFieldType.single_line,
+                        is_required=True,
+                        options=[])
+                ],
+                filled_fields=[
+                    FilledDocumentFormFieldModel(
+                        label="какую Бумажку",
+                        type=DocumentFormFieldType.single_line,
+                        is_required=True,
+                        options=[],
+                        value="вон ту, синенькую"
+                    )]
+            ))
+        self.assertEqual(result, OrderDocumentModel(
+            id=0,
+            name="name",
+            number="2026-0000000000",
+            created_at=datetime(year=2025, month=4, day=1, hour=12, minute=0, second=0),
+            interval=IntervalModel(start_day=1, end_day=5),
+            status=OrderDocumentStatus.in_progress,
+            comment=""
+        ))
+
+    def test_invalid_send_filled_document_form(self):
+        with self.assertRaises(CodeException) as e:
+            LkService(lk_repository=MockCorruptedLkRepository()).send_filled_document_form(
+                filled_document_form_model=FilledDocumentFormModel(
+                    name="name",
+                    description="description",
+                    interval_make=IntervalModel(start_day=1, end_day=5),
+                    user_id="000005678",
+                    fields=[DocumentFormFieldModel(
+                        label='Какую бумажку',
+                        type=DocumentFormFieldType.single_line,
+                        is_required=True,
+                        options=[]
+                    )],
+                    filled_fields=[FilledDocumentFormFieldModel(
+                        label="какую Бумажку",
+                        type=DocumentFormFieldType.single_line,
+                        is_required=True,
+                        options=[],
+                        value="вон ту, синенькую"
+                    )]
+                ),
+                access_token="1"
+            )
+        self.assertEqual(e.exception, CodeException('Lk error: mock exception', 503))
+
+    def test_empty_access_token_get_document_forms(self):
+        with self.assertRaises(CodeException) as e:
+            LkService(lk_repository=MockLkRepository()).get_document_forms("")
+        self.assertEqual(e.exception, CodeException('Not Authorized', 401))
+
+    def test_empty_access_token_send_filled_document_form(self):
+        with self.assertRaises(CodeException) as e:
+            LkService(lk_repository=MockLkRepository()).send_filled_document_form(
+                filled_document_form_model=FilledDocumentFormModel(
+                    name="name",
+                    description="description",
+                    interval_make=IntervalModel(start_day=1, end_day=5),
+                    user_id="000005678",
+                    fields=[DocumentFormFieldModel(
+                        label='Какую бумажку',
+                        type=DocumentFormFieldType.single_line,
+                        is_required=True,
+                        options=[]
+                    )],
+                    filled_fields=[FilledDocumentFormFieldModel(
+                        label="какую Бумажку",
+                        type=DocumentFormFieldType.single_line,
+                        is_required=True,
+                        options=[],
+                        value="вон ту, синенькую"
+                    )]
+                ),
+                access_token=""
+            )
+        self.assertEqual(e.exception, CodeException('Not Authorized', 401))

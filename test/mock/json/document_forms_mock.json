@@ -1,0 +1,76 @@
+[
+  {
+    "name": "Допуск",
+    "description": "Описание допуска идк",
+    "interval_make": {
+      "start_day": 2,
+      "end_day": 5
+    },
+    "fields": [
+      {
+        "label": "тип зачета",
+        "type": "select",
+        "is_required": true,
+        "options": ["зачет","зачет с оценкой","экзамен"]
+      },
+      {
+        "label": "ФИО преподавателя",
+        "type": "single_line",
+        "is_required": true,
+        "options":[]
+      },
+      {
+        "label": "Полное название группы",
+        "type": "single_line",
+        "is_required": true,
+        "options":[]
+      }
+    ]
+  },
+  {
+    "name": "Бумажка",
+    "description": "Описание бумажки идк",
+    "interval_make": {
+      "start_day": 1,
+      "end_day": 3
+    },
+
+    "fields":[
+      {
+        "label": "куда вам бумажку?",
+        "type": "select",
+        "is_required": true,
+        "options": ["домой","на работу","по приколу"]
+      },
+      {
+        "label": "Какую бумажку",
+        "type": "single_line",
+        "is_required": true,
+        "options":[]
+      }
+    ]
+  },
+  {
+    "name": "Важная бумажка",
+    "description": "Описание важной бумажки идк",
+    "interval_make": {
+      "start_day": 1,
+      "end_day": 3
+    },
+
+    "fields":[
+      {
+        "label": "куда вам бумажку?",
+        "type": "select",
+        "is_required": true,
+        "options": ["домой","на работу","по приколу"]
+      },
+      {
+        "label": "Какую бумажку",
+        "type": "single_line",
+        "is_required": true,
+        "options":[]
+      }
+    ]
+  }
+]

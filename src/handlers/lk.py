@@ -2,6 +2,8 @@ from fastapi import APIRouter, Header
 
 from src import loader
 from src.models.course_education_plan_model import CourseEducationPlanModel
+from src.models.document_form_model import DocumentFormModel
+from src.models.filled_document_form_model import FilledDocumentFormModel
 from src.models.lk_course_record_model import LkCourseRecordModel
 from src.models.lk_profile_model import LkProfileModel
 from src.models.order_document_model import OrderDocumentModel
@@ -62,4 +64,38 @@ async def get_academic_records(access_token: str = Header(alias="Authorization")
 )
 async def get_orders_document(access_token: str = Header(alias="Authorization")):
     result = loader.lk_service.get_orders_document(access_token=access_token)
+    return result
+
+
+@router.get(
+    "/document/forms",
+    tags=["lk"],
+    responses={
+        200: {"model": list[DocumentFormModel], "description": "Список моделей форм документов"},
+        401: {"model": str, "description": "Ошибка при взаимодействии со сторонним ресурсом"},
+        503: {},
+    },
+)
+async def get_document_forms(access_token: str = Header(alias="Authorization")):
+    result = loader.lk_service.get_document_forms(access_token=access_token)
+    return result
+
+
+@router.post(
+    "/document/forms",
+    tags=["lk"],
+    responses={
+        200: {"model": OrderDocumentModel, "description": "Отправка заполненной формы документа"},
+        401: {"model": str, "description": "Ошибка при взаимодействии со сторонним ресурсом"},
+        503: {},
+    },
+)
+async def send_filled_document_form(
+    filled_document_form_model: FilledDocumentFormModel,
+    access_token: str = Header(alias="Authorization")
+):
+    result = loader.lk_service.send_filled_document_form(
+        access_token=access_token,
+        filled_document_form_model=filled_document_form_model
+    )
     return result
