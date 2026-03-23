@@ -1,3 +1,5 @@
+import argparse
+
 import urllib3
 from urllib3.exceptions import InsecureRequestWarning
 
@@ -52,8 +54,21 @@ def migrate(
 
 
 if __name__ == "__main__":
-    config = Config(path_env="../.env")
-    db = SQLiteDatabase(db_path="../database.db")
+    args_parser = argparse.ArgumentParser("default")
+    args_parser.add_argument(
+        "--config",
+        help="path to config file (default=\".env\")",
+        default=".env"
+    )
+    args_parser.add_argument(
+        "--database",
+        help="path to database file (default=\"database.db\")",
+        default="database.db"
+    )
+    args = args_parser.parse_args()
+
+    config = Config(path_env=args.config)
+    db = SQLiteDatabase(db_path=args.database)
     parser = NewsParser(config.base_link_url)
     repository = NewsRepository(config.base_news_list_url, config.base_singular_news)
     storage = NewsStorage(db)
