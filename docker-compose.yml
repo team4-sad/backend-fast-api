@@ -2,7 +2,7 @@ services:
   fastapi:
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: docker/fastapi.Dockerfile
     container_name: miigaik_fastapi_app
     ports:
       - "8888:8000"
