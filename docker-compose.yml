@@ -1,6 +1,8 @@
 services:
   fastapi:
-    build: .
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
     container_name: miigaik_fastapi_app
     ports:
       - "8888:8000"
@@ -14,10 +16,10 @@ services:
   news_migration:
     build:
       context: .
-      dockerfile: news.migration.Dockerfile
+      dockerfile: docker/news.migration.Dockerfile
     container_name: miigaik_news_migration
     environment:
-      - INTERVAL_MINUTES=10
+      - INTERVAL_MINUTES=1
     volumes:
       - ./database.db:/app/database.db
     restart: unless-stopped

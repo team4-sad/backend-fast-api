@@ -60,15 +60,10 @@ if __name__ == "__main__":
         help="path to config file (default=\".env\")",
         default=".env"
     )
-    args_parser.add_argument(
-        "--database",
-        help="path to database file (default=\"database.db\")",
-        default="database.db"
-    )
     args = args_parser.parse_args()
 
     config = Config(path_env=args.config)
-    db = SQLiteDatabase(db_path=args.database)
+    db = SQLiteDatabase(db_path=config.database_path)
     parser = NewsParser(config.base_link_url)
     repository = NewsRepository(config.base_news_list_url, config.base_singular_news)
     storage = NewsStorage(db)
