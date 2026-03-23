@@ -2,13 +2,12 @@ from src.config.config import Config
 from src.database.sqlite_database import SQLiteDatabase
 from src.database.sqls import CREATE_TABLE_NEWS_SQL
 from src.parsers.news_parser import NewsParser
-from src.repositories.db_news_repository import DbNewsRepository
-from migration.news.storage.migration_news_repository import NewsStorage
 from src.repositories.news_repository import NewsRepository
 from src.repositories.schedule_repository import ScheduleRepository
 from src.services.lk_service import LkService
 from src.services.news_service import NewsService
 from src.services.schedule_service import ScheduleService
+from src.storage.news_storage import NewsStorage
 from test.mock.classes.mock_lk_repository import MockLkRepository
 
 config = Config()
@@ -24,8 +23,9 @@ news_repository = NewsRepository(
     base_news_list_url=config.base_news_list_url
 )
 
-migration_repository = NewsStorage(database=database)
-db_news_repository = DbNewsRepository(database=database)
+news_storage = NewsStorage(
+    database=database
+)
 
 news_parser = NewsParser(
     base_link_url=config.base_link_url
@@ -34,8 +34,7 @@ news_parser = NewsParser(
 news_service = NewsService(
     news_parser=news_parser,
     news_repository=news_repository,
-    migration_news_repository=migration_repository,
-    db_news_repository=db_news_repository
+    news_storage=news_storage
 )
 
 schedule_repository = ScheduleRepository(

@@ -6,18 +6,17 @@ from src.database.sqls import CREATE_TABLE_NEWS_SQL
 from src.models.news_list_response_model import NewsListResponseModel
 from src.models.news_model import NewsModel
 from src.models.pagination_model import PaginationModel
-from src.repositories.db_news_repository import DbNewsRepository
-from test.utils import json_mock
+from src.storage.news_storage import NewsStorage
+from test.utils import json_mock, TEST_DATABASE_NAME
 
-TEST_DATABASE_NAME = 'test_database.db'
 
-class DbNewsRepositoryTest(TestCase):
+class NewsStorageTest(TestCase):
     def setUp(self):
         self.database = SQLiteDatabase(TEST_DATABASE_NAME)
         self.database.connect()
         if not self.database.table_exists("news"):
             self.database.execute_script(CREATE_TABLE_NEWS_SQL)
-        self.db_news_repository = DbNewsRepository(database=self.database)
+        self.db_news_repository = NewsStorage(database=self.database)
 
     def tearDown(self):
         self.database.close()
@@ -89,7 +88,6 @@ class DbNewsRepositoryTest(TestCase):
                 current_page=1
             )
         ))
-
 
     def test_pagination_search_db(self):
         self.fill_up("news-20.json")
