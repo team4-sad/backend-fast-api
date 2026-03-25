@@ -17,16 +17,16 @@ import json
 
 from requests import get
 
-response = get('https://study.miigaik.ru/api/v1/search/group?groupName=')
-response.raise_for_status()
-jsn = response.json()
-
 
 def get_postfix_group(group_name):
     last_part = "-".join(group_name.split("-")[3:])
     last_part_without_digits = "".join([i for i in last_part if not i.isdigit()])
     return last_part_without_digits
 
+
+response = get('https://study.miigaik.ru/api/v1/search/group?groupName=')
+response.raise_for_status()
+jsn = response.json()
 
 with open('response.json', 'w', encoding="utf-8") as f:
     json.dump(jsn, f, ensure_ascii=False)
