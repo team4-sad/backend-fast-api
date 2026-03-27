@@ -1,4 +1,4 @@
-CREATE_TABLE_NEWS_SQL = """CREATE TABLE news
+CREATE_TABLE_NEWS_SQL = """CREATE TABLE IF NOT EXISTS news
 (
     id              INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     header          TEXT    NOT NULL,
@@ -40,4 +40,23 @@ GET_LAST_NEWS_SQL = """
     FROM news
     ORDER BY strftime('%Y-%m-%d', substr(date, 7, 4) || '-' || substr(date, 4, 2) || '-' || substr(date, 1, 2)) DESC
     LIMIT 1;
+"""
+
+CREATE_TABLE_GROUPS_SQL = """CREATE TABLE IF NOT EXISTS groups 
+(
+	id INTEGER NOT NULL,
+	name TEXT NOT NULL,
+	"year" INTEGER NOT NULL,
+	faculty TEXT NOT NULL,
+	department TEXT NOT NULL,
+	"group" TEXT NOT NULL,
+	CONSTRAINT groups_pk PRIMARY KEY (id)
+);"""
+
+SEARCH_GROUPS_SQL = """
+select * from groups where group like "%?%"
+"""
+
+INSERT_GROUP_SQL = """
+INSERT INTO groups (id, name, "year", faculty, department, "group") VALUES (?, ?, ?, ?, ?, ?);
 """

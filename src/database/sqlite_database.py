@@ -54,23 +54,32 @@ class SQLiteDatabase:
         return self._cursor.fetchone()
 
     def insert(self, table_name: str, data: dict) -> None:
-        columns = ", ".join(data.keys())
+        columns = ", ".join([f'"{i}"' for i in data.keys()])
         placeholders = ", ".join("?" * len(data))
         query = f"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})"
-        self.execute_query(query, tuple(data.values()))
+        params = tuple([data[i] for i in data.keys()])
+        self.execute_query(query, params)
 
     def insert_many(self, table_name: str, data: List[dict]) -> None:
-        for d in data:
-            self.insert(table_name, d)
+        columns = ", ".join([f'"{i}"' for i in data[0].keys()])
+        placeholders = ", ".join("?" * len(data[0]))
+        query = f"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})"
+        data = [tuple([i[j] for j in i.keys()]) for i in data]
+        self._cursor.executemany(query, data)
 
     def update(self, table_name: str, data: dict, condition: str) -> None:
         set_clause = ", ".join([f"{key} = ?" for key in data.keys()])
         query = f"UPDATE {table_name} SET {set_clause} WHERE {condition}"
         self.execute_query(query, tuple(data.values()))
 
-    def delete(self, table_name: str, condition: str) -> None:
-        query = f"DELETE FROM {table_name} WHERE {condition}"
+    def delete(self, table_name: str, condition: str | None = None, commit: bool = True) -> None:
+        if condition:
+            query = f"DELETE FROM {table_name} WHERE {condition}"
+        else:
+            query = f"DELETE FROM {table_name}"
         self.execute_query(query)
+        if commit:
+            self.commit()
 
     def select_all(self, table_name: str, columns: str = "*") -> List[Tuple]:
         query = f"SELECT {columns} FROM {table_name}"
@@ -84,3 +93,9 @@ class SQLiteDatabase:
         with open(file_path, 'w', encoding="utf-8") as f:
             for line in self._connection.iterdump():
                 f.write(f"{line}\n")
+
+    def begin_transaction(self) -> None:
+        self._cursor.execute("BEGIN TRANSACTION")
+
+    def commit(self):
+        self._connection.commit()
