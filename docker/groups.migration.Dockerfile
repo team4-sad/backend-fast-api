@@ -13,17 +13,17 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Копирование исходного кода
 COPY .. /app
 
-# Переменная окружения для интервала (по умолчанию 10 минут)
-ENV INTERVAL_MINUTES=10
+# Расписание cron (по умолчанию каждое воскресенье в 00:00)
+ENV CRON_SCHEDULE="0 0 * * 0"
 
 # Создаём пустой файл лога (для tail)
 RUN touch /var/log/cron.log
 
 CMD ["sh", "-c", "\
 echo '>>> Run on container start' && \
-cd /app && PYTHONPATH=/app /usr/local/bin/python /app/migration/news.py --config /app/.env && \
-echo \"*/${INTERVAL_MINUTES} * * * * cd /app && PYTHONPATH=/app /usr/local/bin/python /app/migration/news.py --config /app/.env >> /var/log/cron.log 2>&1\" > /etc/cron.d/news-migration && \
-chmod 0644 /etc/cron.d/news-migration && \
-crontab /etc/cron.d/news-migration && \
+cd /app && PYTHONPATH=/app /usr/local/bin/python /app/migration/groups.py && \
+echo \"${CRON_SCHEDULE} cd /app && PYTHONPATH=/app /usr/local/bin/python /app/migration/groups.py >> /var/log/cron.log 2>&1\" > /etc/cron.d/groups-migration && \
+chmod 0644 /etc/cron.d/groups-migration && \
+crontab /etc/cron.d/groups-migration && \
 cron && \
 tail -f /var/log/cron.log"]

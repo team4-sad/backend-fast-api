@@ -19,7 +19,18 @@ services:
       dockerfile: docker/news.migration.Dockerfile
     container_name: miigaik_news_migration
     environment:
-      - INTERVAL_MINUTES=1
+      - INTERVAL_MINUTES=10
+    volumes:
+      - ./database.db:/app/database.db
+    restart: unless-stopped
+
+  groups_migration:
+    build:
+      context: .
+      dockerfile: docker/groups.migration.Dockerfile
+    container_name: miigaik_groups_migration
+    environment:
+      - CRON_SCHEDULE=0 0 * * 0
     volumes:
       - ./database.db:/app/database.db
     restart: unless-stopped

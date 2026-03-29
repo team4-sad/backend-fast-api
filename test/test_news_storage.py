@@ -16,7 +16,7 @@ class NewsStorageTest(TestCase):
         self.database.connect()
         if not self.database.table_exists("news"):
             self.database.execute_script(CREATE_TABLE_NEWS_SQL)
-        self.db_news_repository = NewsStorage(database=self.database)
+        self.news_storage = NewsStorage(database=self.database)
 
     def tearDown(self):
         self.database.close()
@@ -33,7 +33,7 @@ class NewsStorageTest(TestCase):
 
     def test_search_db(self):
         self.fill_up("news-5.json")
-        result = self.db_news_repository.search_news_list("тех")
+        result = self.news_storage.search_news_list("тех")
         self.assertEqual(result, NewsListResponseModel(
             news_list=[
                 NewsModel(
@@ -62,7 +62,7 @@ class NewsStorageTest(TestCase):
 
     def test_caps_search_test(self):
         self.fill_up("news-5.json")
-        result = self.db_news_repository.search_news_list("ТЕХ")
+        result = self.news_storage.search_news_list("ТЕХ")
         self.assertEqual(result, NewsListResponseModel(
             news_list=[
                 NewsModel(
@@ -91,7 +91,7 @@ class NewsStorageTest(TestCase):
 
     def test_pagination_search_db(self):
         self.fill_up("news-20.json")
-        result = self.db_news_repository.search_news_list("е")
+        result = self.news_storage.search_news_list("е")
         page = 1
         while result.pagination.has_next_page:
             self.assertEqual(result.pagination, PaginationModel(
@@ -100,7 +100,7 @@ class NewsStorageTest(TestCase):
                 current_page=page
             ))
             page += 1
-            result = self.db_news_repository.search_news_list("а", page)
+            result = self.news_storage.search_news_list("а", page)
         self.assertEqual(result.pagination, PaginationModel(
             has_previous_page=True,
             has_next_page=False,
