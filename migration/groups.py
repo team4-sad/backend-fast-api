@@ -25,6 +25,7 @@ def migrate(
     list_of_groups = [DbGroupModel.from_origin_group_info(group) for group in origin_list_of_groups]
     groups_storage.override_groups(list_of_groups)
 
+
 if __name__ == "__main__":
     args_parser = argparse.ArgumentParser("default")
     args_parser.add_argument(

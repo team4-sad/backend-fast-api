@@ -21,4 +21,3 @@ class GroupsStorage(IGroupsStorage):
         self._db.delete("groups", commit=False)
         self._db.insert_many("groups", [i.to_json() for i in groups])
         self._db.commit()
-

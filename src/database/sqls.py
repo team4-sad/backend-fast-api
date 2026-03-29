@@ -42,21 +42,18 @@ GET_LAST_NEWS_SQL = """
     LIMIT 1;
 """
 
-CREATE_TABLE_GROUPS_SQL = """CREATE TABLE IF NOT EXISTS groups 
+CREATE_TABLE_GROUPS_SQL = """CREATE TABLE IF NOT EXISTS groups
 (
-	id INTEGER NOT NULL,
-	name TEXT NOT NULL,
-	"year" INTEGER NOT NULL,
-	faculty TEXT NOT NULL,
-	department TEXT NOT NULL,
-	"group" TEXT NOT NULL,
-	CONSTRAINT groups_pk PRIMARY KEY (id)
+    id         INTEGER NOT NULL,
+    name       TEXT    NOT NULL,
+    "year"     INTEGER NOT NULL,
+    faculty    TEXT    NOT NULL,
+    department TEXT    NOT NULL,
+    "group"    TEXT    NOT NULL,
+    CONSTRAINT groups_pk PRIMARY KEY (id)
 );"""
 
 SEARCH_GROUPS_SQL = """
 select * from groups where group like "%?%"
 """
 
-INSERT_GROUP_SQL = """
-INSERT INTO groups (id, name, "year", faculty, department, "group") VALUES (?, ?, ?, ?, ?, ?);
-"""
