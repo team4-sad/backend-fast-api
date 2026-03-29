@@ -6,7 +6,7 @@ from src.models.exam_model import ExamModel
 from src.models.groups_info_model import GroupsInfoModel
 from src.models.response_group_schedule_model import ResponseGroupScheduleModel
 from src.models.response_teacher_schedule_model import ResponseTeacherScheduleModel
-from src.models.teachers_info_model import TeachersInfoModel
+from src.models.teachers_info_model import TeacherInfoModel
 
 router = APIRouter(prefix='/schedule')
 
@@ -87,7 +87,7 @@ async def get_list_classrooms(classroom: str):
     "/teachers/{teacher}",
     tags=["schedule"],
     responses={
-        200: {"model": list[TeachersInfoModel], "description": "Поиск преподавателя"},
+        200: {"model": list[TeacherInfoModel], "description": "Поиск преподавателя"},
         503: {"model": str, "description": "Error getting teachers list"}
     },
 )

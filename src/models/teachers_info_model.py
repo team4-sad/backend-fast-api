@@ -5,13 +5,13 @@ from src.models.teacher_model import TeacherModel
 
 
 @dataclasses.dataclass
-class TeachersInfoModel:
+class TeacherInfoModel:
     id: int
     teacher: TeacherModel
 
     @staticmethod
     def from_origin(origin: OriginTeachersInfoModel):
-        return TeachersInfoModel(
+        return TeacherInfoModel(
             id=origin.id,
             teacher=origin.teacher
         )

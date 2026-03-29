@@ -9,7 +9,7 @@ from src.models.response_classroom_schedule_model import ResponseClassroomSchedu
 from src.models.response_group_schedule_model import ResponseGroupScheduleModel
 from src.models.response_teacher_schedule_model import ResponseTeacherScheduleModel
 from src.models.teacher_model import TeacherModel
-from src.models.teachers_info_model import TeachersInfoModel
+from src.models.teachers_info_model import TeacherInfoModel
 from src.services.schedule_service import ScheduleService
 from test.mock.classes.mock_schedule_repository import MockScheduleRepository, CorruptedNotFoundMockScheduleRepository, \
     CorruptedExceptionMockScheduleRepository, EmptyMockScheduleRepository
@@ -294,7 +294,7 @@ class ScheduleServiceTest(unittest.TestCase):
     def test_get_teachers_list(self):
         result = self.schedule_service.fetch_teachers_list(teacher_name="антон")
         self.assertEqual(result,
-                         [TeachersInfoModel(id=1, teacher=TeacherModel(first_name='', last_name='', patronymic=''))])
+                         [TeacherInfoModel(id=1, teacher=TeacherModel(first_name='', last_name='', patronymic=''))])
 
     def test_get_exception_teachers_list(self):
         with self.assertRaises(CodeException) as e:

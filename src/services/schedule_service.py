@@ -10,7 +10,7 @@ from src.models.groups_info_model import GroupsInfoModel
 from src.models.response_classroom_schedule_model import ResponseClassroomScheduleModel
 from src.models.response_group_schedule_model import ResponseGroupScheduleModel
 from src.models.response_teacher_schedule_model import ResponseTeacherScheduleModel
-from src.models.teachers_info_model import TeachersInfoModel
+from src.models.teachers_info_model import TeacherInfoModel
 
 
 class ScheduleService(IScheduleService):
@@ -69,12 +69,12 @@ class ScheduleService(IScheduleService):
             raise CodeException(message="Error getting group list", error_code=503)
         return [GroupsInfoModel.from_origin(obj) for obj in raw_model]
 
-    def fetch_teachers_list(self, teacher_name: str) -> list[TeachersInfoModel]:
+    def fetch_teachers_list(self, teacher_name: str) -> list[TeacherInfoModel]:
         try:
             raw_model = self.schedule_repository.fetch_teachers(teacher_name=teacher_name)
         except Exception as _:
             raise CodeException(message="Error getting teachers list", error_code=503)
-        return [TeachersInfoModel.from_origin(obj) for obj in raw_model]
+        return [TeacherInfoModel.from_origin(obj) for obj in raw_model]
 
     def fetch_classrooms_list(self, classroom: str) -> list[ClassroomsInfoModel]:
         try:

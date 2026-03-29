@@ -5,7 +5,7 @@ from src.models.groups_info_model import GroupsInfoModel
 from src.models.response_classroom_schedule_model import ResponseClassroomScheduleModel
 from src.models.response_group_schedule_model import ResponseGroupScheduleModel
 from src.models.response_teacher_schedule_model import ResponseTeacherScheduleModel
-from src.models.teachers_info_model import TeachersInfoModel
+from src.models.teachers_info_model import TeacherInfoModel
 
 
 class IScheduleService(abc.ABC):
@@ -21,7 +21,7 @@ class IScheduleService(abc.ABC):
     def fetch_groups_list(self, group_name: str) -> GroupsInfoModel:
         pass
 
-    def fetch_teachers_list(self, teacher_name: str) -> TeachersInfoModel:
+    def fetch_teachers_list(self, teacher_name: str) -> TeacherInfoModel:
         pass
 
     def fetch_classrooms_list(self, classroom: str) -> ClassroomsInfoModel:
