@@ -19,5 +19,5 @@ class GroupsStorage(IGroupsStorage):
     def override_groups(self, groups: list[DbGroupModel]):
         self._db.begin_transaction()
         self._db.delete("groups", commit=False)
-        self._db.insert_many("groups", [i.to_json() for i in groups])
+        self._db.insert_many("groups", [i.to_json() for i in groups], commit=False)
         self._db.commit()

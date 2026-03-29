@@ -59,12 +59,14 @@ class SQLiteDatabase:
         params = tuple([data[i] for i in data.keys()])
         self.execute_query(query, params)
 
-    def insert_many(self, table_name: str, data: List[dict]) -> None:
+    def insert_many(self, table_name: str, data: List[dict], commit: bool = True) -> None:
         columns = ", ".join([f'"{i}"' for i in data[0].keys()])
         placeholders = ", ".join("?" * len(data[0]))
         query = f"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})"
         data = [tuple([i[j] for j in i.keys()]) for i in data]
         self._cursor.executemany(query, data)
+        if commit:
+            self.commit()
 
     def update(self, table_name: str, data: dict, condition: str) -> None:
         set_clause = ", ".join([f"{key} = ?" for key in data.keys()])

@@ -54,6 +54,6 @@ CREATE_TABLE_GROUPS_SQL = """CREATE TABLE IF NOT EXISTS groups
 );"""
 
 SEARCH_GROUPS_SQL = """
-select * from groups where group like "%?%"
+select * from "groups" where "name" like '%' || ? || '%'
 """
 
