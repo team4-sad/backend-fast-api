@@ -57,3 +57,18 @@ SEARCH_GROUPS_SQL = """
 select * from "groups" where "name" like '%' || ? || '%'
 """
 
+
+CREATE_TABLE_TEACHERS_SQL = """CREATE TABLE IF NOT EXISTS teachers
+(
+	id          INTEGER NOT NULL,
+	lastname    TEXT NOT NULL,
+	firstname   TEXT NOT NULL,
+	patronymic  TEXT NOT NULL,
+	search_name TEXT NOT NULL,
+	CONSTRAINT  teachers_pk PRIMARY KEY (id)
+);"""
+
+
+SEARCH_TEACHERS_SQL = """
+select * from "teachers" where "search_name" like '%' || ? || '%'
+"""
