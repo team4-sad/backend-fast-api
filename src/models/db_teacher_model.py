@@ -14,7 +14,6 @@ class DbTeacherModel:
     def search_name(self) -> str:
         return f"{self.lastname.lower()} {self.firstname.lower()} {self.patronymic.lower()}"
 
-
     @staticmethod
     def from_json(json: dict):
         return DbTeacherModel(
@@ -38,9 +37,8 @@ class DbTeacherModel:
         _dict["search_name"] = self.search_name
         return _dict
 
-
     def to_tuple(self) -> tuple:
-        return self.id, self.lastname, self.firstname, self.patronymic,self.search_name
+        return self.id, self.lastname, self.firstname, self.patronymic, self.search_name
 
     @staticmethod
     def from_tuple(tpl: tuple):
