@@ -12,7 +12,6 @@ class DbGroupModel:
     department: str
     group: str
 
-
     @staticmethod
     def from_json(json: dict):
         return DbGroupModel(
