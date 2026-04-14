@@ -60,15 +60,29 @@ select * from "groups" where "name" like '%' || ? || '%'
 
 CREATE_TABLE_TEACHERS_SQL = """CREATE TABLE IF NOT EXISTS teachers
 (
-	id          INTEGER NOT NULL,
-	lastname    TEXT NOT NULL,
-	firstname   TEXT NOT NULL,
-	patronymic  TEXT NOT NULL,
-	search_name TEXT NOT NULL,
-	CONSTRAINT  teachers_pk PRIMARY KEY (id)
+    id          INTEGER NOT NULL,
+    lastname    TEXT    NOT NULL,
+    firstname   TEXT    NOT NULL,
+    patronymic  TEXT    NOT NULL,
+    search_name TEXT    NOT NULL,
+    CONSTRAINT teachers_pk PRIMARY KEY (id)
 );"""
 
 
 SEARCH_TEACHERS_SQL = """
 select * from "teachers" where "search_name" like '%' || ? || '%'
+"""
+
+CREATE_TABLE_CLASSROOMS_SQL = """CREATE TABLE IF NOT EXISTS classrooms
+(
+    id   INTEGER NOT NULL,
+    name TEXT    NOT NULL,
+    CONSTRAINT teachers_pk PRIMARY KEY (id)
+);
+"""
+
+SEARCH_CLASSROOM_SQL = """
+    SELECT *
+    FROM classrooms 
+    WHERE "name" like '%' || ? || '%'
 """
