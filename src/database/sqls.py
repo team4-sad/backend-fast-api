@@ -88,31 +88,31 @@ SEARCH_CLASSROOM_SQL = """
 """
 CREATE_TABLE_LESSONS_SQL = """CREATE TABLE IF NOT EXISTS lessons
 (
-	id              INTEGER NOT NULL,
-    classroom_id    INTEGER NOT NULL,
-    day_of_week     INTEGER NOT NULL,
-    week_type       INTEGER NOT NULL,
-	subject         TEXT    NOT NULL,
-	lesson_type     TEXT    NOT NULL,
-	CONSTRAINT      lessons_pk PRIMARY KEY (id)
+    id           INTEGER NOT NULL,
+    classroom_id INTEGER NOT NULL,
+    day_of_week  INTEGER NOT NULL,
+    week_type    INTEGER NOT NULL,
+    subject      TEXT    NOT NULL,
+    lesson_type  TEXT    NOT NULL,
+    CONSTRAINT lessons_pk PRIMARY KEY (id)
 );"""
 
 
 CREATE_TABLE_LESSON_TO_GROUPS_SQL = """CREATE TABLE IF NOT EXISTS lesson_to_groups
 (
-	id          INTEGER NOT NULL,
-	id_lesson   INTEGER NOT NULL,
-	id_group    INTEGER NOT NULL,
-	CONSTRAINT  lesson_to_groups_pk PRIMARY KEY (id)
+    id        INTEGER NOT NULL,
+    id_lesson INTEGER NOT NULL,
+    id_group  INTEGER NOT NULL,
+    CONSTRAINT lesson_to_groups_pk PRIMARY KEY (id)
 );"""
 
 
 CREATE_TABLE_LESSON_TO_TEACHERS_SQL = """CREATE TABLE IF NOT EXISTS lesson_to_teachers
 (
-	id          INTEGER NOT NULL,
-	id_lesson   INTEGER NOT NULL,
-	id_teacher  INTEGER NOT NULL,
-	CONSTRAINT lesson_to_teachers_pk PRIMARY KEY (id)
+    id         INTEGER NOT NULL,
+    id_lesson  INTEGER NOT NULL,
+    id_teacher INTEGER NOT NULL,
+    CONSTRAINT lesson_to_teachers_pk PRIMARY KEY (id)
 );"""
 
 
