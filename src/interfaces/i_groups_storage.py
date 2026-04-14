@@ -9,3 +9,6 @@ class IGroupsStorage (abc.ABC):
 
     def override_groups(self, groups: list[DbGroupModel]):
         pass
+
+    def get_all_groups(self) -> list[DbGroupModel]:
+        pass

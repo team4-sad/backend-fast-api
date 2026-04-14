@@ -21,3 +21,8 @@ class GroupsStorage(IGroupsStorage):
         self._db.delete("groups", commit=False)
         self._db.insert_many("groups", [i.to_json() for i in groups], commit=False)
         self._db.commit()
+
+    def get_all_groups(self) -> list[DbGroupModel]:
+        raw_groups = self._db.select_all("groups")
+        groups = [DbGroupModel.from_tuple(i) for i in raw_groups]
+        return groups

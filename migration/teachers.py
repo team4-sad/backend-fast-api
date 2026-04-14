@@ -7,7 +7,7 @@ from src.config.config import Config
 from src.database.sqlite_database import SQLiteDatabase
 from src.database.sqls import CREATE_TABLE_TEACHERS_SQL
 from src.interfaces.i_schedule_repository import IScheduleRepository
-from src.interfaces.i_teacher_storage import ITeachersStorage
+from src.interfaces.i_teachers_storage import ITeachersStorage
 from src.models.db_teacher_model import DbTeacherModel
 from src.repositories.schedule_repository import ScheduleRepository
 from src.storage.teachers_storage import TeachersStorage

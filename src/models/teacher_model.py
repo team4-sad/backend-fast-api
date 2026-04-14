@@ -14,3 +14,6 @@ class TeacherModel:
             last_name=json_obj['lastName'],
             patronymic=json_obj['patronymic']
         )
+
+    def fio(self):
+        return f'{self.last_name} {self.first_name} {self.patronymic}'

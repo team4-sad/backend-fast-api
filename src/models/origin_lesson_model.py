@@ -1,6 +1,8 @@
 import dataclasses
+from datetime import date
 
 from src.models.teacher_model import TeacherModel
+from src.utils.datetime_utils import str2date
 
 
 @dataclasses.dataclass
@@ -30,6 +32,10 @@ class OriginLessonModel:
     @property
     def get_only_date(self):
         return self.lesson_date.split("T")[0]
+
+    @property
+    def get_date(self) -> date:
+        return str2date(self.lesson_date)
 
     @staticmethod
     def from_json(json_obj: dict):

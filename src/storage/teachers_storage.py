@@ -2,7 +2,7 @@ from typing import override
 
 from src.database.sqlite_database import SQLiteDatabase
 from src.database.sqls import SEARCH_TEACHERS_SQL
-from src.interfaces.i_teacher_storage import ITeachersStorage
+from src.interfaces.i_teachers_storage import ITeachersStorage
 from src.models.db_teacher_model import DbTeacherModel
 
 
