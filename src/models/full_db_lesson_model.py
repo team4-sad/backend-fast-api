@@ -24,6 +24,7 @@ class FullDbLessonModel:
     ) -> tuple[list['FullDbLessonModel'], list[DbLessonToGroupModel], list[DbLessonToTeacherModel]]:
         lessons: list[OriginLessonModel] = list(itertools.chain.from_iterable([i for i in schedule.get_weekdays() if i is not None]))
 
+        # TODO Убрать под функцию
         def process(i: OriginLessonModel):
             _id = str(uuid.uuid4())
             lesson_teachers = [
