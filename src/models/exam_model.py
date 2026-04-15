@@ -1,7 +1,5 @@
 import dataclasses
 
-from src.common.utils import str2date, str2datetime
-
 
 @dataclasses.dataclass
 class ExamModel:

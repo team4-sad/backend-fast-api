@@ -2,7 +2,7 @@ from typing import Callable
 from bs4 import BeautifulSoup
 import re
 
-from src.common.utils import is_only_date, remove_time
+from src.common.datetime_utils import is_only_date, remove_str_time
 from src.enums.required_news_fields import RequiredNewsFields
 from src.exceptions.invalid_news_html import InvalidNewsHTML
 from src.exceptions.invalid_pagination_html import InvalidPaginationHTML
@@ -50,7 +50,7 @@ class NewsParser:
             try:
                 date = tag_news.find("div", class_="news-item-date").text
                 if not is_only_date(date):
-                    date = remove_time(date)
+                    date = remove_str_time(date)
             except AttributeError:
                 self.on_not_found_field(str(tag_news), RequiredNewsFields.date)
                 continue

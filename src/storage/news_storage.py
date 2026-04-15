@@ -1,6 +1,7 @@
 from datetime import date
 from typing import override
-from src.common.utils import date2str
+
+from src.common.datetime_utils import date2strYMD
 from src.database.sqlite_database import SQLiteDatabase
 from src.database.sqls import GET_LAST_NEWS_SQL, GET_DATE_NEWS_SQL, SEARCH_NEWS_SQL, GET_COUNT_NEWS_SQL
 from src.interfaces.i_news_storage import INewsStorage
@@ -31,7 +32,7 @@ class NewsStorage(INewsStorage):
 
     @override
     def get_news_by_date(self, search_date: date) -> list[NewsModel]:
-        news = self._db.fetch_all(GET_DATE_NEWS_SQL, (date2str(search_date), ))
+        news = self._db.fetch_all(GET_DATE_NEWS_SQL, (date2strYMD(search_date),))
         return [NewsModel.from_db(i) for i in news]
 
     @override

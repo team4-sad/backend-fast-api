@@ -1,6 +1,6 @@
 import dataclasses
 
-from src.common.utils import str2date, str2datetime
+from src.common.datetime_utils import str2dateYMD, str2datetimeDMYHMS
 
 
 @dataclasses.dataclass
@@ -37,6 +37,6 @@ class NewsModel:
     @property
     def date_date_created(self):
         try:
-            return str2date(self.date_created)
+            return str2dateYMD(self.date_created)
         except ValueError:
-            return str2datetime(self.date_created).date()
+            return str2datetimeDMYHMS(self.date_created).date()
