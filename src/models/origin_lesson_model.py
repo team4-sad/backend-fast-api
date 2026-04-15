@@ -1,7 +1,7 @@
 import dataclasses
 from datetime import date
 
-from src.common.datetime_utils import str2dateDMY
+from src.common.datetime_utils import str2dateYMD, str2iso
 from src.models.teacher_model import TeacherModel
 
 
@@ -35,7 +35,7 @@ class OriginLessonModel:
 
     @property
     def get_date(self) -> date:
-        return str2dateDMY(self.lesson_date)
+        return str2iso(self.lesson_date)
 
     @staticmethod
     def from_json(json_obj: dict):

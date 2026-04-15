@@ -21,3 +21,7 @@ class TeachersStorage(ITeachersStorage):
         self._db.delete("teachers", commit=False)
         self._db.insert_many("teachers", [i.to_json() for i in teachers], commit=False)
         self._db.commit()
+
+    def get_all_teachers(self) -> list[DbTeacherModel]:
+        row_teachers = self._db.select_all("teachers")
+        return [DbTeacherModel.from_tuple(i) for i in row_teachers]

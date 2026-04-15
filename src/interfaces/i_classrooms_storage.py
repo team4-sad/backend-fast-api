@@ -9,3 +9,6 @@ class IClassroomsStorage(abc.ABC):
 
     def override_classrooms(self, classrooms: list[DbClassroomModel]):
         pass
+
+    def get_all_classrooms(self) -> list[DbClassroomModel]:
+        pass

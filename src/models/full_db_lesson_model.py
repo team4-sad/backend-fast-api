@@ -2,12 +2,12 @@ import dataclasses
 import itertools
 import uuid
 
+from src.common.datetime_utils import is_prime_week
 from src.models.db_lesson_model import DbLessonModel
 from src.models.db_lesson_to_group import DbLessonToGroupModel
 from src.models.db_lesson_to_teacher import DbLessonToTeacherModel
 from src.models.origin_lesson_model import OriginLessonModel
 from src.models.origin_schedule_model import OriginScheduleModel
-from src.utils.datetime_utils import is_prime_week
 
 
 @dataclasses.dataclass
@@ -21,11 +21,21 @@ class FullDbLessonModel:
         schedule: OriginScheduleModel,
         groups_to_id: dict[str, int],
         teachers_to_id: dict[str, int],
-    ) -> list['FullDbLessonModel']:
+    ) -> tuple[list['FullDbLessonModel'], list[DbLessonToGroupModel], list[DbLessonToTeacherModel]]:
         lessons: list[OriginLessonModel] = list(itertools.chain.from_iterable([i for i in schedule.get_weekdays() if i is not None]))
 
-        def to_lesson(i: OriginLessonModel):
+        def process(i: OriginLessonModel):
             _id = str(uuid.uuid4())
+            lesson_teachers = [
+                DbLessonToTeacherModel(
+                    id=None,
+                    teacher_id=teachers_to_id[j.fio()],
+                    lesson_id=_id
+                ) for j in i.teachers
+            ]
+            lesson_groups = [
+                DbLessonToGroupModel.new(_id, j, groups_to_id) for j in i.groups
+            ]
             return FullDbLessonModel(
                 db_lesson=DbLessonModel(
                     id=_id,
@@ -35,20 +45,18 @@ class FullDbLessonModel:
                     subject=i.discipline_name,
                     lesson_type=i.lesson_type,
                 ),
-                teachers=[
-                    DbLessonToTeacherModel(
-                        id=None,
-                        teacher_id=teachers_to_id[j.fio()],
-                        lesson_id=_id
-                    ) for j in i.teachers
-                ],
-                groups=[
-                    DbLessonToGroupModel(
-                        id=None,
-                        lesson_id=_id,
-                        group_id=groups_to_id[j],
-                    ) for j in i.groups
-                ]
-            )
+                teachers=lesson_teachers,
+                groups=lesson_groups
+            ), lesson_groups, lesson_teachers
 
-        return [to_lesson(i) for i in lessons]
+        models: list[FullDbLessonModel] = []
+        groups: list[DbLessonToGroupModel] = []
+        teachers: list[DbLessonToTeacherModel] = []
+
+        for lesson in lessons:
+            new_model, new_groups, new_teachers = process(lesson)
+            models.append(new_model)
+            teachers.extend(new_teachers)
+            groups.extend(new_groups)
+
+        return models, groups, teachers

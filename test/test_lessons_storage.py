@@ -35,7 +35,7 @@ class TestLessonsStorage(unittest.TestCase):
         result = self.lessons_storage.search_lessons("ст")
         self.assertEqual(result, [
             DbLessonModel(
-                id=950,
+                id="950",
                 classroom_id=608,
                 week_type=1,
                 day_of_week=2,
@@ -45,7 +45,7 @@ class TestLessonsStorage(unittest.TestCase):
             DbLessonModel(
                 week_type=1,
                 day_of_week=2,
-                id=952,
+                id="952",
                 classroom_id=608,
                 subject="История градостроительства",
                 lesson_type="Лекционные занятия"
@@ -62,7 +62,7 @@ class TestLessonsStorage(unittest.TestCase):
         self.assertEqual(origin_len, 0)
 
         db_model = DbLessonModel(
-            id=200,
+            id="200",
             classroom_id=100,
             day_of_week=2,
             week_type=1,
@@ -82,7 +82,7 @@ class TestLessonsStorage(unittest.TestCase):
 
         models = [
             DbLessonModel(
-                id=202,
+                id="202",
                 classroom_id=101,
                 day_of_week=3,
                 week_type=1,
@@ -90,7 +90,7 @@ class TestLessonsStorage(unittest.TestCase):
                 lesson_type="other_lesson_type"
             ),
             DbLessonModel(
-                id=204,
+                id="204",
                 classroom_id=102,
                 day_of_week=4,
                 week_type=0,

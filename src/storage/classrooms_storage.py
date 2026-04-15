@@ -17,3 +17,7 @@ class ClassroomsStorage(IClassroomsStorage):
     def search_classroom(self, search_text: str) -> list[DbClassroomModel]:
         classrooms = self._db.fetch_all(SEARCH_CLASSROOM_SQL, (search_text,))
         return [DbClassroomModel.from_tuple(i) for i in classrooms]
+
+    def get_all_classrooms(self) -> list[DbClassroomModel]:
+        classrooms = self._db.select_all("classrooms")
+        return [DbClassroomModel.from_tuple(i) for i in classrooms]

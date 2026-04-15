@@ -86,9 +86,11 @@ SEARCH_CLASSROOM_SQL = """
     FROM classrooms 
     WHERE "name" like '%' || ? || '%'
 """
+
+
 CREATE_TABLE_LESSONS_SQL = """CREATE TABLE IF NOT EXISTS lessons
 (
-    id           INTEGER NOT NULL,
+    id           TEXT    NOT NULL,
     classroom_id INTEGER NOT NULL,
     day_of_week  INTEGER NOT NULL,
     week_type    INTEGER NOT NULL,
@@ -98,21 +100,19 @@ CREATE_TABLE_LESSONS_SQL = """CREATE TABLE IF NOT EXISTS lessons
 );"""
 
 
-CREATE_TABLE_LESSON_TO_GROUPS_SQL = """CREATE TABLE IF NOT EXISTS lesson_to_groups
-(
-    id        INTEGER NOT NULL,
-    id_lesson INTEGER NOT NULL,
+CREATE_TABLE_LESSON_TO_GROUPS_SQL = """CREATE TABLE IF NOT EXISTS lesson_to_groups(
+    id        INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id_lesson TEXT NOT NULL,
     id_group  INTEGER NOT NULL,
-    CONSTRAINT lesson_to_groups_pk PRIMARY KEY (id)
+    subgroup  TEXT
 );"""
 
 
 CREATE_TABLE_LESSON_TO_TEACHERS_SQL = """CREATE TABLE IF NOT EXISTS lesson_to_teachers
 (
-    id         INTEGER NOT NULL,
-    id_lesson  INTEGER NOT NULL,
-    id_teacher INTEGER NOT NULL,
-    CONSTRAINT lesson_to_teachers_pk PRIMARY KEY (id)
+    id         INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    id_lesson  TEXT NOT NULL,
+    id_teacher INTEGER NOT NULL
 );"""
 
 

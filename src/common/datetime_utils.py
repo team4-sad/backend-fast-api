@@ -43,3 +43,11 @@ def date2strYMD(dt: date) -> str:
 
 def str2dateYMD(s: str) -> date:
     return datetime.strptime(s, "%Y-%m-%d").date()
+
+
+def str2iso(s: str) -> datetime:
+    return datetime.fromisoformat(s)
+
+
+def date2iso(dt: date | datetime) -> str:
+    return dt.isoformat()

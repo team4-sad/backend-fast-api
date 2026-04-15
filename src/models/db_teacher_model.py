@@ -11,6 +11,10 @@ class DbTeacherModel:
     patronymic: str
 
     @property
+    def fio(self):
+        return f'{self.lastname} {self.firstname} {self.patronymic}'
+
+    @property
     def search_name(self) -> str:
         return f"{self.lastname.lower()} {self.firstname.lower()} {self.patronymic.lower()}"
 
